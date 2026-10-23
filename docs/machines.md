@@ -19,6 +19,9 @@ A new nest gets the machine chosen in **Tools > Nest Defaults** (see below). To 
 2. Point to **Machine**.
 3. Click the machine. The checked one is this nest's machine.
 
+The status bar at the bottom of the window shows **Machine:** and the nest's machine.
+Click or right-click it for the same list.
+
 The nest file remembers its machine. When you change it:
 
 - Every sheet moves to the new machine's support grid, or has none if that machine
