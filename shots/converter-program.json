@@ -1,0 +1,74 @@
+{
+  "source": "raw/converter-program.png",
+  "max_width": 1100,
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        268,
+        56,
+        180,
+        128
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        448,
+        60
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        270,
+        760,
+        180,
+        38
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 2,
+      "at": [
+        450,
+        764
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        458,
+        58,
+        530,
+        738
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 3,
+      "at": [
+        990,
+        60
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        1002,
+        58,
+        398,
+        738
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 4,
+      "at": [
+        1398,
+        62
+      ]
+    }
+  ]
+}

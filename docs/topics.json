@@ -3,11 +3,24 @@
   "topics": {
     "home": "index.html",
     "first-nest": "first-nest.html",
-    "import-drawings": "first-nest.html#import-drawings",
-    "auto-nest": "first-nest.html#run-auto-nest",
+    "import-drawings": "cad-converter.html",
+    "auto-nest": "auto-nest.html",
     "post": "first-nest.html#post",
     "machines": "machines.html",
     "nest-machine": "machines.html#nest-machine",
-    "support-grid": "machines.html#support-grid"
+    "support-grid": "machines.html#support-grid",
+    "cad-converter": "cad-converter.html",
+    "converter-entities": "cad-converter.html#entities",
+    "converter-program": "cad-converter.html#program",
+    "auto-nest-engines": "auto-nest.html#engines",
+    "auto-nest-stock": "auto-nest.html#stock-options",
+    "auto-nest-review": "auto-nest.html#review",
+    "auto-nest-validation": "auto-nest.html#validation-problems",
+    "plan-cutting": "cutting-planner.html",
+    "cutting-settings": "cutting-planner.html#cutting-settings",
+    "scrap-cutoffs": "cutting-planner.html#scrap-cut-offs",
+    "validate-nest": "validate.html#validate-nest",
+    "overlap-check": "validate.html#overlap-check",
+    "post-check": "validate.html#before-posting"
   }
 }

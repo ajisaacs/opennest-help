@@ -56,5 +56,10 @@ nav:
   - Home: index.md
   - Getting started:
       - Your first nest: first-nest.md
+  - Guides:
+      - CAD Converter: cad-converter.md
+      - Auto Nest: auto-nest.md
+      - Plan the cutting: cutting-planner.md
+      - Check a nest: validate.md
   - Setting up:
       - Machines: machines.md

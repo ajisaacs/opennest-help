@@ -1,0 +1,56 @@
+{
+  "source": "raw/auto-nest-review.png",
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        10,
+        40,
+        626,
+        352
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        636,
+        48
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        10,
+        426,
+        300,
+        22
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 2,
+      "at": [
+        310,
+        426
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        732,
+        474,
+        192,
+        30
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 3,
+      "at": [
+        732,
+        474
+      ]
+    }
+  ]
+}

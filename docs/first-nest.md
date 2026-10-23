@@ -49,6 +49,8 @@ title bar. To start another, use **File > New** (++ctrl+n++).
    want cut, such as dimensions or title blocks.
 4. Click **Accept** to add the drawings to the nest.
 
+The [CAD Converter](cad-converter.md) page covers the rest of this window.
+
 ![Drawings tab listing the four parts, none nested yet](images/first-nest-drawings.png)
 
 1. Each drawing shows **0 of 30 nested** (or its own quantity) until it is placed on
@@ -88,6 +90,8 @@ title bar. To start another, use **File > New** (++ctrl+n++).
 3. Click **Keep** (++enter++) to add the sheets to the nest, or **Discard**
    (++esc++) to throw the result away.
 
+For priorities, rotation limits, engines and sheet costs, see [Auto Nest](auto-nest.md).
+
 ![Main window with the nested sheet](images/first-nest-result.png)
 
 1. **Plate 1 of 1 | 60 x 120:** the sheet you're looking at, and its size.
@@ -118,6 +122,8 @@ cut.
     **Nest > Edit**), outside edges start with no lead-ins. If you post without setting
     them, the check before posting reports **Missing lead-ins** for every contour.
 
+[Plan the cutting](cutting-planner.md) covers the panel and its settings in full.
+
 ## Post the program {#post}
 
 ![Post button and its list of machines](images/first-nest-post-menu.png)
@@ -143,6 +149,8 @@ OpenNest checks the nest before it writes any CNC code.
    the risks for this one post only.
 4. **Post Anyway** writes the program once the box is ticked. **Cancel** goes back so
    you can fix the problems.
+
+[Check a nest](validate.md#before-posting) explains every check.
 
 When the checks pass, OpenNest asks where to save the program, then writes it.
 Remember to save the nest itself with **File > Save** (++ctrl+s++).

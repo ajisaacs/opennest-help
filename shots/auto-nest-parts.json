@@ -1,0 +1,73 @@
+{
+  "source": "raw/auto-nest-parts.png",
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        188,
+        80,
+        50,
+        122
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        213,
+        214
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        238,
+        80,
+        55,
+        122
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 2,
+      "at": [
+        265,
+        214
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        293,
+        80,
+        180,
+        122
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 3,
+      "at": [
+        383,
+        214
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        24,
+        503,
+        172,
+        22
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 4,
+      "at": [
+        196,
+        503
+      ]
+    }
+  ]
+}

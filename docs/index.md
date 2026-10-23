@@ -14,6 +14,17 @@ about 10 minutes.
 **[Machines](machines.md):** pick the machine a nest is cut on. It sets the support grid,
 the starting lead-ins and the cut-off settings.
 
+## Guides
+
+- **[CAD Converter](cad-converter.md):** check drawings as you import them, choose what
+  is cut, etched or left out, and read each part's program.
+- **[Auto Nest](auto-nest.md):** quantities, priorities and rotations, choosing an
+  engine, and letting Auto Nest pick sheet sizes by cost.
+- **[Plan the cutting](cutting-planner.md):** cut order, lead-ins, tabs, pierces and
+  scrap cut-offs, and what to do when a plate isn't ready.
+- **[Check a nest](validate.md):** Overlap Check, Validate Nest and the check that runs
+  before every post.
+
 ## Getting help in the app
 
 - Press ++f1++ in OpenNest to open this help. Inside a dialog, ++f1++ opens the page

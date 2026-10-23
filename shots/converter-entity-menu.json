@@ -1,0 +1,28 @@
+{
+  "source": "raw/converter-entity-menu.png",
+  "crop": [
+    590,
+    66,
+    340,
+    262
+  ],
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        752,
+        190,
+        141,
+        116
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        893,
+        194
+      ]
+    }
+  ]
+}
