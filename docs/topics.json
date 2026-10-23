@@ -1,0 +1,10 @@
+{
+  "_comment": "Stable help topic IDs the OpenNest app opens (F1, Help menu). Never rename or remove an ID; point it at a new page instead.",
+  "topics": {
+    "home": "index.html",
+    "first-nest": "first-nest.html",
+    "import-drawings": "first-nest.html#import-drawings",
+    "auto-nest": "first-nest.html#run-auto-nest",
+    "post": "first-nest.html#post"
+  }
+}

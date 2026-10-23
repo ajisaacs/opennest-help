@@ -1,0 +1,91 @@
+{
+  "source": "raw/first-nest-plan-cutting.png",
+  "max_width": 1100,
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        479,
+        56,
+        38,
+        36
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        517,
+        62
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        798,
+        166,
+        454,
+        38
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 2,
+      "at": [
+        1252,
+        170
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        801,
+        248,
+        110,
+        23
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 3,
+      "at": [
+        915,
+        259
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        882,
+        366,
+        74,
+        23
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 4,
+      "at": [
+        960,
+        377
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        800,
+        416,
+        450,
+        358
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 5,
+      "at": [
+        814,
+        470
+      ]
+    }
+  ]
+}

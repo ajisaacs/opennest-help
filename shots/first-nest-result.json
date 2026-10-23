@@ -1,0 +1,74 @@
+{
+  "source": "raw/first-nest-result.png",
+  "max_width": 1100,
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        288,
+        100,
+        178,
+        22
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        470,
+        111
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        109,
+        178,
+        92,
+        18
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 2,
+      "at": [
+        205,
+        187
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        672,
+        98,
+        112,
+        28
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 3,
+      "at": [
+        672,
+        98
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        1184,
+        790,
+        70,
+        21
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 4,
+      "at": [
+        1184,
+        776
+      ]
+    }
+  ]
+}

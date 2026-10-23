@@ -1,0 +1,56 @@
+{
+  "source": "raw/first-nest-progress.png",
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        8,
+        34,
+        292,
+        50
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        300,
+        40
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        306,
+        62,
+        518,
+        308
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 2,
+      "at": [
+        320,
+        76
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        196,
+        337,
+        90,
+        25
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 3,
+      "at": [
+        196,
+        337
+      ]
+    }
+  ]
+}

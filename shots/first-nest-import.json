@@ -1,0 +1,56 @@
+{
+  "source": "raw/first-nest-drawings.png",
+  "crop": [
+    0,
+    20,
+    640,
+    500
+  ],
+  "annotations": [
+    {
+      "type": "dim",
+      "keep": [
+        [
+          0,
+          96,
+          278,
+          400
+        ]
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        14,
+        125,
+        26,
+        25
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        14,
+        125
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        10,
+        151,
+        260,
+        340
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 2,
+      "at": [
+        262,
+        160
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "source": "raw/first-nest-post-menu.png",
+  "crop": [
+    380,
+    30,
+    520,
+    200
+  ],
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        594,
+        57,
+        46,
+        35
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        594,
+        57
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        597,
+        94,
+        168,
+        20
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 2,
+      "at": [
+        770,
+        104
+      ]
+    }
+  ]
+}

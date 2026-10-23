@@ -1,0 +1,22 @@
+/* Screenshots: a light frame so window edges read against the page. */
+.md-typeset img {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Numbered step markers matching the callouts drawn on screenshots. */
+.md-typeset .step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: 0.35em;
+  border-radius: 50%;
+  background: #e8590c;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85em;
+  vertical-align: middle;
+}

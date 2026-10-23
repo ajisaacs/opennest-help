@@ -1,0 +1,56 @@
+{
+  "source": "raw/first-nest-review.png",
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        10,
+        40,
+        626,
+        312
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        636,
+        48
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        12,
+        428,
+        274,
+        18
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 2,
+      "at": [
+        292,
+        437
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        733,
+        475,
+        91,
+        28
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 3,
+      "at": [
+        733,
+        475
+      ]
+    }
+  ]
+}

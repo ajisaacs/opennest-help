@@ -1,0 +1,56 @@
+{
+  "source": "raw/first-nest-autonest.png",
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        188,
+        80,
+        50,
+        122
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        213,
+        214
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        62,
+        44,
+        52,
+        22
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 2,
+      "at": [
+        118,
+        44
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        378,
+        550,
+        88,
+        26
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 3,
+      "at": [
+        378,
+        550
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "source": "raw/first-nest-empty.png",
+  "max_width": 1100,
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        2,
+        31,
+        400,
+        22
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        410,
+        42
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        2,
+        55,
+        700,
+        39
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 2,
+      "at": [
+        712,
+        74
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        3,
+        97,
+        272,
+        690
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 3,
+      "at": [
+        140,
+        450
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        283,
+        97,
+        980,
+        690
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 4,
+      "at": [
+        770,
+        300
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        2,
+        790,
+        1262,
+        21
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 5,
+      "at": [
+        640,
+        776
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "source": "raw/first-nest-post-settings.png",
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        8,
+        60,
+        468,
+        420
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        462,
+        70
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        288,
+        554,
+        88,
+        26
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 2,
+      "at": [
+        288,
+        554
+      ]
+    }
+  ]
+}

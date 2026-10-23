@@ -1,0 +1,74 @@
+{
+  "source": "raw/first-nest-converter.png",
+  "max_width": 1100,
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        3,
+        32,
+        258,
+        192
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        262,
+        40
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        478,
+        766,
+        88,
+        26
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 2,
+      "at": [
+        566,
+        766
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        478,
+        58,
+        922,
+        702
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 3,
+      "at": [
+        492,
+        72
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        1206,
+        811,
+        92,
+        30
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 4,
+      "at": [
+        1206,
+        811
+      ]
+    }
+  ]
+}

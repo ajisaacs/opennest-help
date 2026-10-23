@@ -1,0 +1,39 @@
+{
+  "source": "raw/first-nest-open-dialog.png",
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        260,
+        148,
+        600,
+        82
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        260,
+        148
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        681,
+        509,
+        86,
+        26
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 2,
+      "at": [
+        681,
+        509
+      ]
+    }
+  ]
+}

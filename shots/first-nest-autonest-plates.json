@@ -1,0 +1,39 @@
+{
+  "source": "raw/first-nest-autonest-plates.png",
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        114,
+        80,
+        202,
+        24
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        322,
+        92
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        34,
+        119,
+        106,
+        18
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 2,
+      "at": [
+        146,
+        128
+      ]
+    }
+  ]
+}

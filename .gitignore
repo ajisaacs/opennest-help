@@ -1,0 +1,6 @@
+# Generated from shots/ by tools/render_shots.py
+docs/images/
+site/
+dist/
+__pycache__/
+.venv/
