@@ -11,6 +11,9 @@ machine.
 drawings, set quantities, run Auto Nest, plan the cutting and post the program. It takes
 about 10 minutes.
 
+**[Machines](machines.md):** pick the machine a nest is cut on. It sets the support grid,
+the starting lead-ins and the cut-off settings.
+
 ## Getting help in the app
 
 - Press ++f1++ in OpenNest to open this help. Inside a dialog, ++f1++ opens the page

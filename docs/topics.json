@@ -5,6 +5,9 @@
     "first-nest": "first-nest.html",
     "import-drawings": "first-nest.html#import-drawings",
     "auto-nest": "first-nest.html#run-auto-nest",
-    "post": "first-nest.html#post"
+    "post": "first-nest.html#post",
+    "machines": "machines.html",
+    "nest-machine": "machines.html#nest-machine",
+    "support-grid": "machines.html#support-grid"
   }
 }

@@ -1,0 +1,63 @@
+{
+  "source": "raw/nest-machine-menu.png",
+  "crop": [
+    0,
+    0,
+    640,
+    166
+  ],
+  "max_width": 1100,
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        195,
+        32,
+        42,
+        20
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        244,
+        20
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        198,
+        77,
+        266,
+        20
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 2,
+      "at": [
+        200,
+        98
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        470,
+        77,
+        108,
+        22
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 3,
+      "at": [
+        600,
+        88
+      ]
+    }
+  ]
+}

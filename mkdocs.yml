@@ -56,3 +56,5 @@ nav:
   - Home: index.md
   - Getting started:
       - Your first nest: first-nest.md
+  - Setting up:
+      - Machines: machines.md
