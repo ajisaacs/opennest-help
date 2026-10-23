@@ -14,3 +14,6 @@ User guides for OpenNest; see README.md for layout, build and capture steps.
 - Never take captures in Database storage mode (it allocates real nest numbers): use
   `tools/launch-app.ps1`. Mask personal, customer or job data in captures.
 - Commit raw captures and manifests, never `docs/images/`, `site/` or `dist/`.
+- Release by the version rules in README.md (Releases > Version numbers): MINOR for new
+  pages or topic IDs, PATCH for fixes and recaptures. Then pin the new tag and SHA-256 in
+  OpenNest's `scripts/help.json` so the app ships it.

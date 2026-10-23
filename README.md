@@ -51,3 +51,19 @@ raw capture.
 Push a `vX.Y.Z` tag. The workflow builds the site and attaches `opennest-help.zip` and
 its SHA-256 to a GitHub Release. OpenNest pins one release (tag and hash) in its
 `scripts/help.json`, and its packaging scripts refuse a zip that doesn't match.
+
+### Version numbers
+
+Tags are `vMAJOR.MINOR.PATCH`, counted from the last tag on `main`:
+
+| Bump | When the release |
+| --- | --- |
+| MINOR | adds a page, a section a topic ID points at, or a new `topics.json` ID |
+| PATCH | only fixes, rewords or recaptures existing pages |
+| MAJOR | stays 0 until the help covers the whole app; never for a removed ID (IDs are never removed) |
+
+Tag only from `main`, after the OpenNest changes the pages describe are on OpenNest's
+`master`, so the shipped help never describes unreleased behavior. In the same sitting,
+wait for the release, then update `tag` and `sha256` in OpenNest's `scripts/help.json`
+(the release attaches `opennest-help.zip.sha256`) and commit that to OpenNest `master`.
+Several help commits can share one release; there is no fixed schedule.
