@@ -4,3 +4,8 @@ site/
 dist/
 __pycache__/
 .venv/
+
+# Throwaway screenshot server (tools/seed-server.ps1)
+.seed/
+tools/seed/Seeder/bin/
+tools/seed/Seeder/obj/

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Loads catalog.json into a throwaway nest server through OpenNest's own client and
+       package code. Build with -p:OpenNestDir=<OpenNest source checkout>. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+  <Target Name="RequireOpenNestDir" BeforeTargets="ResolveProjectReferences;CollectPackageReferences" Condition="'$(OpenNestDir)' == ''">
+    <Error Text="Pass -p:OpenNestDir=&lt;path to the OpenNest source checkout&gt;." />
+  </Target>
+  <ItemGroup Condition="'$(OpenNestDir)' != ''">
+    <ProjectReference Include="$(OpenNestDir)/OpenNest.IO/OpenNest.IO.csproj" />
+    <ProjectReference Include="$(OpenNestDir)/OpenNest.Data/OpenNest.Data.csproj" />
+  </ItemGroup>
+</Project>

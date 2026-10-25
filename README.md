@@ -15,6 +15,7 @@ and built with MkDocs Material into plain HTML. OpenNest ships the built site in
 | `docs/images/` | Generated from `shots/` by the build; not committed. |
 | `samples/*.dxf` | Parts used by the tutorials (`tools/make_samples.py`). |
 | `tools/` | Build, capture, markup and tutorial replay scripts. |
+| `tools/seed/` | Made-up data and loaders for the throwaway screenshot server. |
 
 ## Build
 
@@ -45,6 +46,35 @@ Captures come from a running OpenNest on Windows at 100% display scaling.
 
 Blur anything personal or customer-specific with a `mask` annotation before committing a
 raw capture.
+
+### Database-mode screens
+
+The Drawing Library, drawing sets, releases and **File > Open** pictures need a nest
+server. Never capture them against a real or shared test server: customer names, job
+numbers and notes show in nearly every column. Use a throwaway server on this PC filled
+with made-up parts, customers and sets (`tools/seed/catalog.py`). Saved-by and made-by
+are "AJ"; don't invent people.
+
+Needs the .NET 8 SDK, an OpenNest source checkout and `pip install ezdxf`.
+
+1. `tools/seed-server.ps1 -OpenNest <OpenNest checkout>` builds OpenNest.Server, runs it
+   at `http://127.0.0.1:8095` with its own database in `.seed/` (ignored), and adds 24
+   library drawings, 6 sets and the material list. `-Reset` starts it empty again.
+2. `tools/launch-app.ps1 -Exe <OpenNest.exe> -ServerUrl http://127.0.0.1:8095` starts the
+   app in Database mode against it. It refuses any server that isn't on this PC.
+3. Make two releases in **File > Drawing Sets...** (find each set with **Search**):
+    - **Utility trailer fender kit**, double-clicked twice (×2). Capture
+      `release-new-nests`, then **Make Nests**.
+    - With the two new drafts still open in tabs: **Tongue jack mount**, **Dock cleat
+      backing** twice, and **Test Square 1 in** from the **Library** tab. Capture
+      `release-draft-open`. Close the draft tabs, type the notes
+      "Week 44 trailer and dock orders", capture `release-panel`, then **Make Nests**.
+4. `python tools/seed/copy_nests.py http://127.0.0.1:8095 .seed/catalog.json` adds six
+   saved nests in every status by copying the drafts' layouts, for **File > Open**.
+5. Capture the other screens, then `tools/seed-server.ps1 -Stop`.
+
+`tools/seed/Seeder` refuses a server that already has library drawings, and
+`copy_nests.py` refuses one that isn't on this PC.
 
 ## Releases
 
