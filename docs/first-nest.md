@@ -109,9 +109,10 @@ cut.
 
 1. Click **Plan Cutting** on the toolbar (or **Plate > Plan Cutting**).
 2. The panel on the right reports whether the plan is ready.
-3. **Cutting Settings** sets the lead-ins and lead-outs for outside edges, holes and
-   arcs. They start from the nest's [machine](machines.md#machine-lead-ins) when it has
-   settings for the material and thickness. Check them before you apply the plan.
+3. **Cutting Settings** sets the lead-ins and lead-outs for outside edges and holes
+   (round holes included). They start from the nest's
+   [machine](machines.md#machine-lead-ins) when it has settings for the material and
+   thickness. Check them before you apply the plan.
 4. Click **Apply** to put the plan on the plate. After you change settings, click
    **Replan** to plan again.
 5. **Issues** lists anything the plan couldn't solve, such as a part with no safe

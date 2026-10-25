@@ -55,8 +55,8 @@ or from the settings you applied last.
 
 ![Cutting Parameters dialog](images/cutting-settings.png)
 
-1. One tab for each kind of contour: **External** (outside edges), **Internal**
-   (holes) and **Arc / Circle** (round holes).
+1. One tab for each kind of contour: **External** (outside edges) and **Internal**
+   (holes, round holes included).
 2. **Lead-In.** The **Type** is **None**, **Line**, **Arc**, **Line + Arc**, **Clean
    Hole** or **Line + Line**. Set its **Length** and **Approach Angle** (or the sizes
    the type needs).

@@ -73,8 +73,8 @@ settings yet, OpenNest starts from the machine's **Lead In** and **Lead Out** se
 for the nest's material and thickness. It also uses the kerf for that thickness. The
 material and thickness come from **Nest > Edit**.
 
-- The machine's lead-in goes on outside edges, holes and arcs. You can still change
-  them in **Cutting Settings** before you apply the plan.
+- The machine's lead-in goes on outside edges and holes, round holes included. You can still
+  change them in **Cutting Settings** before you apply the plan.
 - A **Clean Hole** lead-in is used on holes only; outside edges keep their lead-in.
 - A **Line + Line** lead-in isn't copied. Set it in **Cutting Settings**.
 - If the machine has nothing on file for that material and thickness, the settings you
