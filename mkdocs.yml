@@ -63,3 +63,4 @@ nav:
       - Check a nest: validate.md
   - Setting up:
       - Machines: machines.md
+      - Shared nest server: nest-server.md

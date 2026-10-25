@@ -21,6 +21,9 @@
     "scrap-cutoffs": "cutting-planner.html#scrap-cut-offs",
     "validate-nest": "validate.html#validate-nest",
     "overlap-check": "validate.html#overlap-check",
-    "post-check": "validate.html#before-posting"
+    "post-check": "validate.html#before-posting",
+    "nest-server": "nest-server.html",
+    "storage-mode": "nest-server.html#connect-a-pc",
+    "server-setup": "nest-server.html#set-up-the-server"
   }
 }

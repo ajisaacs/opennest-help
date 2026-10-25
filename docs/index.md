@@ -14,6 +14,9 @@ about 10 minutes.
 **[Machines](machines.md):** pick the machine a nest is cut on. It sets the support grid,
 the starting lead-ins and the cut-off settings.
 
+**[Shared nest server](nest-server.md):** keep nests on a server every shop PC shares,
+and connect each PC to it with **File > Storage Mode**.
+
 ## Guides
 
 - **[CAD Converter](cad-converter.md):** check drawings as you import them, choose what
