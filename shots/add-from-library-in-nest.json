@@ -1,0 +1,45 @@
+{
+  "source": "raw/add-from-library-in-nest.png",
+  "crop": [
+    0,
+    0,
+    720,
+    853
+  ],
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        20,
+        96,
+        488,
+        176
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        508,
+        108
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        20,
+        772,
+        340,
+        22
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 2,
+      "at": [
+        360,
+        782
+      ]
+    }
+  ]
+}

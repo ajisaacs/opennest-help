@@ -1,0 +1,56 @@
+{
+  "source": "raw/storage-mode.png",
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        12,
+        109,
+        330,
+        22
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        342,
+        119
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        88,
+        137,
+        304,
+        26
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 2,
+      "at": [
+        392,
+        149
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        269,
+        185,
+        60,
+        26
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 3,
+      "at": [
+        269,
+        185
+      ]
+    }
+  ]
+}

@@ -28,6 +28,15 @@ and connect each PC to it with **File > Storage Mode**.
 - **[Check a nest](validate.md):** Overlap Check, Validate Nest and the check that runs
   before every post.
 
+### With the shared nest server
+
+- **[Drawing Library](drawing-library.md):** keep every part on the server, add parts
+  to a nest from it and save nest drawings to it.
+- **[Drawing sets](drawing-sets.md):** lists of library drawings for an assembly or a
+  repeat order, made by hand or from a BOM.
+- **[Releases](releases.md):** turn sets and drawings into nests, one per material,
+  merging into waiting Draft nests, and undo a release.
+
 ## Getting help in the app
 
 - Press ++f1++ in OpenNest to open this help. Inside a dialog, ++f1++ opens the page

@@ -5,8 +5,9 @@ every PC in the shop shares. With the server, a nest saved on one PC can be open
 any other, every save is kept as a version you can go back to, and new nests get
 numbers from one shared counter, so two PCs never hand out the same number.
 
-The server also holds the shared **Drawing Library**, **Drawing Sets** and
-**Releases**. Those commands only work in Database mode.
+The server also holds the shared [Drawing Library](drawing-library.md),
+[drawing sets](drawing-sets.md) and [releases](releases.md). Those commands only work
+in Database mode.
 
 This page has two parts:
 
@@ -113,17 +114,48 @@ saves nothing.
 Do this on each PC that runs OpenNest. Ask whoever set up the server for its address,
 for example `http://192.168.1.20:8090`.
 
-1. Choose **File > Storage Mode...**.
-2. Select **Database — save/open through a shared nest server**.
-3. In **Server URL**, type the server's address, starting with `http://`. Type only the
+![File menu with the server commands](images/server-file-menu.png)
+
+1. **Drawing Library...**, **Drawing Sets...** and **Releases...** open the shared
+   library. They need Database mode.
+2. **Storage Mode...** switches between File and Database mode.
+
+Choose **File > Storage Mode...**:
+
+![Storage Mode dialog set to Database mode](images/storage-mode.png)
+
+1. Select **Database — save/open through a shared nest server**.
+2. In **Server URL**, type the server's address, starting with `http://`. Type only the
    address and port, nothing after them (not `/healthz`).
-4. Click **OK**.
+3. Click **OK**.
 
 **Save**, **Open** and the other commands in the table [above](#storage-modes) now use
 the server. Nests you saved as files before stay where they are. To put one on the
 server, drag the `.nest` file onto OpenNest and click **Save**.
 
 To go back to files, choose **File > Storage Mode...** and select **File**.
+
+## Open a saved nest {#open-saved-nests}
+
+In Database mode, **File > Open** shows the nests saved on the server.
+
+![Open Nest window listing the server's nests, with a plate preview](images/nest-browser.png)
+
+1. **Nests.** 100 at a time, newest first. Click a column heading to sort every nest
+   by it; click again to reverse. OpenNest remembers your choice.
+2. **Nest Information...** changes the selected nest's name, customer, status and
+   other details without opening it. It saves at once, as a new version.
+3. **Details** of the highlighted nest: its **Plates**, its **Drawings** with how many
+   are nested, and **Versions**, every earlier save. From **Versions** you can open an
+   old version read-only, download it, or restore it as the newest version.
+4. **Preview** of one plate. The arrows under it step through the plates.
+5. **Find** searches name, customer, material, made by, comments and status. It
+   starts searching when you stop typing.
+6. **Deleted nests...** lists nests that were deleted, so you can recover them.
+
+Double-click a nest, or press ++enter++, to open it. ++esc++ closes the window.
+
+Right-click a nest for **Delete...**. Deleting hides the nest but keeps every version.
 
 ### Change the server address only {#change-server-address}
 

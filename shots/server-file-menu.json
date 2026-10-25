@@ -1,0 +1,45 @@
+{
+  "source": "raw/server-file-menu.png",
+  "crop": [
+    0,
+    0,
+    470,
+    400
+  ],
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        56,
+        120,
+        150,
+        64
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        206,
+        130
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        56,
+        337,
+        150,
+        22
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 2,
+      "at": [
+        206,
+        347
+      ]
+    }
+  ]
+}

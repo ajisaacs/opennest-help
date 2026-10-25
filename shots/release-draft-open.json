@@ -1,0 +1,45 @@
+{
+  "source": "raw/release-draft-open.png",
+  "crop": [
+    1056,
+    30,
+    630,
+    830
+  ],
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        1446,
+        404,
+        230,
+        76
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        1676,
+        414
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        1066,
+        742,
+        610,
+        36
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 2,
+      "at": [
+        1066,
+        742
+      ]
+    }
+  ]
+}

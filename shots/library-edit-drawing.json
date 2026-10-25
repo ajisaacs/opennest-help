@@ -1,0 +1,56 @@
+{
+  "source": "raw/library-edit-drawing.png",
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        8,
+        40,
+        450,
+        186
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        458,
+        50
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        8,
+        232,
+        450,
+        228
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 2,
+      "at": [
+        458,
+        244
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        270,
+        635,
+        104,
+        28
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 3,
+      "at": [
+        270,
+        635
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "source": "raw/releases-tab.png",
+  "max_width": 1100,
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        22,
+        74,
+        902,
+        72
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        924,
+        84
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        22,
+        440,
+        704,
+        108
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 2,
+      "at": [
+        726,
+        452
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        1556,
+        805,
+        108,
+        28
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 3,
+      "at": [
+        1556,
+        805
+      ]
+    }
+  ]
+}

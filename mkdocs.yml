@@ -63,4 +63,8 @@ nav:
       - Check a nest: validate.md
   - Setting up:
       - Machines: machines.md
+  - Shared server:
       - Shared nest server: nest-server.md
+      - Drawing Library: drawing-library.md
+      - Drawing sets: drawing-sets.md
+      - Releases: releases.md

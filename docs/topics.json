@@ -24,6 +24,17 @@
     "post-check": "validate.html#before-posting",
     "nest-server": "nest-server.html",
     "storage-mode": "nest-server.html#connect-a-pc",
-    "server-setup": "nest-server.html#set-up-the-server"
+    "server-setup": "nest-server.html#set-up-the-server",
+    "nest-browser": "nest-server.html#open-saved-nests",
+    "drawing-library": "drawing-library.html",
+    "library-add": "drawing-library.html#add-to-nest",
+    "library-save": "drawing-library.html#save-to-library",
+    "library-edit-drawing": "drawing-library.html#edit-drawing",
+    "drawing-sets": "drawing-sets.html",
+    "set-editor": "drawing-sets.html#set-editor",
+    "set-import-bom": "drawing-sets.html#import-bom",
+    "releases": "releases.html",
+    "release-panel": "releases.html#release-panel",
+    "releases-tab": "releases.html#releases-tab"
   }
 }
