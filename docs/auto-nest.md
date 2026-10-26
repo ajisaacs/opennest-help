@@ -17,14 +17,14 @@ walk-through, see [Your first nest](first-nest.md#run-auto-nest).
 2. **Priority** decides which parts get space first. Lower numbers go first, and when
    not everything fits, the lowest numbers are the ones placed. Leave every row at 0
    to treat all parts alike.
-3. **Rot Start**, **Rot End** and **Step** limit how a part may be turned. Leave
-   **Step** at 0 to let OpenNest choose the rotations. Most jobs should.
+3. **Rot Start**, **Rot End** and **Step** limit how a part may be turned, in
+   degrees. Leave **Step** at 0 to let OpenNest choose the rotations. Most jobs
+   should.
 4. The total number of parts and drawings this run will nest.
 
-!!! warning "Rotation limits are in radians"
-    The rotation columns take radians, not degrees: 90° is 1.5708 and 180° is
-    3.1416. For example, to allow only 0° and 90° for a part with a grain direction,
-    enter **Rot Start** 0, **Rot End** 1.5708 and **Step** 1.5708.
+!!! note "Keep a part to its grain"
+    To allow only 0° and 90° for a part with a grain direction, enter **Rot Start**
+    0, **Rot End** 90 and **Step** 90.
 
 ## Choose the engine {#engines}
 
