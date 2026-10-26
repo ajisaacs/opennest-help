@@ -59,7 +59,9 @@ or from the settings you applied last.
    (holes, round holes included).
 2. **Lead-In.** The **Type** is **None**, **Line**, **Arc**, **Line + Arc**, **Clean
    Hole** or **Line + Line**. Set its **Length** and **Approach Angle** (or the sizes
-   the type needs).
+   the type needs). An **Arc** lead-in has a **Radius** and a **Sweep Angle**: how much
+   of a circle the arc is, in degrees from 1 to 180. 90 is a quarter circle; 180, the
+   default, is a half circle.
 3. **Lead-Out.** **None**, **Line** or **Arc**.
 4. **Tabs** leave small uncut gaps that hold parts in the sheet. Tick **Enable
    Tabs**, set the **Tab Size**, then choose **Tab every part** or **Only tab parts the
@@ -70,6 +72,11 @@ or from the settings you applied last.
    it's above 0, every pierce keeps half of it clear of all parts. **Round Lead-In
    Angles** rounds approach angles to the **Increment**.
 6. Click **OK**. The plan starts again with the new settings.
+
+Curved leads (**Arc**, **Line + Arc** and **Clean Hole** lead-ins, and the **Arc**
+lead-out) meet the contour smoothly, curving the same way the cut goes, so the head
+doesn't change direction where the lead joins the cut. When a lead-in starts at an outside
+corner, the curve lines up with the edge that is cut first and stays clear of the part.
 
 With lead-in type **None**, the cut pierces right on the contour. The plan allows it,
 but the check before posting still reports **Missing lead-ins**.

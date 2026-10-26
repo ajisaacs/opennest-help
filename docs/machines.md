@@ -89,6 +89,7 @@ thickness come from **Nest > Edit**.
   cuts** is ticked, holes use the outside settings; clear it to give holes their own. You can
   still change them in **Cutting Settings** before you apply the plan.
 - **Clean Hole** is offered on the **Inside Cuts** tab only.
+- An **Arc** lead-in is a half circle (**Sweep Angle** 180). Change the sweep in **Cutting Settings**.
 - A **Line + Line** lead-in isn't copied. Set it in **Cutting Settings**.
 - If the machine has nothing on file for that material and thickness, the settings you
   used last are used instead.
