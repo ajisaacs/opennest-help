@@ -24,6 +24,31 @@ numbered steps under it.
 OpenNest opens a new, empty nest when it starts. Its name is in the
 title bar. To start another, use **File > New** (++ctrl+n++).
 
+## Undo a change {#undo}
+
+**Edit > Undo** (++ctrl+z++) takes back the last change to the nest, and **Edit > Redo**
+(++ctrl+y++ or ++ctrl+shift+z++) puts it back. The menu names the step, for example
+**Undo Rotate** or **Redo Auto Nest**. Each nest keeps its own last 50 steps while it is
+open; saving doesn't clear them.
+
+Almost anything you do to the nest can be undone: moving, rotating, adding or deleting
+parts, fills and Auto Nest, **Clear Nest**, plates and their settings, clamps and the
+support grid, cut-offs, the cut order and lead-ins, applying a cutting plan, and adding,
+editing or deleting drawings.
+
+Some things can't be undone:
+
+- Saving, posting and exporting, and anything saved on the nest server: releases (use
+  [Undo Release](releases.md#releases-tab)) and the Drawing Library.
+- **Machine Configuration**, **Save as Machine Defaults** and nest defaults. (Picking
+  the nest's machine can be undone.)
+- Zoom, pan, the view options and what is selected.
+- The nest's name, status and who made it.
+
+Undo and Redo are greyed out while Auto Nest, a fill or the **Plan Cutting** panel is
+open. Wait for the job to finish or close the panel first. In a text or number box,
+++ctrl+z++ undoes your typing in that box.
+
 ## Import the drawings {#import-drawings}
 
 ![Drawings tab with the Import Drawings button and the imported parts](images/first-nest-import.png)

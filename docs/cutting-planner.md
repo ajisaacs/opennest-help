@@ -85,7 +85,8 @@ Lead-in**) and the cut-offs exactly as they are, and plans everything else.
 
 To start from scratch, click **Clear Lead-ins & Cut-offs** and confirm. It removes
 every lead-in (locked ones too), every cut-off and the plates' cutting settings, then
-plans again. Parts keep their places. There's no undo.
+plans again. Parts keep their places. To get them back, close the panel and use
+**Edit > Undo** ([Undo a change](first-nest.md#undo)).
 
 ## Scrap cut-offs {#scrap-cut-offs}
 
