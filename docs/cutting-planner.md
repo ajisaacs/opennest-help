@@ -62,9 +62,9 @@ or from the settings you applied last.
    the type needs).
 3. **Lead-Out.** **None**, **Line** or **Arc**.
 4. **Tabs** leave small uncut gaps that hold parts in the sheet. Tick **Enable
-   Tabs**, set the **Tab Size**, then choose **Tab all parts** or **Tab parts the
-   support grid cannot hold level**. The second uses the nest's
-   [support grid](machines.md#support-grid).
+   Tabs**, set the **Tab Size**, then choose **Tab every part** or **Only tab parts the
+   support grid can't hold level**. The second uses the nest's
+   [support bed](machines.md#support-grid).
 5. **Pierce.** **Pierce Clearance** is how far each pierce stays from its own contour.
    **Pierce Diameter** is the size of the hole a pierce blows through this plate; when
    it's above 0, every pierce keeps half of it clear of all parts. **Round Lead-In

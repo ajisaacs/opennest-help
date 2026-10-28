@@ -81,7 +81,7 @@ before it asks where to save the program.
 The extra checks, listed only when they find something:
 
 - **Fixed leads:** a locked lead-in or lead-out that runs into a part or a clamp.
-- **Part support:** a part the [support grid](machines.md#support-grid) can't hold
+- **Part support:** a part the [support bed](machines.md#support-grid) can't hold
   level, with no tab to keep it in place.
 - **Part spacing:** two parts closer than the plate's part spacing. The finding gives
   the measured gap.

@@ -11,7 +11,7 @@ machine.
 drawings, set quantities, run Auto Nest, plan the cutting and post the program. It takes
 about 10 minutes.
 
-**[Machines](machines.md):** pick the machine a nest is cut on. It sets the support grid,
+**[Machines](machines.md):** pick the machine a nest is cut on. It sets the support bed,
 the starting lead-ins and the cut-off settings.
 
 **[Shared nest server](nest-server.md):** keep nests on a server every shop PC shares,

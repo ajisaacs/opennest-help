@@ -33,7 +33,7 @@ open; saving doesn't clear them.
 
 Almost anything you do to the nest can be undone: moving, rotating, adding or deleting
 parts, fills and Auto Nest, **Clear Nest**, plates and their settings, clamps and the
-support grid, cut-offs, the cut order and lead-ins, applying a cutting plan, and adding,
+support bed, cut-offs, the cut order and lead-ins, applying a cutting plan, and adding,
 editing or deleting drawings.
 
 Some things can't be undone:
