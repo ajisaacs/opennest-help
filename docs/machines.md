@@ -80,13 +80,15 @@ with **Nest > Machine** first. **How the support bed works**, or ++f1++, opens t
 ## Lead-ins from the machine {#machine-lead-ins}
 
 When you plan the cutting (or place lead-ins by hand) on a plate that has no cutting
-settings yet, OpenNest starts from the machine's **Lead In** and **Lead Out** settings
-for the nest's material and thickness. It also uses the kerf for that thickness. The
-material and thickness come from **Nest > Edit**.
+settings yet, OpenNest starts from the machine's lead-in and lead-out settings for the
+nest's material and thickness. It also uses the kerf for that thickness. The material and
+thickness come from **Nest > Edit**.
 
-- The machine's lead-in goes on outside edges and holes, round holes included. You can still
-  change them in **Cutting Settings** before you apply the plan.
-- A **Clean Hole** lead-in is used on holes only; outside edges keep their lead-in.
+- The **Outside Cuts** tab sets the lead-in and lead-out for outside edges. The
+  **Inside Cuts** tab sets them for holes, round holes included. While **Same as outside
+  cuts** is ticked, holes use the outside settings; clear it to give holes their own. You can
+  still change them in **Cutting Settings** before you apply the plan.
+- **Clean Hole** is offered on the **Inside Cuts** tab only.
 - A **Line + Line** lead-in isn't copied. Set it in **Cutting Settings**.
 - If the machine has nothing on file for that material and thickness, the settings you
   used last are used instead.
