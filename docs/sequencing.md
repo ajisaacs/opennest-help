@@ -60,9 +60,9 @@ the plate view: the head moves along each lead-in, cut and rapid in order, and p
 not reached yet are drawn faded.
 
 - **Play / pause** (++space++), **Restart** (++home++) and **Jump to end**.
-- **Previous part** and **Next part** (++page-up++, ++page-down++), and previous and next
-  cutout or perimeter (++ctrl+left++, ++ctrl+right++). ++left++ and ++right++ step one
-  move.
+- **◀◀ Part** and **Part ▶▶** (++page-up++, ++page-down++) go to the previous and next
+  part; **◀ Cutout** and **Cutout ▶** (++ctrl+left++, ++ctrl+right++) go to the previous
+  and next cutout or perimeter. ++left++ and ++right++ step one move.
 - Drag the slider to scrub through the cut. **Speed** sets how fast it plays.
 - The window shows the time so far and the total, which part is being cut, and its
   drawing.
