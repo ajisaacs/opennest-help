@@ -19,6 +19,7 @@
     "plan-cutting": "cutting-planner.html",
     "cutting-settings": "cutting-planner.html#cutting-settings",
     "scrap-cutoffs": "cutting-planner.html#scrap-cut-offs",
+    "sheet-cutoff": "cutting-planner.html#sheet-cutoff",
     "validate-nest": "validate.html#validate-nest",
     "overlap-check": "validate.html#overlap-check",
     "post-check": "validate.html#before-posting",

@@ -88,6 +88,20 @@ every lead-in (locked ones too), every cut-off and the plates' cutting settings,
 plans again. Parts keep their places. To get them back, close the panel and use
 **Edit > Undo** ([Undo a change](first-nest.md#undo)).
 
+## Add a cut-off by hand {#sheet-cutoff}
+
+**Plate > Sheet Cut-Off** (or the **Sheet Cut-Off** toolbar button) draws a cut-off line
+where you click. A dashed preview follows the pointer and stops short of the parts it
+would cross.
+
+- Press ++space++ to turn the line between vertical and horizontal. The tag by the
+  pointer and the status bar show which way it will turn.
+- Click to add the line. Keep clicking to add more.
+- Press ++esc++ when you're done.
+- To remove a cut-off, select its line and press ++delete++.
+
+While the tool is on, ++f1++ opens this section.
+
 ## Scrap cut-offs {#scrap-cut-offs}
 
 Tick **Add scrap cut-offs** to cut the leftover skeleton into strips that fit your
