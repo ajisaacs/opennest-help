@@ -20,6 +20,7 @@
     "cutting-settings": "cutting-planner.html#cutting-settings",
     "scrap-cutoffs": "cutting-planner.html#scrap-cut-offs",
     "sheet-cutoff": "cutting-planner.html#sheet-cutoff",
+    "trim-extend-cutoff": "trim-extend-cutoff.html",
     "validate-nest": "validate.html#validate-nest",
     "overlap-check": "validate.html#overlap-check",
     "post-check": "validate.html#before-posting",

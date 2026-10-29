@@ -25,6 +25,8 @@ and connect each PC to it with **File > Storage Mode**.
   engine, and letting Auto Nest pick sheet sizes by cost.
 - **[Plan the cutting](cutting-planner.md):** cut order, lead-ins, tabs, pierces and
   scrap cut-offs, and what to do when a plate isn't ready.
+- **[Trim and extend cut-offs](trim-extend-cutoff.md):** shorten or lengthen cut-off
+  lines where they cross, and swap which line runs through a junction.
 - **[Check a nest](validate.md):** Overlap Check, Validate Nest and the check that runs
   before every post.
 

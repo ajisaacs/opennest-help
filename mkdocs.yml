@@ -60,6 +60,7 @@ nav:
       - CAD Converter: cad-converter.md
       - Auto Nest: auto-nest.md
       - Plan the cutting: cutting-planner.md
+      - Trim and extend cut-offs: trim-extend-cutoff.md
       - Check a nest: validate.md
   - Setting up:
       - Machines: machines.md

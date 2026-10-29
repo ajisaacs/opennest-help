@@ -102,6 +102,9 @@ would cross.
 
 While the tool is on, ++f1++ opens this section.
 
+To shorten or lengthen a cut-off where other cut-offs cross it, or to swap which one
+runs through a junction, see [Trim and extend cut-offs](trim-extend-cutoff.md).
+
 ## Scrap cut-offs {#scrap-cut-offs}
 
 Tick **Add scrap cut-offs** to cut the leftover skeleton into strips that fit your
