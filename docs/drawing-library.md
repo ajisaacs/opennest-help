@@ -87,14 +87,23 @@ Click **Edit Drawing...** in the library, or right-click a drawing and choose
 
 ![Edit Drawing dialog](images/library-edit-drawing.png)
 
-1. **Details:** name, customer, material, grade, thickness and cut type. Units can't
-   be changed, because that would change what the geometry means.
-2. **Nesting settings**, used whenever the drawing is added to a nest:
+1. **Drawing:** name, customer, material, grade, thickness and cut type. Customer,
+   material, grade and thickness list the values the library and the machines already
+   use, so pick one to keep spellings matching; you can still type a new one. Units
+   can't be changed, because that would change what the geometry means.
+2. **Nesting**, used whenever the drawing is added to a nest:
     - **Cut first** sequences its parts before the others, for example a test square.
-    - **Priority** and the rotation limits work as they do in [Auto Nest](auto-nest.md).
-    - **Color** is how its parts are drawn in the nest.
+    - **Priority** works as it does in [Auto Nest](auto-nest.md).
+    - **Color** is how its parts are drawn in the nest. Click the swatch to pick a color
+      used in every color scheme; **Automatic** lets each nest's color scheme pick it
+      again, and **Reset** puts back the color the drawing had.
 
-3. **Save to Library** saves a new revision. It stays greyed out until you change
+3. **Rotation:** the angles the nesting engines may turn its parts to. Set **Start**,
+   **End** and **Step**, or drag the dial's handles; the dial shades the range and ticks
+   each angle tried, and the line below it says what the engines will do. With a
+   **Step** of 0 the engines try 0°, 90°, 180° and 270°. **Allow 180° equivalent** also
+   tries each angle turned half a turn.
+4. **Save to Library** saves a new revision. It stays greyed out until you change
    something.
 
 If your changes would make the drawing match another library drawing, OpenNest names
