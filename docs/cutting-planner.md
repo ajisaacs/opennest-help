@@ -66,7 +66,10 @@ or from the settings you applied last.
 4. **Tabs** leave small uncut gaps that hold parts in the sheet. Tick **Enable
    Tabs**, set the **Tab Size**, then choose **Tab every part** or **Only tab parts the
    support grid can't hold level**. The second uses the nest's
-   [support bed](machines.md#support-grid).
+   [support bed](machines.md#support-grid) and tabs only the parts that could tip, at
+   the point where one tab steadies the part most. On a plate with no support bed, it
+   tabs the parts whose narrow side is in the **On plates with no support bed** range
+   instead. Leave the second number at 0 to tab nothing there.
 5. **Pierce.** **Pierce Clearance** is how far each pierce stays from its own contour.
    **Pierce Diameter** is the size of the hole a pierce blows through this plate; when
    it's above 0, every pierce keeps half of it clear of all parts. **Round Lead-In
@@ -116,12 +119,55 @@ runs through a junction, see [Trim and extend cut-offs](trim-extend-cutoff.md).
 
 Tick **Add scrap cut-offs** to cut the leftover skeleton into strips that fit your
 scrap bin. The strip size is shown on the box, for example **35 in strips**. Click
-**Cut-off Settings** to change the spacing, the smallest strip and the tail to keep;
-**Use These Settings** returns to the plan.
+**Cut-off Settings** to change them; **Use These Settings** returns to the plan.
+
+- **Nominal spacing along sheet length:** the most material between two strip lines.
+  It isn't the length of each cut.
+- **Minimum strip:** the shortest strip. Strip lines move between this and the
+  spacing to cut less, for example crossing a part's gap instead of running beside it.
+  Set it equal to the spacing for a fixed grid.
+- **Minimum tail to keep:** a leftover piece past the parts at least this long is cut
+  off whole, so it can go back on the rack. A shorter one is cut into strips with the
+  rest of the skeleton.
+- **Lock head height and overcut the far edge by:** see
+  [below](#head-locked-overcut).
+
+When the parts leave a band across the top of the sheet (away from the origin) at least
+**Minimum tail to keep** wide, and that band is worth more than the tail along the
+length, a cut-off along the length separates it and the strip lines stop there. The band
+stays whole as a remnant. A horizontal cut-off you placed yourself above the parts
+works the same way.
 
 The cut-offs are planned like parts: a cut-off that crosses parts comes before them,
 and one that separates the sheet comes last. Clearing the box, or closing the panel
 without applying, takes them off again.
+
+To add scrap cut-offs without planning the cutting, use **Plate > Automatic Scrap
+Cutoffs...** (this plate) or **Nest > Automatic Scrap Cutoffs (All Plates)...**. The
+dialog has the same settings, previews the cut-offs on the sheet, and **Apply** adds
+them at the end of each plate's cutting order. For the whole nest, a table lists each
+plate as **Ready**, **Blocked** or **No change**; one blocked plate stops every plate
+from changing.
+
+!!! warning "Check the strips fit your scrap bin"
+    The spacing doesn't promise that every scrap piece is separated. Clearance around
+    parts and skipped short cuts can leave pieces joined. Check the preview, and the
+    sheet's real width, against your bin.
+
+### Overcut the far edge {#head-locked-overcut}
+
+Sheets often arrive wider than their nominal size, so the far edge (the one away from
+the origin) may not be where the nest thinks. A cut-off normally never starts there.
+
+Tick **Lock head height and overcut the far edge by** and enter how far past the edge
+to cut (1.5 in, or 38.1 mm, by default). Cut-offs made afterwards cut past the far
+edge by that much with the head height locked, so the head doesn't dive off the edge
+of the sheet. Plan Cutting may then start such a cut at the far edge when that's
+quicker. Cut-offs you already have keep their old setting; delete and add one again to
+change it.
+
+The post must have head-lock codes set up; without them it refuses to post a nest
+with these cut-offs. Try it on the machine before production.
 
 ## When a plate isn't ready {#not-ready}
 

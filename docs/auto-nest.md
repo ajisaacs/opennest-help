@@ -63,9 +63,13 @@ at, with that plate's spacing. Turn it on to let Auto Nest choose from several s
 3. The sheet sizes on offer. Type each **Size** as width x length, for example
    `60 x 120`. Type in the blank last row to add a size. To remove one, click the grey
    box at the left of its row and press ++delete++.
-   **Cost** is the price of one sheet. Either leave every cost at 0, which makes Auto
-   Nest use the least material, or give every row a cost to have it spend the least
-   money. Don't mix the two.
+    - **Use:** untick a row to leave it out of this run without deleting it.
+    - **Qty:** how many of that sheet you have. Leave it blank for no limit.
+    - **Cost** is the price of one sheet. Either leave every cost at 0, which makes Auto
+      Nest use the least material, or give every row a cost to have it spend the least
+      money. Don't mix the two.
+    - **Source** says where a row loaded [from MaterialLedger](#materialledger) came
+      from. It's blank on rows you type.
 4. **Salvage Rate.** How much of a usable offcut's value counts as saved. At 50%,
    leftover material that can go back on the rack counts half its cost (or area).
    Set it to 0 to count only what you buy.
@@ -75,6 +79,37 @@ at, with that plate's spacing. Turn it on to let Auto Nest choose from several s
 
 The sizes, costs and salvage rate are saved with the nest, so they're filled in the
 next time you run Auto Nest on it.
+
+### Stock from MaterialLedger {#materialledger}
+
+If your shop tracks sheets and drops in MaterialLedger, Auto Nest can offer the stock
+that's free right now. Set it up once on each PC: in **Tools > Options**, under
+**MaterialLedger**, enter the ledger's **URL** and **API key**, click **Test**, then
+**Save Ledger**. The nest needs a material and a thickness (**Nest > Edit**).
+
+1. Turn on **Stock Options** and click **Load from ledger**.
+2. The ledger's free full sheets and drops of the nest's material are added as rows,
+   each with how many are free. Rows you typed yourself stay. Point at a row to see its
+   item codes and rack locations.
+3. Lower a ledger row's **Qty**, or untick **Use**, to keep stock out of the run. You
+   can't change a ledger row's size or cost.
+
+The line under the list sums up what was loaded, or why nothing was (for example, no
+mapping for the material, or the ledger can't be reached).
+
+- **Substitutes.** Stock the ledger accepts in place of the nest's grade reads, for
+  example, **A1011 P&O for HR** in amber. It's ticked like the rest; untick **Use** if
+  you don't want it.
+- **Drops** of the same size share one row. An irregular drop shows **(irr.)** and is
+  offered as the largest rectangle that's safe to use.
+- **Costs.** While any ledger row is ticked, Auto Nest uses the least material and
+  ignores the costs on rows you typed. The summary line says so.
+- **Nothing is reserved.** The stock is what was free when you loaded it; someone else
+  can take the same drop first. Hold the sheets in MaterialLedger.
+
+When you keep the result, each sheet cut from ledger stock remembers its item code. The
+**Plates** tab shows it when you point at the plate. Ledger rows aren't saved with the
+nest. In Database mode the status bar shows the nest's [ledger holds](nest-server.md#ledger-holds).
 
 ## Watch it run {#progress}
 

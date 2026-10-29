@@ -22,13 +22,19 @@ and connect each PC to it with **File > Storage Mode**.
 - **[CAD Converter](cad-converter.md):** check drawings as you import them, choose what
   is cut, etched or left out, and read each part's program.
 - **[Auto Nest](auto-nest.md):** quantities, priorities and rotations, choosing an
-  engine, and letting Auto Nest pick sheet sizes by cost.
+  engine, and letting Auto Nest pick sheet sizes by cost or from MaterialLedger stock.
 - **[Plan the cutting](cutting-planner.md):** cut order, lead-ins, tabs, pierces and
   scrap cut-offs, and what to do when a plate isn't ready.
 - **[Trim and extend cut-offs](trim-extend-cutoff.md):** shorten or lengthen cut-off
   lines where they cross, and swap which line runs through a junction.
 - **[Check a nest](validate.md):** Overlap Check, Validate Nest and the check that runs
   before every post.
+- **[Edit a plate by hand](edit-plates.md):** add and change plates, place, fill, move
+  and line up parts, clamps, sheet cut-offs and lead-ins placed by hand.
+- **[Cut order and simulation](sequencing.md):** set the cut order yourself, watch the
+  cut play out and estimate the cut time.
+- **[Nest settings](nest-settings.md):** the nest's material and status, defaults for
+  new nests, Options, exports and reports, and the Shape Library.
 
 ### With the shared nest server
 

@@ -7,7 +7,8 @@ Every nest is cut on one machine. The machine you pick for a nest decides:
 - the **cut-off** clearance, overtravel and direction
 
 Machines and their settings for each material and thickness are set up in
-**Tools > Machine Configuration**.
+**Tools > Machine Configuration**. In Database mode every PC shares one set of machines
+from the nest server; see [Shared settings](nest-server.md#shared-settings).
 
 ## Choose the nest's machine {#nest-machine}
 
@@ -75,7 +76,10 @@ can tip, and Plan Cutting can tab those parts in place. Open it with
 The machine-defaults buttons are greyed out when the nest has no machine. Pick one
 with **Nest > Machine** first. **How the support bed works**, or ++f1++, opens this page.
 
-**View > Draw Support** shows the points or slats on the plate.
+To see the bed, turn on **View > Draw Support**. It draws the points or slats, the
+points each part rests on and each part's balance point: green when the part is held
+level, red when it can tip. A red part also shows an orange diamond where one tab would
+steady it best.
 
 ## Lead-ins from the machine {#machine-lead-ins}
 

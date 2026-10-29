@@ -82,7 +82,9 @@ The extra checks, listed only when they find something:
 
 - **Fixed leads:** a locked lead-in or lead-out that runs into a part or a clamp.
 - **Part support:** a part the [support bed](machines.md#support-grid) can't hold
-  level, with no tab to keep it in place.
+  level, with no tab to keep it in place. On a plate with no bed, it's a part whose narrow
+  side is in the **On plates with no support bed** range of
+  [Cutting Settings](cutting-planner.md#cutting-settings) that has no tab.
 - **Part spacing:** two parts closer than the plate's part spacing. The finding gives
   the measured gap.
 - **Nested part order** and **Nested part leads:** a part cut inside another part's

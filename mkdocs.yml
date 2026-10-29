@@ -62,8 +62,11 @@ nav:
       - Plan the cutting: cutting-planner.md
       - Trim and extend cut-offs: trim-extend-cutoff.md
       - Check a nest: validate.md
+      - Edit a plate by hand: edit-plates.md
+      - Cut order and simulation: sequencing.md
   - Setting up:
       - Machines: machines.md
+      - Nest settings: nest-settings.md
   - Shared server:
       - Shared nest server: nest-server.md
       - Drawing Library: drawing-library.md

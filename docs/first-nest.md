@@ -11,15 +11,15 @@ numbered steps under it.
 1. **Menu bar.** Every command lives here. **Help** opens this guide.
 2. **Toolbar.** Shortcuts for common jobs:
     - New, open and save
-    - The nesting **Engine** and **Auto Nest**
-    - Cut-off, **Plan Cutting** and cutting simulation
+    - The nesting **Engine**, **Auto Nest** and **Remnants**
+    - **Sheet Cut-Off**, **Plan Cutting**, **Simulate Cutting** and **Sequence by Path**
     - **Post**
 3. **Drawings and Plates tabs.** **Drawings** lists the parts in this nest and how many
    are nested. **Plates** lists the sheets.
 4. **Plate view.** The current sheet, drawn to scale. Scroll to zoom. Use the arrows
    above it to move between plates.
-5. **Status bar.** The cursor position, the plate's material and its utilization (how
-   much of the sheet is used by parts).
+5. **Status bar.** The cursor position, the nest's machine and material, and the
+   plate's utilization (how much of the sheet is used by parts).
 
 OpenNest opens a new, empty nest when it starts. Its name is in the
 title bar. To start another, use **File > New** (++ctrl+n++).

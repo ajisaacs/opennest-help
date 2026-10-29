@@ -168,6 +168,59 @@ If the server moves, update the address without changing the mode:
 
 This only changes where OpenNest looks. It doesn't move any nests from the old server.
 
+## Nest status {#nest-status}
+
+Every nest has a **Status**, set in **Nest > Edit** or with **Nest Information...** in
+the Open window:
+
+| Status | Means |
+| --- | --- |
+| **Draft** | Made but not ready yet, such as a nest a [release](releases.md) made before it's checked. Releases add parts only to Draft nests. |
+| **Quote** | Nested to price a job. New nests start here. |
+| **To Be Cut** | Ready for the machine. |
+| **Has Been Cut** | Cut and done. |
+
+## Shared settings {#shared-settings}
+
+In Database mode the server also keeps one copy of the settings that decide how nests
+are made and posted, so every PC nests and posts the same way:
+
+- the machines in **Tools > Machine Configuration** (materials, thicknesses, lead-ins,
+  kerf, cut-offs, support bed)
+- each post processor's settings
+- the machine clamp defaults
+- **Tools > Nest Defaults**
+
+The first time a PC opens in Database mode and the server lacks some of these, OpenNest
+lists them and offers to upload them. Click **Yes** on the PC whose settings are right.
+Uploading never replaces settings the server already has, so other PCs only add what's
+missing (a post installed on just one PC, for example). Click **No** to keep using this
+PC's own settings; it asks again next time.
+
+Once the server has a setting, every PC uses the server's copy and saves changes back to
+it. The title of **Tools > Machine Configuration** says whether it's editing the shared
+machines, this PC's own (not shared yet), or a read-only copy.
+
+- **Server unreachable.** OpenNest uses the last copy it read, tells you once, and won't
+  let you change shared settings until the server is back.
+- **Someone else saved first.** Nothing is overwritten. For post settings, the post stops
+  and loads the other PC's settings; post again to see them. For machines, reopen
+  **Machine Configuration** to see the other changes.
+
+File mode always uses this PC's own settings.
+
+## MaterialLedger holds {#ledger-holds}
+
+If the PC is set up for [MaterialLedger](auto-nest.md#materialledger), the status bar
+shows how many of a saved server nest's sheets are held in the ledger, for example
+**Ledger: 4 of 4 sheets held** or **Ledger: 2 of 4 held, 2 short**. It turns red when
+sheets are short or the ledger can't be reached. Point at it to list each hold; click it
+to check again. OpenNest only reads holds; make and close them in MaterialLedger.
+
+When you change a nest's status to **Has Been Cut** and it still has open holds, a note
+reminds you to close them out, with a link to the nest in MaterialLedger. It never stops
+you saving or posting.
+
 ## When something goes wrong {#troubleshooting}
 
 **OpenNest can't reach the server.** Open `http://<address>:<port>/healthz` in a
