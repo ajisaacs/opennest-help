@@ -14,14 +14,14 @@ The release panel is on the right of the **Library** and **Sets** tabs in
 **File > Drawing Sets...**.
 
 - **Add a set:** double-click it on the **Sets** tab, or select it and click
-  **Add to Release**. Each double-click adds one more kit.
+  **Add to Release**. Each double-click adds one to its **Qty**.
 - **Add a drawing on its own:** double-click it on the **Library** tab. It's added at
   the **Quantity** under the preview.
 
 ![Release panel with two sets and a drawing, merging into two drafts](images/release-panel.png)
 
 1. **What's in the release.** The heading sums it up. Click a **Qty** to change it:
-   kits for a set, pieces (**pcs**) for a drawing. **✕** removes a line.
+   how many of a set (**sets**), or pieces (**pcs**) of a drawing. **✕** removes a line.
 2. **Customer** is filled in when every line has the same customer. **Notes** are
    saved with the release.
 3. **Nests it will make.** One row per material, with how many parts it gets and
@@ -43,7 +43,7 @@ nest:
 
 ![Release panel making two new Draft nests](images/release-new-nests.png)
 
-1. Two kits of one set.
+1. Two of one set.
 2. Each row says **new Draft nest**.
 3. **Make Nests (2)** makes both.
 

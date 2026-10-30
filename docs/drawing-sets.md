@@ -2,7 +2,7 @@
 
 A drawing set is a named list of [library drawings](drawing-library.md), each with how
 many one set needs: an assembly, a kit or a repeat order. Releasing a set makes the
-nests for it, with every quantity multiplied by the number of kits. See
+nests for it, with every quantity multiplied by the number of sets. See
 [Releases](releases.md).
 
 Sets are kept on the [nest server](nest-server.md) and need Database mode. A set
@@ -26,8 +26,8 @@ Choose **File > Drawing Sets...**. The window opens on the **Sets** tab.
    **More** holds **Archive**, **Restore**, **History...**, **Releases...** and
    **Import BOM...**. Right-click a set for the same commands.
 
-Double-click a set to add one kit of it to the release panel. Double-click again for
-another kit.
+Double-click a set to add it to the release panel. Double-click it again to add one
+more.
 
 ## Make or change a set {#set-editor}
 
