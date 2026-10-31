@@ -51,6 +51,8 @@ and connect each PC to it with **File > Storage Mode**.
   for that dialog.
 - Use **Help** on the menu bar to jump to a guide.
 - Use the search box at the top of this window to find any topic.
+- **Help > Check for Updates...** and **Help > About OpenNest** show which version you
+  have; see [Updates](nest-settings.md#updates).
 
 ## Follow along with sample parts
 

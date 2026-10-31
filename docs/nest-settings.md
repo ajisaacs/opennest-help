@@ -61,10 +61,24 @@ In Database mode the server keeps one shared copy of the nest defaults; see
 | **Color scheme** | The colors of the plate view. |
 | **Fill Strategies** | Which fill methods the engines try, and in what order. Leave them as they are unless you're asked to change them. |
 | **Nest server URL** | The [nest server's](nest-server.md#change-server-address) address. **Set / Change Server** saves it at once. |
-| **Auto-update feed URL** | Where OpenNest checks for updates. Leave it blank to turn update checks off. **Save Feed URL** saves it at once. |
+| **Auto-update feed URL** | Where OpenNest checks for [updates](#updates). Leave it blank to get them from OpenNest's GitHub releases. **Save Feed URL** saves it at once. |
+| **Include development builds** | Also offers the newest test build, made from every change as it's finished. Leave it off on PCs that cut production work. Takes effect after a restart. |
 | **MaterialLedger** | The ledger **URL** and **API key**, for [stock from MaterialLedger](auto-nest.md#materialledger). **Test** checks the connection; **Save Ledger** saves them at once. |
 
 Click **Save** for the rest.
+
+## Updates {#updates}
+
+The status bar shows which version of OpenNest is running. A copy installed with the
+OpenNest installer checks for a new version a minute after it starts and downloads it in
+the background. When it's ready, the status bar says **Update … ready - click to
+restart**; click it and save your work first, because an unsaved nest is lost.
+
+- **Help > Check for Updates...** checks now. If you're up to date, it says so.
+- **Help > About OpenNest** shows the version and the releases page.
+- A copy that wasn't installed with the installer, such as one unzipped to a folder,
+  can't update itself. **Check for Updates...** offers to open the releases page so you
+  can download the new version.
 
 ## Machines and posts {#machine-configuration}
 
