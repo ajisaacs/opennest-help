@@ -1,7 +1,8 @@
 # Trim and extend cut-offs
 
 **Trim/Extend Cut-Off** shortens or lengthens a cut-off line where it meets the
-cut-offs that cross it, so you don't have to delete a line and draw it again. Use it to
+cut-offs that cross it, or leaves a gap in it, so you don't have to delete a line and
+draw it again. Use it to
 choose which line runs through a junction: for example, to let a vertical cut-off split
 the whole sheet and keep the remnant beyond it in one piece.
 
@@ -12,12 +13,15 @@ To add or remove cut-off lines, see [Add a cut-off by hand](cutting-planner.md#s
 Open **Plate > Trim/Extend Cut-Off**, or click the **Trim/Extend Cut-Off** toolbar
 button, just after **Sheet Cut-Off**. The tool starts in Trim mode.
 
-- **Trim:** click the piece of a cut-off you want to remove. The piece runs from where
-  you click back to the nearest cut-off that crosses the line (or to the line's end),
-  and the line now stops on that crossing cut-off.
+- **Trim:** click the piece of a cut-off you want to remove. The piece runs between the
+  cut-offs that cross the line on either side of your click (or to the line's end), and
+  the line now stops on that crossing cut-off.
+- **Trim a middle piece** to leave a gap: click the piece between two crossing cut-offs.
+  That stretch is left uncut, and the line is cut as two pieces, one on each side of the
+  gap, each with its own place in the cutting order.
 - **Extend:** click near the end of a cut-off you want to grow. The end runs to the next
   cut-off that crosses its path, or to the sheet edge if none does. Click again to go
-  one crossing further.
+  one crossing further. Click beside a gap to close it again in one click.
 - Press ++tab++ to switch between Trim and Extend. The status bar shows which mode is on.
 - Press ++esc++ when you're done.
 
@@ -28,8 +32,16 @@ As you move the pointer, a dashed preview shows what a click will do:
 - dashed **red** marks the piece a trim removes
 - dashed **green** marks the piece an extend adds
 
-You can only trim a piece at an end of a line. The middle piece between two crossing
-cut-offs can't be trimmed, because a cut-off has one start and one end.
+A gap is never cut, so nothing waits for it: the parts inside it can be cut in any order
+around the pieces of the line.
+
+## Move a line with the lines that meet it {#drag}
+
+Drag a cut-off to move it. The lines that stop on it, or whose gap ends on it, come with
+it: they grow or shorten to keep meeting it, and the drag undoes as one step. A line can't
+be dragged past the next line that crosses it; it stops a **Minimum segment length**
+short. A line that already stopped short of it before the drag isn't joined; bring it to
+the line with Extend or Trim first.
 
 ## Swap which line runs through {#swap-through-cut}
 
@@ -44,6 +56,8 @@ is on) and choose **Swap Through-Cut**.
   known position.
 - If a line now splits the sheet in two, it moves to the end of the cutting order, so
   the head never travels back across the separated piece.
+- **Swap Through-Cut** isn't offered where a gap touches the junction. Close the gap
+  with Extend first.
 
 ### Example {#swap-example}
 
@@ -64,10 +78,11 @@ When an edit can't be made, nothing changes and the status bar says why:
 | Status bar | What to do |
 | --- | --- |
 | No cut-off crosses this line to trim it to; delete it instead. | Select the line and press ++delete++. |
-| Trimming the middle piece would split the line in two; trim an end piece instead. | Click a piece at one end of the line. |
+| That stretch of the line is already uncut. | You clicked inside a gap. Use Extend to close it. |
 | Trimming here would leave a line shorter than the minimum segment length. | Trim at a different crossing, or delete the line. |
 | This end already runs to the sheet edge. | There's nothing further to extend to. |
 | These cut-offs do not meet with one running through and the other stopping at it. | Swap only works where one line stops at the other. |
+| A gap in one of these lines meets the junction; extend to close it before swapping. | Switch to Extend and click beside the gap, then swap. |
 
 **Head-locked cut-offs.** A cut-off made with **Lock head height and overcut the far
 edge** overcuts the far sheet edge. Trimming its far end turns the overcut off, and

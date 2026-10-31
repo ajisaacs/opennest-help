@@ -104,8 +104,14 @@ plans again. Parts keep their places. To get them back, close the panel and use
 where you click. A dashed preview follows the pointer and stops short of the parts it
 would cross.
 
+A new line runs from its start edge (set by the machine's cut direction) and stops at the
+first cut-off that crosses it, the way scrap cut-offs do. It runs the full sheet when
+nothing crosses it.
+
 - Press ++space++ to turn the line between vertical and horizontal. The tag by the
   pointer and the status bar show which way it will turn.
+- Press ++tab++ to switch to full-length lines, for a line that should run through the
+  others, and again to switch back. The choice lasts until you close the nest.
 - Click to add the line. Keep clicking to add more.
 - Press ++esc++ when you're done.
 - To remove a cut-off, select its line and press ++delete++.

@@ -121,10 +121,12 @@ the skeleton for the scrap bin.
 2. A preview line follows the pointer. Press ++space++ to switch between a vertical
    and a horizontal cut.
 3. Click to add the cut-off. It stops short of parts by the machine's cut-off
-   clearance.
+   clearance, and at the first cut-off that crosses it. Press ++tab++ for lines that
+   run the full sheet instead.
 4. Press ++esc++ to stop.
 
-Drag a cut-off to move it. For cut-offs that chop the whole skeleton into strips, see
+Drag a cut-off to move it; the lines that stop on it move with it. To shorten, lengthen
+or gap a line where others cross it, see [Trim and extend cut-offs](trim-extend-cutoff.md). For cut-offs that chop the whole skeleton into strips, see
 [Scrap cut-offs](cutting-planner.md#scrap-cut-offs).
 
 ## Lead-ins by hand {#place-lead-in}
