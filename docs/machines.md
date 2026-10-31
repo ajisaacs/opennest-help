@@ -83,9 +83,10 @@ steady it best.
 
 ## Lead-ins from the machine {#machine-lead-ins}
 
-When you plan the cutting (or place lead-ins by hand) on a plate that has no cutting
-settings yet, OpenNest starts from the machine's lead-in and lead-out settings for the
-nest's material and thickness. It also uses the kerf for that thickness. The material and
+When you plan the cutting (or place lead-ins by hand), OpenNest starts from the cutting
+settings you used last. When the nest's machine, material or thickness differs from
+theirs, it puts in the machine's lead-in and lead-out settings for the nest's material and
+thickness, and the kerf for that thickness. The material and
 thickness come from **Nest > Edit**.
 
 - The **Outside Cuts** tab sets the lead-in and lead-out for outside edges. The
@@ -96,4 +97,5 @@ thickness come from **Nest > Edit**.
 - An **Arc** lead-in is a half circle (**Sweep Angle** 180). Change the sweep in **Cutting Settings**.
 - A **Line + Line** lead-in isn't copied. Set it in **Cutting Settings**.
 - If the machine has nothing on file for that material and thickness, the settings you
-  used last are used instead.
+  used last are used as they are.
+- Plates you've already planned keep their lead-ins until you apply a new plan.

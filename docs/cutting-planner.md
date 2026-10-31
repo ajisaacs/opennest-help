@@ -44,36 +44,47 @@ It shows the plan beside the plate first. Nothing on the plate changes until you
 Changing a setting, or ticking or clearing a box, plans again straight away. While the
 plan is shown, the plate view shows the proposed cutting order as part numbers.
 
+When the nest has more than one plate with parts, a list in the panel chooses **Current
+plate only** or **All plates**. Changing it takes off scrap cut-offs that aren't applied
+yet and plans again. The **Plan Cutting** toolbar button opens with the choice you made
+last (all plates at first); **Plate > Plan Cutting** is always the current plate and
+**Nest > Plan Cutting (All Plates)** always every plate.
+
 When the panel covers several plates, **Previous** and **Next** move between them.
 **Apply** applies every plate at once, or none.
 
 ## Cutting settings {#cutting-settings}
 
-**Cutting Settings** opens the **Cutting Parameters** dialog. The settings start from
-the nest's [machine](machines.md#machine-lead-ins) for the material and thickness,
-or from the settings you applied last.
+**Cutting Settings** opens the **Cutting Parameters** dialog. It starts from the
+settings you used last. When the nest's [machine](machines.md#machine-lead-ins),
+material or thickness differs from theirs, the machine's lead-ins, lead-outs and kerf
+for it are put in.
 
 ![Cutting Parameters dialog](images/cutting-settings.png)
 
-1. One tab for each kind of contour: **External** (outside edges) and **Internal**
-   (holes, round holes included).
-2. **Lead-In.** The **Type** is **None**, **Line**, **Arc**, **Line + Arc**, **Clean
-   Hole** or **Line + Line**. Set its **Length** and **Approach Angle** (or the sizes
-   the type needs). An **Arc** lead-in has a **Radius** and a **Sweep Angle**: how much
-   of a circle the arc is, in degrees from 1 to 180. 90 is a quarter circle; 180, the
-   default, is a half circle.
-3. **Lead-Out.** **None**, **Line** or **Arc**.
-4. **Tabs** leave small uncut gaps that hold parts in the sheet. Tick **Enable
-   Tabs**, set the **Tab Size**, then choose **Tab every part** or **Only tab parts the
-   support grid can't hold level**. The second uses the nest's
+1. **Leads**, with one tab for each kind of contour: **Outside** (each part's
+   perimeter) and **Holes** (inner contours, round holes included).
+2. **Lead-in.** **None**, **Line**, **Arc**, **Line + Arc**, **Clean Hole** or **Line +
+   Line**. Set its **Length** and **Approach angle** (or the sizes the type needs). An
+   **Arc** lead-in has a **Radius** and a **Sweep angle**: how much of a circle the arc
+   is, in degrees from 1 to 180. 90 is a quarter circle; 180, the default, is a half
+   circle. **Round lead-in angles to every** rounds approach angles to that many degrees.
+3. **Lead-out.** **None**, **Line** or **Arc**. Beside the fields, a sample part with a
+   hole shows the leads and pierce points as you change them; the tab's own contour is
+   drawn strong.
+4. **Tabs** leave small uncut gaps that hold parts in the sheet. Tick **Add tabs to hold
+   parts in the sheet**, set the **Tab size**, then choose **Tab every part** or **Only
+   tab parts the support grid can't hold level**. The second uses the nest's
    [support bed](machines.md#support-grid) and tabs only the parts that could tip, at
-   the point where one tab steadies the part most. On a plate with no support bed, it
-   tabs the parts whose narrow side is in the **On plates with no support bed** range
-   instead. Leave the second number at 0 to tab nothing there.
-5. **Pierce.** **Pierce Clearance** is how far each pierce stays from its own contour.
-   **Pierce Diameter** is the size of the hole a pierce blows through this plate; when
-   it's above 0, every pierce keeps half of it clear of all parts. **Round Lead-In
-   Angles** rounds approach angles to the **Increment**.
+   the point where one tab steadies the part most. With **Tab alone holds parts up to**
+   a length, a part that could tip and is no longer than that is held by its tab alone,
+   wherever the tab goes (0 = off). On a plate with no support bed, it tabs the parts
+   whose narrow side is in the **On plates with no support bed** range instead. Leave the
+   second number at 0 to tab nothing there.
+5. **Pierce.** **Clearance from contour** is how far each pierce stays from the contour
+   it leads into. **Pierce zone diameter** is the size of the hole a pierce blows
+   through the plate; when it's above 0, every pierce keeps half of it clear of all
+   parts (0 = off).
 6. Click **OK**. The plan starts again with the new settings.
 
 Curved leads (**Arc**, **Line + Arc** and **Clean Hole** lead-ins, and the **Arc**
@@ -84,8 +95,9 @@ corner, the curve lines up with the edge that is cut first and stays clear of th
 With lead-in type **None**, the cut pierces right on the contour. The plan allows it,
 but the check before posting still reports **Missing lead-ins**.
 
-When you apply a plan, each plate keeps its settings, and they become the starting
-settings for the next plan.
+The settings are saved as soon as you click **OK**, even if you don't apply the plan,
+and the next plan on any plate starts from them. A plate that's already planned keeps its
+lead-ins until you apply a new plan to it.
 
 ## When a plate already has lead-ins {#existing-lead-ins}
 
