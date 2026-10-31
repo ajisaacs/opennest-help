@@ -56,7 +56,8 @@ to Fit** leave an outlined plate alone.
 
 1. On the **Drawings** tab, click a drawing, then move the pointer onto the plate. A
    copy of the part follows the pointer.
-2. Click to place it. Keep clicking to place more. ++enter++ places one too.
+2. Click to place it. Keep clicking to place more. ++enter++ or ++f1++ places one too
+   (while a part follows the pointer, ++f1++ doesn't open help).
 3. Press ++esc++ to stop.
 
 While a part follows the pointer, press ++ctrl+f++ to fill the largest empty area

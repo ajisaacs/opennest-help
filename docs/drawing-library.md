@@ -51,6 +51,11 @@ Before adding, OpenNest checks the drawing against the nest:
 - **Another drawing with the same name** in the nest: it isn't added. Rename one of
   them first.
 
+A drawing saved with no material or grade, or with a thickness of 0, suits every nest,
+for example a test square you cut before each job. It's listed whatever the nest's
+material, adding it isn't counted as a difference, and it takes the nest's material for
+what it left blank.
+
 The drawing in the nest is a copy. Editing it in the nest never changes the library.
 
 ![Add from Drawing Library dialog, In This Nest tab](images/add-from-library-in-nest.png)

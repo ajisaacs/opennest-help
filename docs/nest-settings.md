@@ -39,9 +39,10 @@ To change one plate instead, use **Plate > Edit**; see
 
 ## Defaults for new nests {#nest-defaults}
 
-**Tools > Nest Defaults** sets what **File > New** and BOM import start from: **Units**,
-**Plate width** and **Plate length**, **Quadrant**, **Part spacing**, the four **Edge**
-spacings and the [**Machine**](machines.md#default-machine). Click **Save**.
+**Tools > Nest Defaults** sets what **File > New** and BOM import start from: the
+[**Machine**](machines.md#default-machine) and **Units**, the **Plate Size** (**Width**
+and **Length**), the **Quadrant** (click one to select it), and the **Spacing**
+**Between parts** and from each of the **Plate edges**. Click **Save**.
 
 **Tools > Save Current Plate as Defaults** copies the current plate's size and spacing
 into those defaults in one step.

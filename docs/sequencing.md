@@ -67,8 +67,10 @@ not reached yet are drawn faded.
 - The window shows the time so far and the total, which part is being cut, and its
   drawing.
 
-You can still zoom and pan the plate while it plays. Click **Done** or press ++esc++
-to close it.
+While the simulator is open the nest is for viewing only: you can zoom, pan and move
+between plates, but selecting and editing parts, the menus, toolbars and lists, and
+**Undo** are off until it closes. Click **Done** or press ++esc++ to close it; closing
+the nest closes it too.
 
 The time uses the same settings as Calculate Cut Time (below): the outside and hole
 feeds, the machine whose acceleration times the moves, and **Skip etch-only contours**.
