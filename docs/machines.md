@@ -7,7 +7,12 @@ Every nest is cut on one machine. The machine you pick for a nest decides:
 - the **cut-off** clearance, overtravel and direction
 
 Machines and their settings for each material and thickness are set up in
-**Tools > Machine Configuration**. In Database mode every PC shares one set of machines
+**Tools > Machine Configuration**. A new install starts with one machine, **Generic
+Laser**: mild steel (CR, HR, HR P&O), stainless (304, 316) and aluminum (5052, 6061) in
+gauge and plate thicknesses, with fiber-laser kerfs, line lead-ins and the usual plate
+sizes up to 72 × 144. Change its values, or add your own machines, before you cut.
+Each thickness can have a **Name / Gauge**, such as `16 ga`, shown beside its value in
+the list. In Database mode every PC shares one set of machines
 from the nest server; see [Shared settings](nest-server.md#shared-settings).
 
 ## Choose the nest's machine {#nest-machine}

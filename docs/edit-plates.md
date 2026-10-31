@@ -17,7 +17,7 @@ The **Plates** tab lists every sheet in the nest with its size and utilization.
   removes every plate with no parts.
 - **Plate > Edit** changes the plate's **Size**, its **Quantity** (how many sheets are
   cut with this layout), its **Part Spacing** and **Edge Spacing**, and the
-  **Quadrant** its origin is in.
+  **Quadrant** its origin is in, and can give it a [sheet outline](#sheet-outline).
 - **Plate > Set as Default** makes this plate's size and spacing the nest's default for
   new plates. **Tools > Save Current Plate as Defaults** saves them for new nests too;
   see [Nest settings](nest-settings.md#nest-defaults).
@@ -29,6 +29,28 @@ The **Plates** tab lists every sheet in the nest with its size and utilization.
 
 Point at a plate in the **Plates** list to see the stock it's cut from, when it was
 loaded from [MaterialLedger](auto-nest.md#materialledger).
+
+### Odd-shaped sheets {#sheet-outline}
+
+A remnant, a drop or a sheet with a damaged area can be nested as it is. Draw its shape
+in CAD: the largest closed outline is the sheet, and any closed shape inside it is an
+area to keep empty.
+
+1. Open **Plate > Edit** and click **Outline...**.
+2. Pick the DXF, DWG or SVG file. The box beside the button shows how many corners and
+   areas to keep empty it found, and **Size** becomes the outline's overall size (it
+   can't be typed while the sheet has an outline).
+3. Click **Done**. The plate view shades the sheet, hatches the areas to keep empty and
+   draws where parts may go.
+
+**Clear** makes the sheet a rectangle again. Parts are kept the largest edge spacing
+inside the outline.
+
+Only [Auto Nest](auto-nest.md) with the **Irregular** engine (or **Default**, which
+tries it) nests on an outlined sheet. ++ctrl+f++ fill, Fill Area and Pattern Tile need a
+rectangle; on an outlined plate the status bar says so and nothing is added. Sheet
+cut-offs are cut only where they cross material. Automatic Scrap Cutoffs and **Resize
+to Fit** leave an outlined plate alone.
 
 ## Place parts {#place-parts}
 
@@ -104,8 +126,11 @@ the checks treat them as off-limits.
 
 - **Nest > Clamps...** sets where the clamps are for every plate in the nest. Click
   **Add** and enter the **Center** of each clamp, measured from the plate origin.
-  **Save as Machine Defaults** saves them for the machine; tick **Give new nests these
-  clamps** to use them in new nests.
+  Tick **Clearance from parts** to set how far parts stay from every clamp; while it's
+  clear, they keep the sheet's bottom edge spacing. A clamp that sits under the sheet can
+  have close to zero. **Save as Machine Defaults** saves them for the machine; tick **Give new nests
+  these clamps** to use them in new nests. The machine's own clamps and **Clearance**
+  are also on the **Clamps** tab in **Tools > Machine Configuration**.
 - **Plate > Edit Clamps** (or right-click a clamp and choose **Edit Clamps**) edits them
   on the plate itself: drag a clamp along its edge or onto another edge, click near an
   edge to add one, or click a clamp's dimension to type its position. ++delete++
