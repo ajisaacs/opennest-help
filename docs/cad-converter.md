@@ -1,6 +1,6 @@
 # CAD Converter
 
-The CAD Converter turns DXF and DWG files into drawings OpenNest can nest. It opens
+The CAD Converter turns DXF, DWG and SVG files into drawings OpenNest can nest. It opens
 when you click **Import Drawings** on the **Drawings** tab (or use **Nest > Import
 Drawing**) and pick one or more files. Check each drawing here before it goes into the
 nest: what you see in the preview is what will be cut.
@@ -27,7 +27,7 @@ nest: what you see in the preview is what will be cut.
 7. **Split** cuts a part too big for your sheets into pieces. **Simplify** replaces
    runs of short lines with true arcs; when it finds some, the button shows how many,
    for example **Simplify (3)**. **Export DXF** saves the drawing, as it is now, to a
-   new DXF file.
+   new DXF file, or to an SVG file if you pick **SVG** as the file type.
 8. **Original** shows the geometry as imported, faded, behind the current drawing,
    so you can compare after simplifying. **Labels** numbers each entity. **Bends**
    chooses how bend lines are found in files you add from now on; **Auto** suits most
@@ -53,6 +53,34 @@ several at once, click them with ++ctrl++ or ++shift++ held, then right-click on
 Text in the file isn't cut. To engrave it, right-click the text and choose
 **Convert "…" to Geometry**; OpenNest asks for an engraving font (`.CHR`) the first
 time.
+
+## Dimensions {#dimensions}
+
+Dimensions show a part's sizes on the drawing while you check it. They're measured from
+the geometry that will be cut, so they follow along as you untick layers, exclude lines
+or simplify. They never change the part's program, and they don't appear on plates,
+reports or exported DXF files.
+
+- **Overall size:** in the **Dimensions** section, click **Add Overall Dimensions**. It
+  adds the width and the height, below and to the right of the part.
+- **Holes and radii:** select one or more circles or arcs, right-click and choose **Add
+  Radius Dimension** or **Add Diameter Dimension**. Only a curve that's cut or etched
+  can have one; right-click it and choose **Cut** or **Etch** first.
+- Drag a dimension line to move it, across the part to its other side if you like. Drag
+  a radius or diameter label to swing it around the curve or move it in or out.
+- The **Dimensions** section lists each one with its value. Select one and click
+  **Remove** to delete it.
+
+Dimensions are saved with the drawing in the nest.
+
+## SVG files {#svg}
+
+An SVG doesn't always say how big it really is. When a file states its width or height in
+real units, such as inches or millimeters, OpenNest uses that. When it doesn't, the **SVG Scale** dialog asks
+what one of the file's units is: **1/96 inch (web and Inkscape pixels)**, **1/72 inch
+(Illustrator points)**, **1 millimeter** or **1 inch**. The **Imported size** line shows
+how big the part comes out for each choice; pick the one that matches the part. **Skip
+File** leaves that file out.
 
 ## Check the program {#program}
 

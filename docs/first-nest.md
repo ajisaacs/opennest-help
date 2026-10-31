@@ -58,7 +58,7 @@ open. Wait for the job to finish or close the panel first. In a text or number b
 
 ![Windows Open dialog with four DXF files selected](images/first-nest-open-dialog.png)
 
-1. Select the DXF or DWG files for the job. Hold ++ctrl++ to pick several, or press
+1. Select the DXF, DWG or SVG files for the job. Hold ++ctrl++ to pick several, or press
    ++ctrl+a++ to pick the whole folder.
 2. Click **Open**. The files open in the CAD Converter.
 

@@ -1,7 +1,7 @@
 # OpenNest Help
 
 OpenNest arranges flat parts on sheets of material and writes the CNC programs that
-cut them. You bring in part drawings (DXF or DWG) and say how many of each you need.
+cut them. You bring in part drawings (DXF, DWG or SVG) and say how many of each you need.
 OpenNest nests them on sheets, plans the cutting order and posts a program for your
 machine.
 
@@ -20,7 +20,7 @@ and connect each PC to it with **File > Storage Mode**.
 ## Guides
 
 - **[CAD Converter](cad-converter.md):** check drawings as you import them, choose what
-  is cut, etched or left out, and read each part's program.
+  is cut, etched or left out, add dimensions, and read each part's program.
 - **[Auto Nest](auto-nest.md):** quantities, priorities and rotations, choosing an
   engine, and letting Auto Nest pick sheet sizes by cost or from MaterialLedger stock.
 - **[Plan the cutting](cutting-planner.md):** cut order, lead-ins, tabs, pierces and

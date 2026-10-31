@@ -84,8 +84,9 @@ OpenNest saves them for next time. In Database mode, machines and post settings 
   mode, or to the [nest server](nest-server.md) in Database mode.
 - **File > Export .nest...** writes a `.nest` file in either mode, to share or back up.
   It doesn't change where **Save** goes.
-- **File > Export** saves the current plate as a **DXF file**, an **image** as it's shown
-  on screen (`.jpg`), or a text file of each part's **locations and rotations**.
+- **File > Export** saves the current plate as a **DXF file**, an **SVG file**, an
+  **image** as it's shown on screen (`.jpg`), or a text file of each part's **locations
+  and rotations**.
   **Export All** does the same for every plate in turn.
 - **File > Export Nest Report...** writes a PDF report of the whole nest: each sheet
   layout, the parts and quantities, utilization and any shortfall. It doesn't post or
