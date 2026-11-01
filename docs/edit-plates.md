@@ -178,5 +178,6 @@ them all.
   Bounds** (each part's box), **Draw Offset** (the part spacing around each part),
   **Draw Cut Direction** and **Draw Support** (the [support bed](machines.md#support-grid)).
 - **View > Zoom To** zooms to an **Area** you drag, the **Plate**, the **Selected** parts
-  or everything (**Fit**, or ++f++).
+  or everything (**Fit**, or ++f++). The buttons to the right of the plate arrows zoom
+  out, in, to fit and to an area you drag.
 - **Plate > View in CAD** opens the current plate as a DXF in your CAD program.

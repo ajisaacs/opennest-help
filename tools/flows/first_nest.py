@@ -122,7 +122,7 @@ def run(until):
     capture("first-nest-review", r"^Review Auto Nest")
     click(review, 777, 489)  # Keep
     time.sleep(1.5)
-    click(main, 861, 110)  # Zoom To Fit
+    click(main, 847, 110)  # Zoom To Fit
     time.sleep(1)
     capture("first-nest-result", r"^OpenNest - \[")
     if until == "result":
