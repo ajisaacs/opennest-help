@@ -79,7 +79,7 @@ can tip, and Plan Cutting can tab those parts in place. Open it with
 8. Click **OK** to apply the bed to this nest.
 
 The machine-defaults buttons are greyed out when the nest has no machine. Pick one
-with **Nest > Machine** first. **How the support bed works**, or ++f1++, opens this page.
+with **Nest > Machine** first. **How the support bed works** opens this page.
 
 To see the bed, turn on **View > Draw Support**. It draws the points or slats, the
 points each part rests on and each part's balance point: green when the part is held

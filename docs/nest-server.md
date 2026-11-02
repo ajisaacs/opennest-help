@@ -66,6 +66,8 @@ machine.
     | `OPENNEST_BIND_ADDRESS` | This machine's shop-network address, so shop PCs can reach it. Use `127.0.0.1` to try it on this machine only. Don't use `0.0.0.0`. |
     | `OPENNEST_HOST_PORT` | The port PCs connect to. `8090` unless something else uses it. |
     | `OPENNEST_DATA_VOLUME` | Leave as `opennest-data`. This is where the nests are stored. |
+    | `OPENNEST_WORKER_CPUS`, `OPENNEST_WORKER_MEMORY` | How many CPUs (fractions allowed) and how much memory the [server nesting](#server-jobs) worker may use. `2` and `4g` unless you change them. Less only makes jobs slower; leave room for the server and anything else on the machine. |
+    | `OPENNEST_JOB_RETENTION_DAYS` | Days a finished server nest job is kept, reviewed or not, before it's deleted with its result. `7` unless you change it. |
 
     Don't put passwords or tokens in this file.
 
@@ -76,7 +78,8 @@ machine.
     ```
 
 4. Check that it is running. After a few seconds, `docker compose ... ps` should show
-   **(healthy)**, and opening `http://<address>:<port>/healthz` in a browser on a shop
+   both `opennest-server` and the nesting worker, `opennest-worker`, as **(healthy)**, and
+   opening `http://<address>:<port>/healthz` in a browser on a shop
    PC should show `{"status":"ok"}`.
 
 The server starts again by itself after the machine restarts.
@@ -167,6 +170,37 @@ If the server moves, update the address without changing the mode:
    **Cancel** in Options.
 
 This only changes where OpenNest looks. It doesn't move any nests from the old server.
+
+## Server nest jobs {#server-jobs}
+
+Auto Nest can run a job on the server instead of your PC; see
+[Nest on the server](auto-nest.md#nest-on-server). **Nest > My Server Jobs...** lists the
+server's jobs, newest first, with the nest, its **State**, the **Result**, the **Engine**,
+who submitted it and when it was submitted and finished. Results waiting for review are
+bold. The list updates by itself while it's open.
+
+- **Only my jobs**, on by default, shows the jobs you sent from any PC. **Show** narrows the
+  list to **Active**, **Finished** or **Ready to review** jobs.
+- A queued job shows its place in the queue. A finished one shows its result, for example
+  **42 parts on 3 sheets, 78.5%**, and how many parts couldn't be placed.
+- **Open** (or double-click) a job that's **Ready to review**. Open the nest it was sent
+  from first; if a different nest is open, OpenNest asks whether to use that one, and its
+  drawings must be the ones the job was sent with. OpenNest checks the result on your PC
+  and shows the usual [review](auto-nest.md#review).
+- **Cancel Job** stops a queued or running job. **Remove** deletes a finished job and its
+  result from the server. It asks first if nobody has kept or discarded the result yet.
+
+A result can be kept only once. If another PC kept it first, OpenNest says who and adds
+nothing. A job kept or discarded shows **Kept** or **Discarded**; point at it to see who
+and when. If you changed one of the job's drawings after sending it, the result can't be
+opened until the drawing is back as it was; run Auto Nest again instead.
+
+While you have results waiting, the status bar says so, for example **2 server nests to
+review**, even for jobs that finished while OpenNest was closed. Click it to open My
+Server Jobs.
+
+The server deletes every finished job some days after it ends, a week unless whoever set
+up the server changed it, so keep or discard results before then.
 
 ## Nest status {#nest-status}
 

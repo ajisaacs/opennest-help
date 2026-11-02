@@ -15,11 +15,13 @@ numbered steps under it.
     - **Sheet Cut-Off**, **Plan Cutting**, **Simulate Cutting** and **Sequence by Path**
     - **Post**
 3. **Drawings and Plates tabs.** **Drawings** lists the parts in this nest and how many
-   are nested. **Plates** lists the sheets.
+   are nested; a number in brackets first, such as **[12]**, is how many are on the plate
+   you're looking at. **Plates** lists the sheets.
 4. **Plate view.** The current sheet, drawn to scale. Scroll to zoom. Use the arrows
    above it to move between plates.
-5. **Status bar.** The cursor position, the nest's machine and material, and the
-   plate's utilization (how much of the sheet is used by parts).
+5. **Status bar.** The cursor position, the nest's machine and material, the
+   plate's utilization (how much of the sheet is used by parts) and the
+   [layout check](validate.md#overlap-check).
 
 OpenNest opens a new, empty nest when it starts. Its name is in the
 title bar. To start another, use **File > New** (++ctrl+n++).

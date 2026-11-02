@@ -2,7 +2,7 @@
 
 User guides for [OpenNest](https://github.com/ajisaacs/OpenNest), written in Markdown
 and built with MkDocs Material into plain HTML. OpenNest ships the built site in its
-`Help` folder and shows it in a WebView2 window (Help menu, F1).
+`Help` folder and shows it in a WebView2 window (Help menu).
 
 ## Layout
 

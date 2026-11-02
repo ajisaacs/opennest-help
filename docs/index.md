@@ -47,9 +47,8 @@ and connect each PC to it with **File > Storage Mode**.
 
 ## Getting help in the app
 
-- Press ++f1++ in OpenNest to open this help. Inside a dialog, ++f1++ opens the page
-  for that dialog.
-- Use **Help** on the menu bar to jump to a guide.
+- **Help > OpenNest Help** opens this guide, and **Help > Your First Nest** the
+  tutorial.
 - Use the search box at the top of this window to find any topic.
 - **Help > Check for Updates...** and **Help > About OpenNest** show which version you
   have; see [Updates](nest-settings.md#updates).

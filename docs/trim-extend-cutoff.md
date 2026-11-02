@@ -25,8 +25,6 @@ button, just after **Sheet Cut-Off**. The tool starts in Trim mode.
 - Press ++tab++ to switch between Trim and Extend. The status bar shows which mode is on.
 - Press ++esc++ when you're done.
 
-While the tool is on, ++f1++ opens this page.
-
 As you move the pointer, a dashed preview shows what a click will do:
 
 - dashed **red** marks the piece a trim removes

@@ -27,14 +27,13 @@ nest: what you see in the preview is what will be cut.
 7. **Split** cuts a part too big for your sheets into pieces. **Simplify** replaces
    runs of short lines with true arcs; when it finds some, the button shows how many,
    for example **Simplify (3)**. **Export DXF** saves the drawing, as it is now, to a
-   new DXF file, or to an SVG file if you pick **SVG** as the file type.
-8. **Original** shows the geometry as imported, faded, behind the current drawing,
-   so you can compare after simplifying. **Labels** numbers each entity. **Bends**
+   new DXF file, or to an SVG file if you pick **SVG** as the file type. **Holes...**
+   opens the [hole table](#hole-table).
+8. **Original** shows the file's geometry as it was read, before any cleanup, faded
+   behind the current drawing, so you can compare it with what will be cut. **Labels** numbers each entity. **Bends**
    chooses how bend lines are found in files you add from now on; **Auto** suits most
    files.
 9. **Accept** adds every drawing in the list to the nest. **Cancel** adds none.
-
-Press ++f1++ in the converter to open this page.
 
 ## Choose what's cut {#entities}
 
@@ -66,12 +65,28 @@ reports or exported DXF files.
 - **Holes and radii:** select one or more circles or arcs, right-click and choose **Add
   Radius Dimension** or **Add Diameter Dimension**. Only a curve that's cut or etched
   can have one; right-click it and choose **Cut** or **Etch** first.
-- Drag a dimension line to move it, across the part to its other side if you like. Drag
-  a radius or diameter label to swing it around the curve or move it in or out.
+- Drag a dimension by its line or its value to move it, across the part to its other
+  side if you like. Drag a radius or diameter dimension to swing it around the curve or
+  move it in or out.
 - The **Dimensions** section lists each one with its value. Select one and click
   **Remove** to delete it.
 
 Dimensions are saved with the drawing in the nest.
+
+## Hole table {#hole-table}
+
+**Holes...** opens the **Hole Table** beside the preview. It lists the drawing's holes by
+diameter, smallest first, with how many there are of each, and colors every hole in the
+preview to match its row. Closing the table puts the normal colors back.
+
+- A round hole is a cut circle, or a ring of arcs on one center, inside the part. The
+  outline of a round part isn't a hole.
+- A keyed hole, a round hole with a keyway or a flat, gets its own row marked **keyed**,
+  after round holes of the same diameter.
+- Slots and other shapes aren't listed, nor are etched, display-only or excluded circles.
+
+The table follows the drawing you're checking and updates as you change what's cut. It
+only shows; it doesn't change the drawing.
 
 ## SVG files {#svg}
 

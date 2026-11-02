@@ -128,8 +128,6 @@ nothing crosses it.
 - Press ++esc++ when you're done.
 - To remove a cut-off, select its line and press ++delete++.
 
-While the tool is on, ++f1++ opens this section.
-
 To shorten or lengthen a cut-off where other cut-offs cross it, or to swap which one
 runs through a junction, see [Trim and extend cut-offs](trim-extend-cutoff.md).
 

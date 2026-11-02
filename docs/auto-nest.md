@@ -29,7 +29,8 @@ walk-through, see [Your first nest](first-nest.md#run-auto-nest).
 ## Choose the engine {#engines}
 
 The **Plates** tab picks the nesting engine. The engine chosen on the toolbar is
-selected when the dialog opens.
+selected when the dialog opens. The open list, here and on the toolbar, describes each
+engine beside its name.
 
 ![Nest Engine list on the Plates tab](images/auto-nest-engines.png)
 
@@ -40,7 +41,12 @@ selected when the dialog opens.
 | **Irregular** | Odd shapes that should interlock. |
 | **Circles** | Jobs where every part is round: blanks, washers, flanges. If any part isn't round it places nothing. |
 | **FlatBar** | Cutting parts from flat bar, one row along the bar. Shaped ends are nested into each other. |
-| **Fill**, **Strip**, **Vertical Remnant**, **Horizontal Remnant** | Fixed fill patterns, the same ones used to fill a single plate by hand. |
+| **Lattice** | Many copies of a few parts. It repeats them in tight rows and pairs. It was called **Fill** before. |
+| **Strip**, **Vertical Remnant**, **Horizontal Remnant** | Fixed fill patterns, the same ones used to fill a single plate by hand. Strip fills one strip at a time; the remnant patterns keep the largest drop on the right side or the top. |
+
+**Fill Area** on the toolbar fills with the chosen engine when it's Lattice, Strip or a
+remnant pattern, and with Lattice for any other engine. The engine's tooltip on the
+toolbar says so.
 
 Whatever the engine, Auto Nest first puts small parts inside the holes of larger parts
 where they fit.
@@ -116,6 +122,25 @@ nest. In Database mode the status bar shows the nest's [ledger holds](nest-serve
 The **Nesting Progress** window shows the stages and the **Best plan so far** while
 the engine works. **Stop** throws the run away and leaves your nest as it was. See
 [Your first nest](first-nest.md#run-auto-nest) for a picture.
+
+## Nest on the server {#nest-on-server}
+
+In Database mode, a big job can run on the nest server instead of tying up your PC.
+Tick **Nest on the server** on the **Plates** tab before you click **Accept**. Auto Nest
+remembers the choice. It's greyed out for plug-in engines, which run only on your PC.
+
+- The server nests one job at a time. The progress window shows your place in the queue,
+  then the server's stage and its **Best plan so far**. The server has no time limit, so
+  it can take longer than a run on your PC, but it finds the same nest.
+- **Stop**, or closing the progress window, stops the job on the server as well.
+- If the server can't take the job, OpenNest asks whether to nest on this PC instead.
+- If OpenNest isn't in front when the job ends, Windows shows a notification. Click it
+  to go back to the result.
+- Your PC checks the result and shows the usual review. **Keep** and **Discard** work as
+  they do for a run on your PC.
+
+A result you haven't kept or discarded waits on the server, for example one that
+finished after OpenNest closed. Find it in [My Server Jobs](nest-server.md#server-jobs).
 
 ## Keep or discard the result {#review}
 

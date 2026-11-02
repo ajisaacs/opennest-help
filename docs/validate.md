@@ -4,7 +4,7 @@ OpenNest has three ways to find problems before anything is cut:
 
 | Check | What it finds | When to use it |
 | --- | --- | --- |
-| [Overlap Check](#overlap-check) | Parts whose material overlaps | After moving parts by hand, or keeping an Auto Nest result that failed its check |
+| [Overlap Check](#overlap-check) | Parts whose material overlaps, and parts closer than the part spacing | Runs by itself on the plate you're looking at; check it after moving parts by hand, or keeping an Auto Nest result that failed its check |
 | [Validate Nest](#validate-nest) | Overlaps, missing lead-ins and rapids that cross cut parts, on every plate | After planning the cutting, or any time you want a full check |
 | [Check before posting](#before-posting) | Everything Validate Nest finds, and more | Runs by itself every time you post |
 
@@ -21,9 +21,24 @@ Check** menu:
   **Markers** puts a marker on each overlap, **Both** does both, and **Off** hides
   them.
 
-The result is shown in the top-left corner of the plate view, for example **No
-material overlaps detected**. A part inside another part's hole doesn't count as an
-overlap when it fits in the hole.
+OpenNest checks the plate you're looking at by itself, half a second after you stop
+changing it. **Check Active Plate** runs the check at once.
+
+The check also finds parts that don't overlap but sit closer than the plate's part
+spacing. Each pair gets an orange ring at its narrowest gap, labeled with the gap, for
+example **1/3 gap 0.1**. Point at a ring or an overlap marker to see the parts and the
+gap. These are the same pairs the [check before posting](#before-posting) warns about.
+
+When something is wrong, the top-left corner of the plate view says so, for example
+**Overlaps: 1 pairs; part spacing: 3 pairs too close**. A clear plate leaves the corner
+empty. A check that failed, was canceled or couldn't check every part always says so.
+
+The **Layout** section of the status bar, beside utilization, follows the check:
+**Layout: checking…**, **Layout: OK**, or the findings in red, such as **Layout: 1
+overlap, 3 too close**. Point at it for the full wording.
+
+A part inside another part's hole doesn't count as an overlap when it fits in the
+hole.
 
 ## Validate Nest {#validate-nest}
 
@@ -57,8 +72,9 @@ What each warning means:
   over a clamp. The cut piece could tip up and hit the head. Plan the cutting again, or
   change the order by hand.
 
-Validate Nest doesn't check spacing between parts, distance to the plate edge, or the
-post processor's output. While the panel is open you can still zoom and pan the plate
+Validate Nest doesn't check spacing between parts (the [Overlap Check](#overlap-check)
+and the check before posting do), distance to the plate edge, or the post processor's
+output. While the panel is open you can still zoom and pan the plate
 view, but you can't edit the nest or post. Close the panel first.
 
 ## Check before posting {#before-posting}
