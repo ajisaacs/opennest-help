@@ -17,8 +17,8 @@ nest: what you see in the preview is what will be cut.
 3. **Layers**, **Colors** and **Line Types** in the file. Untick one to leave
    everything on it out of the drawing: dimensions, title blocks, notes or a border.
    **All** and **None** tick or untick every layer.
-4. **Bend Lines**, **Breakoffs** and **Tabbed Cutouts.** Expand a section to see or
-   add them. Bend lines are found in the file when it's imported.
+4. **Bend Lines**, **Breakoffs**, **Tabbed Cutouts** and **Dimensions.** Expand a section
+   to see or add them. Bend lines are found in the file when it's imported.
 5. **Preview.** Scroll to zoom, drag with the middle button to pan, and double-click
    the middle button to fit the drawing. Right-click a line to change how it's used
    (see [below](#entities)).

@@ -128,23 +128,23 @@ def run(until):
     if until == "result":
         return
 
-    click(main, 498, 74)  # Plan Cutting toolbar button
+    click(main, 543, 74)  # Plan Cutting toolbar button
     time.sleep(8)
     capture("first-nest-plan-cutting", r"^OpenNest - \[")
-    click(main, 918, 377)  # Apply
+    click(main, 918, 369)  # Apply
     time.sleep(3)
 
-    click(main, 628, 74)  # Post drop-down arrow
+    click(main, 671, 66)  # Post drop-down arrow
     time.sleep(1)
     left, top = origin(main)
-    mouse.move(coords=(left + 680, top + 104))
+    mouse.move(coords=(left + 712, top + 97))
     time.sleep(1.2)
     capture("first-nest-post-menu", r"^OpenNest - \[", "--no-raise")
-    click(main, 680, 104)  # first post processor
-    settings = window(r"Settings$")
+    click(main, 712, 97)  # first post processor
+    settings = window(r".+ Settings$")
     time.sleep(1)
-    capture("first-nest-post-settings", r"Settings$")
-    click(settings, 332, 566)  # OK
+    capture("first-nest-post-settings", r".+ Settings$")
+    click(settings, 607, 566)  # OK
     window(r"^Verify Nest Before Posting", timeout=120)
     time.sleep(10)
     capture("first-nest-verify", r"^Verify Nest Before Posting")

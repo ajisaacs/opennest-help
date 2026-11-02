@@ -122,7 +122,8 @@ For priorities, rotation limits, engines and sheet costs, see [Auto Nest](auto-n
 ![Main window with the nested sheet](images/first-nest-result.png)
 
 1. **Plate 1 of 1 | 60 x 120:** the sheet you're looking at, and its size.
-2. Each drawing now shows **30 of 30 nested** (or its own quantity).
+2. Each drawing now shows **[30] 30 of 30 nested**: 30 on this sheet, and 30 of the 30
+   you need in the whole nest.
 3. Arrows to move between sheets when a job needs more than one.
 4. **Util:** how much of this sheet the parts use.
 
@@ -143,7 +144,10 @@ cut.
 4. Click **Apply** to put the plan on the plate. After you change settings, click
    **Replan** to plan again.
 5. **Issues** lists anything the plan couldn't solve, such as a part with no safe
-   place to start a cut.
+   place to start a cut. On a tightly packed sheet like this one, it can also list
+   rapids that raise the head over parts already cut, because no order keeps the head
+   down for them. The plan is still ready: the post raises the head for each one, and a
+   post with no head-raise code set up refuses the nest.
 
 !!! note "Lead-ins come from Cutting Settings"
     If the nest's machine has no settings for its material and thickness (set them in
@@ -161,8 +165,8 @@ cut.
 
 ![Post processor settings](images/first-nest-post-settings.png)
 
-1. The post's settings: output units, line numbers, subprograms, assist gas, kerf
-   compensation and more. OpenNest saves them for next time.
+1. The post's settings. Pick a section on the left (program output, sheets, libraries,
+   kerf, head raise and more) to see its settings. OpenNest saves them for next time.
 2. Click **OK** to continue.
 
 ### Check the nest before it is written

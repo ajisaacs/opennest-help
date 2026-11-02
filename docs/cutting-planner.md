@@ -78,7 +78,7 @@ for it are put in.
    [support bed](machines.md#support-grid) and tabs only the parts that could tip, at
    the point where one tab steadies the part most. With **Tab alone holds parts up to**
    a length, a part that could tip and is no longer than that is held by its tab alone,
-   wherever the tab goes (0 = off). On a plate with no support bed, it tabs the parts
+   wherever the tab goes. New settings start at 6; 0 turns it off. On a plate with no support bed, it tabs the parts
    whose narrow side is in the **On plates with no support bed** range instead. Leave the
    second number at 0 to tab nothing there.
 5. **Pierce.** **Clearance from contour** is how far each pierce stays from the contour
