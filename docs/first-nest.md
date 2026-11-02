@@ -176,11 +176,13 @@ OpenNest checks the nest before it writes any CNC code.
 ![Verify Nest Before Posting window](images/first-nest-verify.png)
 
 1. A summary of the checks. A green check means that check found nothing.
-2. Each finding, by plate and part. Click one to read it in full.
-3. If you've reviewed every finding and still want to post, tick this box. It accepts
-   the risks for this one post only.
-4. **Post Anyway** writes the program once the box is ticked. **Cancel** goes back so
-   you can fix the problems.
+2. Each finding, by plate and part. Click one to read it in full. This nest has none.
+3. **Continue Posting** writes the program. **Cancel** goes back without writing
+   anything.
+
+When the check does find something, the button reads **Post Anyway** instead. To post
+despite the findings, tick the box saying you understand the risks; it accepts them for
+this one post only. Otherwise click **Cancel** and fix the problems.
 
 [Check a nest](validate.md#before-posting) explains every check.
 

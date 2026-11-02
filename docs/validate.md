@@ -87,12 +87,13 @@ before it asks where to save the program.
 1. A summary of the checks. **Overlapping parts and clamps**, **Missing lead-ins** and
    **Rapid crossings** are always listed; a green check means that check found nothing.
    Other checks are listed only when they find something (see below).
-2. Each finding, by plate and part. Click one to read it in full.
-3. To post despite the findings, tick the box saying you understand the risks. It
-   applies to this one post only; the next post starts unticked.
-4. **Post Anyway** writes the program once the box is ticked. **Cancel** (the default,
-   and ++esc++) goes back without writing anything. When nothing is found, the button
-   reads **Continue Posting** instead.
+2. Each finding, by plate and part. Click one to read it in full. This nest has none.
+3. **Continue Posting** writes the program. **Cancel** (the default, and ++esc++) goes
+   back without writing anything.
+
+When there are findings, the button reads **Post Anyway** and stays greyed out until you
+tick the box saying you understand the risks. The box applies to this one post only; the
+next post starts unticked.
 
 The extra checks, listed only when they find something:
 
@@ -109,7 +110,9 @@ The extra checks, listed only when they find something:
 
 Some posts reorder the cutting when they write the program. For those, the review adds
 a warning that the final rapid sequence can't be fully checked, even when the nest has
-no findings.
+no findings. The Cincinnati CL post writes a nest planned with **Plan Cutting** in the
+order checked, so it gets no such warning, unless the post's part sub-programs or smart
+rapids are turned on, or a part's etching comes after its cuts.
 
 A part whose geometry can't be checked is reported as incomplete, never as passed.
 
