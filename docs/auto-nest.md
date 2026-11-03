@@ -51,11 +51,9 @@ toolbar says so.
 Whatever the engine, Auto Nest first puts small parts inside the holes of larger parts
 where they fit.
 
-**Keep like parts together**, beside the engine list, is on by default. It nests each
-part type as one group, so parts are easier to sort and package off the table. It can
-leave a slightly shorter offcut than mixing the types. Turn it off for the shortest
-layout. Auto Nest remembers the choice. It changes how Irregular nests, so it also
-affects Default when Irregular's layout is the one kept.
+Irregular also tries nesting each part type with three or more copies as one group,
+which makes parts easier to sort and package off the table. It keeps the grouped layout
+only when it beats mixing the types, so grouping never costs you sheet.
 
 ## Sheet sizes and stock {#stock-options}
 
