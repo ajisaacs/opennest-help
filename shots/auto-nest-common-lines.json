@@ -1,0 +1,28 @@
+{
+  "source": "raw/auto-nest-common-lines.png",
+  "crop": [
+    0,
+    400,
+    582,
+    188
+  ],
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        125,
+        490,
+        192,
+        76
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        317,
+        494
+      ]
+    }
+  ]
+}

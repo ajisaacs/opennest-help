@@ -58,21 +58,26 @@ only when it beats mixing the types, so grouping never costs you sheet.
 ## Common lines {#common-lines}
 
 Two parts placed one kerf apart, straight edge to straight edge, can share one cut
-and save the part spacing between them. **Common Lines** on the **Plates** tab says
-when Auto Nest may place parts that way:
+and save the part spacing between them.
 
-- **Off** (the default) nests as usual.
-- **When it adds parts** keeps a common-line layout only when it places more parts or
-  uses fewer sheets.
-- **Whenever available** also takes one that shortens the cut or uses less material,
-  never at the cost of a part.
+![Common Lines list open on the Plates tab](images/auto-nest-common-lines.png)
 
-Only drawings with **Allow common line** ticked take part. Double-click a drawing on
-the **Drawings** tab to open **Drawing Properties** and tick it; it's off by default
-because a shared edge is cut from the centerline, which some customers' edge-quality
-requirements don't accept. A drawing pairs only with copies of itself, and only when it
-may turn half a turn. The kerf comes from the nest's machine for its material and
-thickness.
+1. **Common Lines** on the **Plates** tab says when Auto Nest may place parts that way:
+    - **Off** (the default) nests as usual.
+    - **When it adds parts** keeps a common-line layout only when it places more parts
+      or uses fewer sheets.
+    - **Whenever available** also takes one that shortens the cut or uses less
+      material, never at the cost of a part.
+
+![Drawing Properties with Allow common line ticked](images/drawing-properties-common-line.png)
+
+1. Only drawings with **Allow common line** ticked take part. Double-click a drawing on
+   the **Drawings** tab to open **Drawing Properties** and tick it. It's off by default
+   because a shared edge is cut from the centerline, which some customers' edge-quality
+   requirements don't accept.
+
+A drawing pairs only with copies of itself, and only when it may turn half a turn. The
+kerf comes from the nest's machine for its material and thickness.
 
 The choice is saved with the nest, and **Fill Area** on the toolbar uses it too. New
 nests start from **Common lines** in

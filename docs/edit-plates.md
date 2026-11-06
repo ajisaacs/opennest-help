@@ -137,17 +137,22 @@ cut. That saves the part spacing along the shared edge, which counts on costly p
 [Auto Nest](auto-nest.md#common-lines) can place parts this way; you can also join them
 by hand.
 
+![Two joined parts selected, with the part right-click menu](images/common-line-parts.png)
+
+1. The plate draws each shared edge as a teal dashed line.
+2. Clicking a joined part selects the whole group, so dragging, nudging, pushing,
+   turning and lining up move the joined parts together.
+3. Right-click a part for **Join Common Line** and **Remove Common Line** on the
+   selection.
+
 - **Plate > Arrange > Join Common Line** slides the selected parts together, one kerf
   apart, so their facing edges share a cut. The kerf is the machine's for the nest's
   material and thickness. If any part has no edge to share, nothing moves.
 - **Plate > Arrange > Remove Common Line** separates them again. The parts stay where
   they are and are held to the part spacing again.
-- Right-click a part for the same two commands on the selection.
 
-The plate draws each shared edge as a teal dashed line. Clicking a joined part selects
-the whole group, so dragging, nudging, pushing, turning and lining up move the joined
-parts together. To move one part alone, remove the common line first. Copied and
-pasted, joined parts stay joined.
+To move one part alone, remove the common line first. Copied and pasted, joined parts
+stay joined.
 
 [Plan Cutting](cutting-planner.md) cuts each shared edge once. Only the CI Fiber post
 can post that; other posts refuse the nest. For those, or to cut every edge in full,

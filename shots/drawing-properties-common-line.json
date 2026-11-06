@@ -1,0 +1,22 @@
+{
+  "source": "raw/drawing-properties-common-line.png",
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        366,
+        282,
+        236,
+        40
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        602,
+        286
+      ]
+    }
+  ]
+}

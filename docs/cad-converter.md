@@ -62,16 +62,20 @@ the geometry that will be cut, so they follow along as you untick layers, exclud
 or simplify. They never change the part's program, and they don't appear on plates,
 reports or exported DXF files.
 
-- **Overall size:** in the **Dimensions** section, click **Add Overall Dimensions**. It
-  adds the width and the height, below and to the right of the part.
-- **Holes and radii:** select one or more circles or arcs, right-click and choose **Add
-  Radius Dimension** or **Add Diameter Dimension**. Only a curve that's cut or etched
-  can have one; right-click it and choose **Cut** or **Etch** first.
-- Drag a dimension by its line or its value to move it, across the part to its other
-  side if you like. Drag a radius or diameter dimension to swing it around the curve or
-  move it in or out.
-- The **Dimensions** section lists each one with its value. Select one and click
-  **Remove** to delete it.
+![Mounting Plate with overall, diameter and radius dimensions](images/converter-dimensions.png)
+
+1. **Overall size:** in the **Dimensions** section, click **Add Overall Dimensions**. It
+   adds the width and the height, below and to the right of the part.
+2. **Holes and radii:** select one or more circles or arcs, right-click and choose **Add
+   Radius Dimension** or **Add Diameter Dimension**. Only a curve that's cut or etched
+   can have one; right-click it and choose **Cut** or **Etch** first.
+3. The **Dimensions** section lists each one with its value. Selecting one highlights it
+   in the preview.
+4. **Remove** deletes the selected dimension.
+
+Drag a dimension by its line or its value to move it, across the part to its other side
+if you like. Drag a radius or diameter dimension to swing it around the curve or move it
+in or out.
 
 Dimensions are saved with the drawing in the nest.
 
