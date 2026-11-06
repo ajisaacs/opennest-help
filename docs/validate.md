@@ -107,6 +107,9 @@ The extra checks, listed only when they find something:
 - **Nested part order** and **Nested part leads:** a part cut inside another part's
   hole should be cut first, and leads mustn't run into it.
 - **Pierce zones:** a pierce too close to a part for the plate's pierce diameter.
+- **Common lines:** [joined parts](edit-plates.md#common-lines) that no longer share
+  their edge one kerf apart, a group joined at a different kerf from the plate's, a lead
+  that runs into the partner, or a shared edge that isn't cut exactly once.
 
 Some posts reorder the cutting when they write the program. For those, the review adds
 a warning that the final rapid sequence can't be fully checked, even when the nest has

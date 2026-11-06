@@ -117,7 +117,36 @@ and the others move to it.
 | **Horizontally**, **Vertically** | Line up the centers across or up and down. |
 | **Evenly Space Horizontally**, **Evenly Space Vertically** | Spread the parts out evenly between the outermost two. |
 | **Center Parts** | Moves every part on the plate together to the middle of the sheet. |
-| **Expand Spacing** | Pushes the selected parts apart as far as the plate and the other parts allow. It can take a while; **Cancel** leaves the parts where they were. |
+| **Expand Spacing** | Spreads the selected parts apart as far as the plate and the other parts allow. A repeating pattern, such as a fill, is stretched evenly so it stays a pattern. It can take a while; **Cancel** leaves the parts where they were. |
+
+## Common lines {#common-lines}
+
+Two parts with straight edges facing each other exactly one kerf apart can share one
+cut. That saves the part spacing along the shared edge, which counts on costly plate.
+[Auto Nest](auto-nest.md#common-lines) can place parts this way; you can also join them
+by hand.
+
+- **Plate > Arrange > Join Common Line** slides the selected parts together, one kerf
+  apart, so their facing edges share a cut. The kerf is the machine's for the nest's
+  material and thickness. If any part has no edge to share, nothing moves.
+- **Plate > Arrange > Remove Common Line** separates them again. The parts stay where
+  they are and are held to the part spacing again.
+- Right-click a part for the same two commands on the selection.
+
+The plate draws each shared edge as a teal dashed line. Clicking a joined part selects
+the whole group, so dragging, nudging, pushing, turning and lining up move the joined
+parts together. To move one part alone, remove the common line first. Copied and
+pasted, joined parts stay joined.
+
+[Plan Cutting](cutting-planner.md) cuts each shared edge once. Only the CI Fiber post
+can post that; other posts refuse the nest. For those, or to cut every edge in full,
+tick **Plate > Arrange > Cut Common Lines Twice** and plan the cutting again. The
+[check before posting](validate.md#before-posting) lists any **Common lines** problem,
+such as a joined part that was moved away from its partner.
+
+!!! warning "Try it on the machine first"
+    Cutting a shared edge once hasn't been proven on a machine yet. Cut a test pair and
+    measure both parts before using it for production.
 
 ## Clamps {#clamps}
 

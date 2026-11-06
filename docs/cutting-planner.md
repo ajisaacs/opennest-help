@@ -203,6 +203,13 @@ with these cut-offs. Try it on the machine before production.
 **Overlapping parts** block the plan for that plate. Fix the layout first; see
 [Check a nest](validate.md#overlap-check).
 
+**Common lines.** Parts [joined on a common line](edit-plates.md#common-lines) are
+cut one after the other, and each shared edge is cut once, by the part cut first. A
+group that was broken, a joined part that's locked or left out of the plan, or a shared
+edge with no room for its lead, blocks the plate; the issue names the parts. Rejoin or
+unlock them, or tick **Plate > Arrange > Cut Common Lines Twice** to cut each part's
+whole outline.
+
 **Hard plates.** If the planner runs out of tries before finding a plan that passes
 every check, it tries again with the current part order. If that fails too, it offers
 the safest route it found, with every rule it breaks listed under **Issues**. To let

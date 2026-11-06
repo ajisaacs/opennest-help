@@ -55,6 +55,30 @@ Irregular also tries nesting each part type with three or more copies as one gro
 which makes parts easier to sort and package off the table. It keeps the grouped layout
 only when it beats mixing the types, so grouping never costs you sheet.
 
+## Common lines {#common-lines}
+
+Two parts placed one kerf apart, straight edge to straight edge, can share one cut
+and save the part spacing between them. **Common Lines** on the **Plates** tab says
+when Auto Nest may place parts that way:
+
+- **Off** (the default) nests as usual.
+- **When it adds parts** keeps a common-line layout only when it places more parts or
+  uses fewer sheets.
+- **Whenever available** also takes one that shortens the cut or uses less material,
+  never at the cost of a part.
+
+Only drawings with **Allow common line** ticked take part. Double-click a drawing on
+the **Drawings** tab to open **Drawing Properties** and tick it; it's off by default
+because a shared edge is cut from the centerline, which some customers' edge-quality
+requirements don't accept. A drawing pairs only with copies of itself, and only when it
+may turn half a turn. The kerf comes from the nest's machine for its material and
+thickness.
+
+The choice is saved with the nest, and **Fill Area** on the toolbar uses it too. New
+nests start from **Common lines** in
+[**Tools > Nest Defaults**](nest-settings.md#nest-defaults). To join parts by hand, and
+for how they're cut and posted, see [Common lines](edit-plates.md#common-lines).
+
 ## Sheet sizes and stock {#stock-options}
 
 With **Stock Options** off, Auto Nest uses sheets the size of the plate you're looking
