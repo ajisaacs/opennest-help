@@ -14,9 +14,9 @@ walk-through, see [Your first nest](first-nest.md#run-auto-nest).
 1. **Qty** is how many of each drawing to nest. It starts at the number still to be
    nested (the full quantity, less any already on plates). Set it to 0 to leave a
    drawing out of this run.
-2. **Priority** decides which parts get space first. Lower numbers go first, and when
-   not everything fits, the lowest numbers are the ones placed. Leave every row at 0
-   to treat all parts alike.
+2. **Priority** decides which parts get space first. Higher numbers go first, and when
+   not everything fits, the highest numbers are the ones placed. Leave every row at 0
+   to treat all parts alike, and set one part to 1 to put it ahead of the rest.
 3. **Rot Start**, **Rot End** and **Step** limit how a part may be turned, in
    degrees. Leave **Step** at 0 to let OpenNest choose the rotations. Most jobs
    should.
