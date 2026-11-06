@@ -4,9 +4,9 @@ OpenNest has three ways to find problems before anything is cut:
 
 | Check | What it finds | When to use it |
 | --- | --- | --- |
-| [Overlap Check](#overlap-check) | Parts whose material overlaps, and parts closer than the part spacing | Runs by itself on the plate you're looking at; check it after moving parts by hand, or keeping an Auto Nest result that failed its check |
-| [Validate Nest](#validate-nest) | Overlaps, missing lead-ins and rapids that cross cut parts, on every plate | After planning the cutting, or any time you want a full check |
-| [Check before posting](#before-posting) | Everything Validate Nest finds, and more | Runs by itself every time you post |
+| [Overlap Check](#overlap-check) | Parts whose material overlaps, parts closer than the part spacing, and parts off the plate or outside its work area | Runs by itself on the plate you're looking at; check it after moving parts by hand, or keeping an Auto Nest result that failed its check |
+| [Validate Nest](#validate-nest) | Every check before posting, on every plate: overlaps, missing lead-ins, rapids that cross cut parts, spacing, the plate edge and more | After planning the cutting, or any time you want a full check |
+| [Check before posting](#before-posting) | Everything Validate Nest finds, and whether the post changes the cutting order | Runs by itself every time you post |
 
 None of them changes the nest. They point at problems; you decide how to fix them.
 
@@ -29,13 +29,22 @@ spacing. Each pair gets an orange ring at its narrowest gap, labeled with the ga
 example **1/3 gap 0.1**. Point at a ring or an overlap marker to see the parts and the
 gap. These are the same pairs the [check before posting](#before-posting) warns about.
 
+It also checks each part against the sheet. A red crosshair marks where a part leaves
+the plate, and an orange ring marks a part that's **outside the work area**: inside the
+plate's edge spacing, or too close to the edge of an [odd-shaped
+sheet](edit-plates.md#sheet-outline) or an area to keep empty. Point at a marker to
+read it. Leads aren't checked here; Validate Nest and the check before posting check
+them too.
+
 When something is wrong, the top-left corner of the plate view says so, for example
-**Overlaps: 1 pairs; part spacing: 3 pairs too close**. A clear plate leaves the corner
-empty. A check that failed, was canceled or couldn't check every part always says so.
+**Overlaps: 1 pairs; part spacing: 3 pairs too close; 1 parts off the plate**. A clear
+plate leaves the corner empty. A check that failed, was canceled or couldn't check every
+part always says so.
 
 The **Layout** section of the status bar, beside utilization, follows the check:
 **Layout: checking…**, **Layout: OK**, or the findings in red, such as **Layout: 1
-overlap, 3 too close**. Point at it for the full wording.
+overlap, 3 too close, 1 off plate, 2 outside work area**. Point at it for the full
+wording.
 
 A part inside another part's hole doesn't count as an overlap when it fits in the
 hole.
@@ -71,11 +80,15 @@ What each warning means:
 - **Rapid crossing:** a rapid move passes over a part or hole that's already cut, or
   over a clamp. The cut piece could tip up and hit the head. Plan the cutting again, or
   change the order by hand.
+- **Off the plate** and **Outside work area:** a part, or a lead, past the edge of the
+  sheet, or a part inside the edge spacing. Move the part back onto the plate.
 
-Validate Nest doesn't check spacing between parts (the [Overlap Check](#overlap-check)
-and the check before posting do), distance to the plate edge, or the post processor's
-output. While the panel is open you can still zoom and pan the plate
-view, but you can't edit the nest or post. Close the panel first.
+It also lists everything else the [check before posting](#before-posting) finds, such
+as **Part spacing**, **Part support** and **Common line**, under the same names.
+
+Validate Nest doesn't check the post processor's output. While the panel is open you
+can still zoom and pan the plate view, but you can't edit the nest or post. Close the
+panel first.
 
 ## Check before posting {#before-posting}
 
@@ -97,10 +110,14 @@ next post starts unticked.
 
 The extra checks, listed only when they find something:
 
+- **Off the plate:** a part, or a lead-in, lead-out or etch, past the edge of the sheet,
+  or on an area of an odd-shaped sheet that must stay empty.
+- **Outside work area:** a part inside the plate's edge spacing, or that close to an
+  odd-shaped sheet's outline or an area to keep empty. Leads may run there.
 - **Fixed leads:** a locked lead-in or lead-out that runs into a part or a clamp.
 - **Part support:** a part the [support bed](machines.md#support-grid) can't hold
-  level, with no tab to keep it in place. On a plate with no bed, it's a part whose narrow
-  side is in the **On plates with no support bed** range of
+  level, with no tab to keep it in place. With **Tab parts by size**, or on a plate with
+  no bed, it's a part whose narrow side is in the size range of
   [Cutting Settings](cutting-planner.md#cutting-settings) that has no tab.
 - **Part spacing:** two parts closer than the plate's part spacing. The finding gives
   the measured gap.
