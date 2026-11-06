@@ -160,6 +160,16 @@ Double-click a nest, or press ++enter++, to open it. ++esc++ closes the window.
 
 Right-click a nest for **Delete...**. Deleting hides the nest but keeps every version.
 
+### List the material for several nests {#get-materials}
+
+To order stock for a whole job, select several nests (hold ++ctrl++ or ++shift++) and
+click **Get Materials**, then **Selected Nests**, or choose **All Matching Nests** for
+every nest the current search finds, on every page. Right-clicking the selection offers
+the same. OpenNest reads each nest and lists the sheets they use by **Material**,
+**Grade**, **Thickness** and size, with the **Quantity** and the nests that use each.
+Plates with no parts aren't counted. **Copy All** copies the list to paste into a
+spreadsheet, and **Save CSV...** saves it as a file.
+
 ### Change the server address only {#change-server-address}
 
 If the server moves, update the address without changing the mode:
@@ -187,7 +197,8 @@ bold. The list updates by itself while it's open.
   from first; if a different nest is open, OpenNest asks whether to use that one, and its
   drawings must be the ones the job was sent with. OpenNest checks the result on your PC
   and shows the usual [review](auto-nest.md#review).
-- **Cancel Job** stops a queued or running job. **Remove** deletes a finished job and its
+- **Stop Job** stops a queued or running job; it shows **Stopping**, then **Stopped**.
+  **Remove** deletes a finished job and its
   result from the server. It asks first if nobody has kept or discarded the result yet.
 
 A result can be kept only once. If another PC kept it first, OpenNest says who and adds

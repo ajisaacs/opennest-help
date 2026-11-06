@@ -65,7 +65,7 @@ In Database mode the server keeps one shared copy of the nest defaults; see
 | **Color scheme** | The colors of the plate view. |
 | **Fill Strategies** | Which fill methods the engines try, and in what order. Leave them as they are unless you're asked to change them. |
 | **Nest server URL** | The [nest server's](nest-server.md#change-server-address) address. **Set / Change Server** saves it at once. |
-| **Auto-update feed URL** | Where OpenNest checks for [updates](#updates). Leave it blank to get them from OpenNest's GitHub releases. **Save Feed URL** saves it at once. |
+| **Auto-update feed URL** | Where OpenNest checks for [updates](#updates). Leave it blank to get them from the nest server in Database mode (or GitHub if the server has none), and from OpenNest's GitHub releases otherwise. **Save Feed URL** saves it at once. Takes effect after a restart. |
 | **Include development builds** | Also offers the newest test build, made from every change as it's finished. Leave it off on PCs that cut production work. Takes effect after a restart. |
 | **MaterialLedger** | The ledger **URL** and **API key**, for [stock from MaterialLedger](auto-nest.md#materialledger). **Test** checks the connection; **Save Ledger** saves them at once. |
 
@@ -106,9 +106,14 @@ OpenNest saves them for next time. In Database mode, machines and post settings 
   **image** as it's shown on screen (`.jpg`), or a text file of each part's **locations
   and rotations**.
   **Export All** does the same for every plate in turn.
-- **File > Export Nest Report...** writes a PDF report of the whole nest: each sheet
-  layout, the parts and quantities, utilization and any shortfall. It doesn't post or
-  check the nest.
+- **File > View Nest Report...** opens a PDF report of the whole nest in a window, with
+  **Save As...** and **Print...**: each sheet layout, every part with its size, weight,
+  and how many are needed and nested, utilization and any shortfall (marked **SHORT**).
+  **File > Export Nest Report...** saves the same report as a file. Neither posts or
+  checks the nest.
+- Part weights use the nest's thickness and the material's density from **Tools >
+  Machine Configuration**. When either is missing, the report shows **-** and says
+  what's missing.
 
 ## Other ways to add drawings {#add-drawings}
 
