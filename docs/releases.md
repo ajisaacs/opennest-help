@@ -33,8 +33,9 @@ The release panel is on the right of the **Library** and **Sets** tabs in
     When several drafts match, the newest is chosen. Pick another, or
     **New Draft nest**, in the **Nest** list. Untick a row to leave that material out.
 
-4. **Nest after release** runs Auto Nest on every nest the release makes or changes.
-   Untick it to make the nests without sheets and nest them yourself later.
+4. **Nest after release** runs Auto Nest on every nest the release makes or changes,
+   on [MaterialLedger stock](#ledger-stock) first. Untick it to make the nests without
+   sheets and nest them yourself later.
 5. **Make Nests** makes the release. The number is how many nests it will make or
    change.
 
@@ -68,7 +69,9 @@ to [edit the drawings](drawing-library.md#edit-drawing).
 Click **Make Nests**. With **Nest after release** ticked:
 
 1. The main window comes forward. Each nest opens in its own tab and Auto Nest runs
-   on it, one at a time, with the usual progress window.
+   on it, one at a time, with the usual progress window. A nest that uses ledger stock
+   can show two runs: one on the ledger's sheets, then one on the nest's default sheet
+   for what's left.
 2. When all of them are done, OpenNest saves them to the server and records the
    release.
 3. Each row in **Nests it will make** shows what happened: **Created** or
@@ -80,6 +83,23 @@ through one.
 
 New nests get the next nest number, the release's material and customer, and the
 **Draft** status. Change the status in **Nest > Edit** when the nest is ready to cut.
+
+### Stock from MaterialLedger {#ledger-stock}
+
+When the PC is set up for [MaterialLedger](auto-nest.md#materialledger), each nest is
+nested first on the free sheets and drops of its material, grade and thickness that
+**Load from ledger** in Auto Nest would offer, substitutes included. Whatever doesn't
+fit goes on the nest's default sheet, as set on the **Defaults** tab of
+**Nest > Edit**.
+
+- Stock already coded on another open nest on the server isn't offered, and neither is
+  stock an earlier nest of the same release took.
+- Each sheet cut from ledger stock remembers its item code, as it does after Auto Nest;
+  point at the plate in the **Plates** list to see it.
+- The nest's row says how many sheets came from MaterialLedger, or, after
+  **MaterialLedger not used:**, why not: for example, the ledger can't be reached, has
+  no mapping for the material, or has no free stock of it.
+- **Nothing is reserved.** Hold the sheets in MaterialLedger before cutting.
 
 ## See and undo past releases {#releases-tab}
 
