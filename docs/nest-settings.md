@@ -84,8 +84,8 @@ restart**; click it and save your work first, because an unsaved nest is lost.
 ## Machines and posts {#machine-configuration}
 
 **Tools > Machine Configuration** lists your machines. For each one you set its
-materials, grades and thicknesses, with the lead-ins, lead-outs, kerf and cut-off
-settings for each thickness, its plate sizes, its clamps and their clearance, its
+materials, grades and thicknesses, with the lead-ins, lead-outs, kerf, tabs, pierce and
+cut-off settings for each thickness, its plate sizes, its clamps and their clearance, its
 [support bed](machines.md#support-grid) and its acceleration limits for
 [cut time](sequencing.md#cut-time). See [Machines](machines.md) for how a nest uses them.
 

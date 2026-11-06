@@ -3,7 +3,8 @@
 Every nest is cut on one machine. The machine you pick for a nest decides:
 
 - the **support bed** its sheets rest on, used to judge whether cut parts can tip
-- the starting **lead-ins, lead-outs and kerf** for the nest's material and thickness
+- the **lead-ins, lead-outs, kerf, tabs and pierce** for the nest's material and
+  thickness
 - the **cut-off** clearance, overtravel and direction
 
 Machines and their settings for each material and thickness are set up in
@@ -86,21 +87,31 @@ points each part rests on and each part's balance point: green when the part is 
 level, red when it can tip. A red part also shows an orange diamond where one tab would
 steady it best.
 
-## Lead-ins from the machine {#machine-lead-ins}
+## Cutting settings from the machine {#machine-lead-ins}
 
-When you plan the cutting (or place lead-ins by hand), OpenNest starts from the cutting
-settings you used last. When the nest's machine, material or thickness differs from
-theirs, it puts in the machine's lead-in and lead-out settings for the nest's material and
-thickness, and the kerf for that thickness. The material and
-thickness come from **Nest > Edit**.
+Each thickness of a machine's material keeps its own cutting settings. When you plan
+the cutting (or place lead-ins by hand), OpenNest uses the settings of the nest's
+machine for the nest's material and thickness, which come from **Nest > Edit**. Change
+them in **Cutting Settings** in the Plan Cutting panel, or in **Tools > Machine
+Configuration**; either way they're saved on the machine.
 
-- The **Outside Cuts** tab sets the lead-in and lead-out for outside edges. The
-  **Inside Cuts** tab sets them for holes, round holes included. While **Same as outside
-  cuts** is ticked, holes use the outside settings; clear it to give holes their own. You can
-  still change them in **Cutting Settings** before you apply the plan.
-- **Clean Hole** is offered on the **Inside Cuts** tab only.
-- An **Arc** lead-in is a half circle (**Sweep Angle** 180). Change the sweep in **Cutting Settings**.
-- A **Line + Line** lead-in isn't copied. Set it in **Cutting Settings**.
+- The **General** tab holds the thickness's kerf. The **Outside Cuts** tab sets the
+  lead-in and lead-out for outside edges. The **Inside Cuts** tab sets them for holes,
+  round holes included. While **Same as outside cuts** is ticked, holes use the outside
+  settings; clear it to give holes their own.
+- The **Tabs & Pierce** tab sets lead-in angle rounding,
+  [tabs](cutting-planner.md#cutting-settings) and pierce for the thickness. Tick **Use
+  for this thickness** to give it its own; unticked, nests of that thickness use the
+  tab and pierce settings last used on each PC.
+- To give several thicknesses the same tabs and pierce, right-click the thickness in
+  the list and choose **Copy Tabs & Pierce To...**. Tick the thicknesses to copy to
+  (**Thinner**, **Thicker**, **All** and **None** tick them for you), then click
+  **Copy**. For example, set tabs on 1/4" and copy them to every thinner thickness. A
+  thickness with no tabs and pierce of its own copies that too, so the others go back
+  to each PC's settings.
+- **Clean Hole** is offered on the **Inside Cuts** tab only. An **Arc** lead-in is a
+  half circle, and a machine thickness can't hold a **Line + Line** lead-in.
 - If the machine has nothing on file for that material and thickness, the settings you
-  used last are used as they are.
+  used last on this PC are used as they are, and **Cutting Settings** can use every
+  lead type.
 - Plates you've already planned keep their lead-ins until you apply a new plan.

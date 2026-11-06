@@ -55,10 +55,13 @@ When the panel covers several plates, **Previous** and **Next** move between the
 
 ## Cutting settings {#cutting-settings}
 
-**Cutting Settings** opens the **Cutting Parameters** dialog. It starts from the
-settings you used last. When the nest's [machine](machines.md#machine-lead-ins),
-material or thickness differs from theirs, the machine's lead-ins, lead-outs and kerf
-for it are put in.
+**Cutting Settings** opens the **Cutting Parameters** dialog. Its settings belong to
+the nest's [machine](machines.md#machine-lead-ins), material and thickness, so each
+thickness keeps its own: 1/4" plate can be tabbed while 1/2" isn't. The line above the
+fields says what you're editing, for example **Saved for Fiber 1 · Mild Steel A36 0.25
+in**. When the machine has no entry for the nest's material and thickness, or the nest
+has no machine, material or thickness, it says **This PC's settings:** and why, and the
+settings you used last on this PC are used instead.
 
 ![Cutting Parameters dialog](images/cutting-settings.png)
 
@@ -69,18 +72,25 @@ for it are put in.
    **Arc** lead-in has a **Radius** and a **Sweep angle**: how much of a circle the arc
    is, in degrees from 1 to 180. 90 is a quarter circle; 180, the default, is a half
    circle. **Round lead-in angles to every** rounds approach angles to that many degrees.
+   When the settings are saved for a machine thickness, only the leads a machine
+   thickness can hold are offered: no **Line + Line**, no sweep angle (arcs are half
+   circles) and no **Clean Hole** on the **Outside** tab.
 3. **Lead-out.** **None**, **Line** or **Arc**. Beside the fields, a sample part with a
    hole shows the leads and pierce points as you change them; the tab's own contour is
    drawn strong.
 4. **Tabs** leave small uncut gaps that hold parts in the sheet. Tick **Add tabs to hold
-   parts in the sheet**, set the **Tab size**, then choose **Tab every part** or **Only
-   tab parts the support grid can't hold level**. The second uses the nest's
-   [support bed](machines.md#support-grid) and tabs only the parts that could tip, at
-   the point where one tab steadies the part most. With **Tab alone holds parts up to**
-   a length, a part that could tip and is no longer than that is held by its tab alone,
-   wherever the tab goes. New settings start at 6; 0 turns it off. On a plate with no support bed, it tabs the parts
-   whose narrow side is in the **On plates with no support bed** range instead. Leave the
-   second number at 0 to tab nothing there.
+   parts in the sheet**, set the **Tab size**, then choose:
+    - **Only tab parts the support grid can't hold level** uses the nest's
+      [support bed](machines.md#support-grid) and tabs only the parts that could tip, at
+      the point where one tab steadies the part most. With **Tab alone holds parts up
+      to** a length, a part that could tip and is no longer than that is held by its
+      tab alone, wherever the tab goes. New settings start at 6; 0 turns it off. On a
+      plate with no support bed, it tabs by size instead.
+    - **Tab parts by size** ignores the support bed and tabs every part whose narrow side
+      is in the range under **By size, or with no support bed, tab parts whose narrow
+      side is**. The narrow side is measured on each part's smallest box at any angle,
+      so turning a part doesn't change it. Leave the second number at 0 to tab nothing
+      by size.
 5. **Pierce.** **Clearance from contour** is how far each pierce stays from the contour
    it leads into. **Pierce zone diameter** is the size of the hole a pierce blows
    through the plate; when it's above 0, every pierce keeps half of it clear of all
@@ -96,8 +106,11 @@ With lead-in type **None**, the cut pierces right on the contour. The plan allow
 but the check before posting still reports **Missing lead-ins**.
 
 The settings are saved as soon as you click **OK**, even if you don't apply the plan,
-and the next plan on any plate starts from them. A plate that's already planned keeps its
-lead-ins until you apply a new plan to it.
+and the next plan on any nest of that machine, material and thickness starts from them.
+In Database mode the machines are [shared](nest-server.md#shared-settings), so every PC
+gets them. If the machine can't be saved, for example because the server can't be
+reached, OpenNest says so and keeps them on this PC for that material and thickness. A
+plate that's already planned keeps its lead-ins until you apply a new plan to it.
 
 ## When a plate already has lead-ins {#existing-lead-ins}
 
