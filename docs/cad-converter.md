@@ -48,6 +48,8 @@ several at once, click them with ++ctrl++ or ++shift++ held, then right-click on
     - **Display Only**: shown here but not cut or marked.
     - **Exclude** (++delete++): left out of the drawing. Right-click it again and
       choose **Include** to bring it back.
+    - **Add Radius Dimension** and **Add Diameter Dimension** (circles and arcs only):
+      see [Dimensions](#dimensions).
 
 Text in the file isn't cut. To engrave it, right-click the text and choose
 **Convert "…" to Geometry**; OpenNest asks for an engraving font (`.CHR`) the first
@@ -75,9 +77,15 @@ Dimensions are saved with the drawing in the nest.
 
 ## Hole table {#hole-table}
 
-**Holes...** opens the **Hole Table** beside the preview. It lists the drawing's holes by
-diameter, smallest first, with how many there are of each, and colors every hole in the
-preview to match its row. Closing the table puts the normal colors back.
+![Hole Table beside the preview of a plate with two hole sizes](images/converter-hole-table.png)
+
+1. **Holes...** opens the **Hole Table** beside the preview.
+2. One row for each hole size, by diameter and smallest first, with how many there are.
+   The line under the rows counts the holes and sizes.
+3. Every hole in the preview takes the color of its row. Closing the table puts the
+   normal colors back.
+
+You can drag the table aside if it covers part of the drawing.
 
 - A round hole is a cut circle, or a ring of arcs on one center, inside the part. The
   outline of a round part isn't a hole.

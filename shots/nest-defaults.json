@@ -1,30 +1,29 @@
 {
   "source": "raw/nest-defaults.png",
-  "max_width": 1100,
   "annotations": [
     {
       "type": "box",
       "rect": [
-        14,
-        299,
-        406,
-        28
+        22,
+        63,
+        320,
+        26
       ]
     },
     {
       "type": "callout",
       "n": 1,
       "at": [
-        400,
-        290
+        342,
+        63
       ]
     },
     {
       "type": "box",
       "rect": [
-        246,
-        342,
-        87,
+        403,
+        453,
+        90,
         28
       ]
     },
@@ -32,8 +31,8 @@
       "type": "callout",
       "n": 2,
       "at": [
-        234,
-        330
+        403,
+        453
       ]
     }
   ]

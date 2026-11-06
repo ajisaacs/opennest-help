@@ -1,0 +1,62 @@
+{
+  "source": "raw/converter-hole-table.png",
+  "crop": [
+    470,
+    52,
+    936,
+    752
+  ],
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        1088,
+        766,
+        62,
+        30
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 1,
+      "at": [
+        1088,
+        766
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        960,
+        93,
+        242,
+        73
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 2,
+      "at": [
+        1202,
+        97
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        548,
+        184,
+        72,
+        72
+      ]
+    },
+    {
+      "type": "callout",
+      "n": 3,
+      "at": [
+        620,
+        188
+      ]
+    }
+  ]
+}

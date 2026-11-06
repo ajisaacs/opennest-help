@@ -107,7 +107,7 @@ def run(until):
     if until == "drawings":
         return
 
-    click(main, 365, 74)  # Auto Nest toolbar button
+    click(main, 365, 75)  # Auto Nest toolbar button
     auto = window(r"^AutoNest$")
     time.sleep(1)
     capture("first-nest-autonest", r"^AutoNest$")
@@ -122,25 +122,25 @@ def run(until):
     capture("first-nest-review", r"^Review Auto Nest")
     click(review, 777, 489)  # Keep
     time.sleep(1.5)
-    click(main, 847, 110)  # Zoom To Fit
+    click(main, 847, 111)  # Zoom To Fit
     time.sleep(1)
     capture("first-nest-result", r"^OpenNest - \[")
     if until == "result":
         return
 
-    click(main, 543, 74)  # Plan Cutting toolbar button
+    click(main, 543, 82)  # Plan Cutting toolbar button
     time.sleep(8)
     capture("first-nest-plan-cutting", r"^OpenNest - \[")
-    click(main, 918, 369)  # Apply
+    click(main, 918, 377)  # Apply
     time.sleep(3)
 
-    click(main, 671, 66)  # Post drop-down arrow
+    click(main, 671, 74)  # Post drop-down arrow
     time.sleep(1)
     left, top = origin(main)
-    mouse.move(coords=(left + 712, top + 97))
+    mouse.move(coords=(left + 712, top + 105))
     time.sleep(1.2)
     capture("first-nest-post-menu", r"^OpenNest - \[", "--no-raise")
-    click(main, 712, 97)  # first post processor
+    click(main, 712, 105)  # first post processor
     settings = window(r".+ Settings$")
     time.sleep(1)
     capture("first-nest-post-settings", r".+ Settings$")

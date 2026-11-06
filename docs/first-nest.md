@@ -104,6 +104,8 @@ The [CAD Converter](cad-converter.md) page covers the rest of this window.
    toolbar is selected here.
 2. **Stock Options.** Turn this on to offer several sheet sizes, with their costs.
    Leave it off to nest on the nest's default sheet.
+3. **Common Lines.** Leave it **Off** for this tutorial. See
+   [Common lines](auto-nest.md#common-lines) for parts that share an edge.
 
 ![Nesting Progress window](images/first-nest-progress.png)
 
