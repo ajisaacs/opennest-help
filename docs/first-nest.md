@@ -26,6 +26,10 @@ numbered steps under it.
 OpenNest opens a new, empty nest when it starts. Its name is in the
 title bar. To start another, use **File > New** (++ctrl+n++).
 
+A **\*** after the name means the nest has changes you haven't saved. Closing it, or
+OpenNest, then asks whether to save them: **Yes** saves, **No** throws the changes
+away, and **Cancel** keeps the nest open.
+
 ## Undo a change {#undo}
 
 **Edit > Undo** (++ctrl+z++) takes back the last change to the nest, and **Edit > Redo**

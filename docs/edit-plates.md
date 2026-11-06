@@ -22,13 +22,18 @@ The **Plates** tab lists every sheet in the nest with its size and utilization.
   new plates. **Tools > Save Current Plate as Defaults** saves them for new nests too;
   see [Nest settings](nest-settings.md#nest-defaults).
 - **Plate > Rotate** turns the whole plate and its parts 90° either way, or 180°.
-- **Plate > Resize to Fit** (++ctrl+p++) shrinks the plate to the nearest standard size
-  that holds its parts. **Auto-size plate factor** in **Tools > Options** sets the step
-  it rounds up to.
+- **Plate > Resize to Fit** (++ctrl+p++) shrinks or grows the plate to fit its parts,
+  rounded up to the **Auto-size plate factor** in **Tools > Options**, whatever the
+  plate's size.
 - **Nest > Clear Nest...** removes every part from every plate.
 
 Point at a plate in the **Plates** list to see the stock it's cut from, when it was
 loaded from [MaterialLedger](auto-nest.md#materialledger).
+
+To change the order of the plates, for example to keep sheets of one size together,
+drag a row in the **Plates** list to a new place, or select it and press ++alt+up++ or
+++alt+down++. Moving a plate changes only its place in the list, never its quantity, and
+**Edit > Undo** takes it back.
 
 ### Odd-shaped sheets {#sheet-outline}
 
@@ -66,7 +71,8 @@ You can also drag a drawing from the list onto the plate.
 
 The **Drawings** tab counts each placed part: **12 of 30 nested** goes up as you place
 parts and down when you delete them. **Hide fully nested drawings** hides the
-drawings that are done.
+drawings that are done. When every drawing is done the list says so; click that note to
+show them again.
 
 ### Fill with a pair {#best-fit}
 
@@ -94,7 +100,12 @@ part in the nest. Place or fill parts into a remnant as above.
   to the selection. **Edit > Select All** (++ctrl+a++) selects every part.
 - Drag selected parts to move them.
 - The arrow keys move the selection by the offset increment. Set it with **Tools > Set
-  Offset Increment** (++f5++).
+  Offset Increment** (++f5++). Tick **Calculated distance (selection size + part
+  spacing)** to have each press move the selection by its own size plus the part
+  spacing, so it lands right beside where it was, one part spacing away, ready to
+  repeat a row. The
+  move isn't stopped by parts or the edge; the [layout check](validate.md#overlap-check)
+  shows anything it lands on.
 - ++x++ or ++shift+left++ pushes the selection left until it meets another part or the
   plate edge; ++shift+x++ or ++shift+right++ pushes it right. ++y++ or
   ++shift+down++ pushes down; ++shift+y++ or ++shift+up++ pushes up.

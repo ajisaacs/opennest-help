@@ -22,7 +22,8 @@ can't read stops **Done** or **Save** instead of being read as zero.
 
 - **Name.** In Database mode you can rename the nest here. In File mode the name is the
   file name; change it with **File > Save As**.
-- **Customer**, **Made By** and the dates it was made and last changed.
+- **Customer**, **Made By** and the dates it was made and last changed. A blank **Made
+  By** starts with your name: the one you last typed there, or your Windows user name.
 - **Status:** **Draft**, **Quote**, **To Be Cut** or **Has Been Cut**; see
   [Nest status](nest-server.md#nest-status).
 - **Material**, **Grade** and **Thickness.** The material list includes every material
