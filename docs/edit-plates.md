@@ -12,9 +12,13 @@ before you plan the cutting.
 
 The **Plates** tab lists every sheet in the nest with its size and utilization.
 
-- **Plate > Add** adds an empty plate. **Plate > Remove**, or **Remove Selected
-  Plate** on the **Plates** tab, removes the current one. **Nest > Remove Empty Plates**
-  removes every plate with no parts.
+- The last row in the list is always an empty plate. Put parts on it and a new empty
+  plate is added after it.
+- To delete a plate, right-click it in the list and choose **Delete Plate**, or select
+  it and click **Remove Selected Plate** above the list. **Edit > Undo** brings it back.
+  **Nest > Remove Empty Plates** removes every plate with no parts.
+- To copy a plate and its layout, right-click it and choose **Duplicate Plate**. The
+  copy goes right after it.
 - **Plate > Edit** changes the plate's **Size**, its **Quantity** (how many sheets are
   cut with this layout), its **Part Spacing** and **Edge Spacing**, and the
   **Quadrant** its origin is in, and can give it a [sheet outline](#sheet-outline).
