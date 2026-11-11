@@ -63,7 +63,7 @@ In Database mode the server keeps one shared copy of the nest defaults; see
 | **Auto-size plate factor** | The step **Plate > Resize to Fit** rounds plate sizes up to. |
 | **Cut planning effort** | How long [Plan Cutting](cutting-planner.md#not-ready) searches on hard plates: 1 is normal, up to 10. |
 | **Color scheme** | The colors of the plate view. |
-| **Clone push placement** | Where ++shift++ + click and ++ctrl++ + click [push a placed part](edit-plates.md#place-parts): **Closest to origin** tries pushing left first and down first and keeps whichever ends nearer the plate's origin corner; **Push left, then down** and **Push down, then left** always push in that order. Left and down turn around on plates whose origin is in another corner. |
+| **Clone push placement** | Where ++shift++ + click and ++ctrl++ + click [push a placed part](edit-plates.md#place-parts): Every push goes toward the plate's origin corner. **Closest to origin** tries a sideways push first and an up-or-down push first, and keeps whichever ends nearer that corner; **Push horizontally first** and **Push vertically first** always push in that order. |
 | **Fill Strategies** | Which fill methods the engines try, and in what order. Leave them as they are unless you're asked to change them. |
 | **Nest server URL** | The [nest server's](nest-server.md#change-server-address) address. **Set / Change Server** saves it at once. |
 | **Auto-update feed URL** | Where OpenNest checks for [updates](#updates). Leave it blank to get them from the nest server in Database mode (or GitHub if the server has none), and from OpenNest's GitHub releases otherwise. **Save Feed URL** saves it at once. Takes effect after a restart. |
