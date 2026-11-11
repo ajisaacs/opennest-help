@@ -68,6 +68,12 @@ to Fit** leave an outlined plate alone.
 2. Click to place it. Keep clicking to place more. ++enter++ or ++f1++ places one too.
 3. Press ++esc++ to stop.
 
+++shift++ + click places the part and pushes it toward the plate's origin corner until it
+meets other parts or the plate edge, fitting it into the shapes of the parts it meets.
+++ctrl++ + click pushes it the same way but stops square to the other parts' outer edges,
+so it never tucks into a shape. **Clone push placement** in
+[**Tools > Options**](nest-settings.md#options) picks which way both go.
+
 While a part follows the pointer, press ++ctrl+f++ to fill the largest empty area
 around the pointer with that part. On an empty plate it fills the whole sheet.
 
