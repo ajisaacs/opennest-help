@@ -28,8 +28,8 @@ This page has two parts:
 In either mode you can:
 
 - Drag `.nest` files onto the main window to open them from disk.
-- Use **File > Export .nest...** to write a local copy to share or back up. Exporting
-  doesn't change where **Save** goes.
+- Use **File > Save Copy as .nest File...** to write a local copy to share or back up.
+  The copy doesn't change where **Save** goes.
 
 ## Set up the server {#set-up-the-server}
 
@@ -120,7 +120,7 @@ for example `http://192.168.1.20:8090`.
 ![File menu with the server commands](images/server-file-menu.png)
 
 1. **Drawing Library...**, **Drawing Sets...** and **Releases...** open the shared
-   library. They need Database mode.
+   library. They need Database mode, so they're grayed out until you switch.
 2. **Storage Mode...** switches between File and Database mode.
 
 Choose **File > Storage Mode...**:

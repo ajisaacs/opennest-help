@@ -101,18 +101,17 @@ OpenNest saves them for next time. In Database mode, machines and post settings 
 
 - **File > Save** (++ctrl+s++) and **Save As** save the nest: to a `.nest` file in File
   mode, or to the [nest server](nest-server.md) in Database mode.
-- **File > Export .nest...** writes a `.nest` file in either mode, to share or back up.
-  It doesn't change where **Save** goes.
-- **File > Export** saves the current plate as a **DXF file**, an **SVG file**, an
-  **image** as it's shown on screen (`.jpg`), or a text file of each part's **locations
-  and rotations**.
-  **Export All** does the same for every plate in turn.
-- **File > View Nest Report...** opens a PDF report of the whole nest in a window, with
-  **Save As...** and **Print...**: each sheet layout, every part with its size, weight,
-  and how many are needed and nested, utilization and any shortfall (marked **SHORT**).
-  **File > Export Nest Report...** saves the same report as a file. Neither posts or
-  checks the nest.
-- **File > View Part Printouts...** opens a one-page printout for every part in the
+- **File > Save Copy as .nest File...** writes a `.nest` file in either mode, to share
+  or back up. It doesn't change where **Save** goes.
+- **File > Export Plate...** saves the current plate as a **DXF file**, an **SVG file**,
+  an **image** as it's shown on screen (`.jpg`), or a text file of each part's
+  **locations and rotations**.
+  **Export All Plates...** does the same for every plate in turn.
+- **File > Nest Report...** opens a PDF report of the whole nest in a window, with
+  **Save As...** to keep it as a file and **Print...**: each sheet layout, every part
+  with its size, weight, and how many are needed and nested, utilization and any
+  shortfall (marked **SHORT**). The report doesn't post or check the nest.
+- **File > Part Printouts...** opens a one-page printout for every part in the
   nest, with **Save As...** and **Print...**: the part drawn to fit the page with its
   overall dimensions, its size,
   material, thickness, cut length, pierce count, area, weight and quantity needed. To
