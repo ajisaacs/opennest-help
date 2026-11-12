@@ -112,6 +112,11 @@ OpenNest saves them for next time. In Database mode, machines and post settings 
   and how many are needed and nested, utilization and any shortfall (marked **SHORT**).
   **File > Export Nest Report...** saves the same report as a file. Neither posts or
   checks the nest.
+- **File > View Part Printouts...** opens a one-page printout for every part in the
+  nest, with **Save As...** and **Print...**: the part drawn to fit the page, its size,
+  material, thickness, cut length, pierce count, area, weight and quantity needed. To
+  print one part, right-click it in the drawing list and choose **View Part
+  Printout...**.
 - Part weights use the nest's thickness and the material's density from **Tools >
   Machine Configuration**. When either is missing, the report shows **-** and says
   what's missing.
