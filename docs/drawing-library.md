@@ -15,9 +15,11 @@ main window.
 
 ![Drawing Library window with a part selected](images/drawing-library.png)
 
-1. **Search.** Type part of a drawing's name, customer or notes.
+1. **Search.** Type part of a drawing's name, customer or notes. **Filter...** beside
+   it narrows the list by size, holes, thickness and more ([below](#filter)).
 2. **Drawing list.** Every active drawing with its customer, material, grade,
-   thickness and cut type. **Previous** and **Next** page through a large library.
+   thickness, cut type, **Size (in)** and **Holes**. Click a column header to sort by
+   it. **Previous** and **Next** page through a large library.
 3. **Preview and details.** The selected drawing, its details, the last revision
    (when, and who saved it) and its notes.
 4. **Add to Release.** Adds the selected drawing to the release panel on the right, at
@@ -28,6 +30,60 @@ main window.
 
 The window also has the **Sets** and **Releases** tabs, covered on their own pages.
 
+**Size (in)** is the drawing's longer side by its shorter side, for example `3.5 x 2`,
+and **Holes** counts the closed cutouts inside its outline. The nest server measures
+every library drawing in the background, so a newly saved drawing shows them within
+about a minute. Until then both are blank; a **?** means the drawing could not be
+measured.
+
+## Filter the library {#filter}
+
+To find parts by size, holes or thickness instead of by name, click **Filter...**
+beside the search box. It works the same in **File > Drawing Library...** and in
+**Nest > Add from Drawing Library...**.
+
+![Filter Drawing Library dialog](images/library-filter.png)
+
+1. **Customer.** One customer, matched exactly. The list offers the customers on the
+   page you were looking at.
+2. **Thickness (in).** Type inches, a fraction such as `3/16` or a gauge such as
+   `16 ga`. **Include drawings saved without a thickness** (on to start with) keeps
+   drawings that suit any thickness, like a test square.
+3. **Longer side** and **Shorter side (in).** Inches or fractions such as `3-1/2`.
+4. **Holes.** Whole numbers.
+5. **Saved.** Tick a date to use it. This is when the drawing was saved to the
+   library; drawings brought over from PEP all carry the date they were imported, and
+   their PEP dates are in their notes.
+6. **Clear** empties every box. **OK** applies the filter; **Cancel** keeps the one
+   you had.
+
+Leave a box blank for no limit. Every limit includes its value, so Holes from `2`
+means 2 or more. If a box doesn't read, or a range runs high to low, the dialog stays
+open and says why in red.
+
+Size and hole limits leave out drawings the server hasn't measured yet.
+
+While a filter is on, the button reads **Filter (on)...** and the gray line under the
+search box ends with what it holds, for example
+*Filter: Thickness 0.0598-0.1875 in (or none); Length up to 4 in; Holes 2+.* The
+filter works together with the search box and, when adding to a nest, with the nest's
+material.
+
+### Example: small parts with two or more holes
+
+To find parts no bigger than 4 in square, 16 ga to 3/16 thick, with at least 2 holes:
+
+1. Click **Filter...**.
+2. **Thickness:** `16 ga` to `3/16`.
+3. **Longer side:** leave the first box blank and type `4` in the second. The shorter
+   side can't be longer, so it needs no limit.
+4. **Holes:** `2` in the first box, the second blank.
+5. Click **OK**.
+
+![Drawing Library filtered to small parts with two or more holes](images/library-filtered.png)
+
+To go back to the whole library, open **Filter (on)...**, click **Clear**, then **OK**.
+
 ## Add library drawings to a nest {#add-to-nest}
 
 With a nest open, choose **Nest > Add from Drawing Library...**, or click the
@@ -36,8 +92,10 @@ With a nest open, choose **Nest > Add from Drawing Library...**, or click the
 ![Add from Drawing Library dialog, Drawings tab](images/add-from-library.png)
 
 1. **Search.** The list starts with drawings of the nest's material, grade and
-   thickness. Tick **Show all materials** to see the rest.
-2. **Drawing list.** Click a drawing to select it.
+   thickness. Tick **Show all materials** to see the rest. **Filter...** narrows it
+   further ([Filter the library](#filter)).
+2. **Drawing list.** Click a drawing to select it. **Size (in)** and **Holes** show
+   each drawing's measured size and hole count.
 3. **Preview and details** of the selected drawing.
 4. Enter a **Quantity** and click **Add to Nest** (or double-click the drawing).
 5. **In This Nest** lists what the nest already holds.

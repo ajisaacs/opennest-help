@@ -30,6 +30,7 @@
     "nest-browser": "nest-server.html#open-saved-nests",
     "drawing-library": "drawing-library.html",
     "library-add": "drawing-library.html#add-to-nest",
+    "library-filter": "drawing-library.html#filter",
     "library-save": "drawing-library.html#save-to-library",
     "library-edit-drawing": "drawing-library.html#edit-drawing",
     "drawing-sets": "drawing-sets.html",

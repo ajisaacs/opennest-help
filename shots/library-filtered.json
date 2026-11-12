@@ -1,0 +1,30 @@
+{
+  "source": "raw/library-filtered.png",
+  "crop": [
+    0,
+    0,
+    1232,
+    893
+  ],
+  "max_width": 1100,
+  "annotations": [
+    {
+      "type": "box",
+      "rect": [
+        84,
+        80,
+        856,
+        52
+      ]
+    },
+    {
+      "type": "box",
+      "rect": [
+        26,
+        156,
+        806,
+        46
+      ]
+    }
+  ]
+}
