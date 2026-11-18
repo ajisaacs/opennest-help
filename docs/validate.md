@@ -4,7 +4,7 @@ OpenNest has three ways to find problems before anything is cut:
 
 | Check | What it finds | When to use it |
 | --- | --- | --- |
-| [Overlap Check](#overlap-check) | Parts whose material overlaps, parts closer than the part spacing, and parts off the plate or outside its work area | Runs by itself on the plate you're looking at; check it after moving parts by hand, or keeping an Auto Nest result that failed its check |
+| [Overlap Check](#overlap-check) | Parts whose material overlaps, parts closer than the part spacing, and parts off the plate or outside its work area | Runs by itself on the plate you're looking at whenever you change it, including moving parts by hand or keeping an Auto Nest result that failed its check |
 | [Validate Nest](#validate-nest) | Every check before posting, on every plate: overlaps, missing lead-ins, rapids that cross cut parts, spacing, the plate edge and more | After planning the cutting, or any time you want a full check |
 | [Check before posting](#before-posting) | Everything Validate Nest finds, and whether the post changes the cutting order | Runs by itself every time you post |
 
@@ -12,17 +12,13 @@ None of them changes the nest. They point at problems; you decide how to fix the
 
 ## Overlap Check {#overlap-check}
 
-The plate view can shade overlapping material in magenta. Use the **View > Overlap
-Check** menu:
-
-- **Check Active Plate** checks the plate you're looking at. **Cancel Check** stops a
-  long check.
-- **Display** chooses how overlaps are shown: **Areas** shades the shared material,
-  **Markers** puts a marker on each overlap, **Both** does both, and **Off** hides
-  them.
-
 OpenNest checks the plate you're looking at by itself, half a second after you stop
-changing it. **Check Active Plate** runs the check at once.
+changing it, and shades overlapping material in magenta. There's nothing to start or
+stop.
+
+The **View > Overlap Check** menu chooses how overlaps are shown: **Areas** shades the
+shared material, **Markers** puts a marker on each overlap, **Both** does both, and
+**Off** hides them.
 
 The check also finds parts that don't overlap but sit closer than the plate's part
 spacing. Each pair gets an orange ring at its narrowest gap, labeled with the gap, for
