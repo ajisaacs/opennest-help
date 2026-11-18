@@ -26,9 +26,11 @@ nest: what you see in the preview is what will be cut.
    drawing.
 7. **Split** cuts a part too big for your sheets into pieces. **Simplify** replaces
    runs of short lines with true arcs; when it finds some, the button shows how many,
-   for example **Simplify (3)**. **Export DXF** saves the drawing, as it is now, to a
-   new DXF file, or to an SVG file if you pick **SVG** as the file type. **Holes...**
-   opens the [hole table](#hole-table).
+   for example **Simplify (3)**. **Export...** saves the drawing, as it is now, to a
+   new file. Pick the file type in the save window: DXF (R14 through 2018), DWG (2004
+   through 2018) or SVG. The file keeps its layers and includes the bend lines with
+   notes for their direction, angle and radius, so if you import it again the bends
+   come back with it. **Holes...** opens the [hole table](#hole-table).
 8. **Original** shows the file's geometry as it was read, before any cleanup, faded
    behind the current drawing, so you can compare it with what will be cut. **Labels** numbers each entity. **Bends**
    chooses how bend lines are found in files you add from now on; **Auto** suits most
@@ -60,7 +62,7 @@ time.
 Dimensions show a part's sizes on the drawing while you check it. They're measured from
 the geometry that will be cut, so they follow along as you untick layers, exclude lines
 or simplify. They never change the part's program, and they don't appear on plates,
-reports or exported DXF files.
+reports or exported files (DXF, DWG or SVG).
 
 ![Mounting Plate with overall, diameter and radius dimensions](images/converter-dimensions.png)
 
