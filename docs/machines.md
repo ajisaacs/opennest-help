@@ -55,7 +55,8 @@ If you never pick one, new nests use the first machine in alphabetical order.
 
 The support bed is what the sheet rests on while it's cut: a grid of points, as on a laser
 table, or straight slats, as on a plasma table. OpenNest uses it to warn when a cut part
-can tip, and Plan Cutting can tab those parts in place. Open it with
+can tip, and Plan Cutting can tab those parts in place and
+[slice slugs](cutting-planner.md#slug-slices) that would tip. Open it with
 **Nest > Support Bed**. The machine's own bed is also set on the **Support Bed** tab in
 **Tools > Machine Configuration**.
 

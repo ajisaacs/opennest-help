@@ -116,6 +116,24 @@ gets them. If the machine can't be saved, for example because the server can't b
 reached, OpenNest says so and keeps them on this PC for that material and thickness. A
 plate that's already planned keeps its lead-ins until you apply a new plan to it.
 
+### Slice slugs that would tip {#slug-slices}
+
+A cutout's slug drops onto the support bed too, and one the bed can't hold level can tip
+up into the head's path. Tick **Cutouts > Slice slugs the support grid can't hold level**
+to have Plan Cutting cut each such slug into pieces, right before it cuts that cutout, so
+the pieces drop between the supports.
+
+- On a grid of points the slices run midway between the rows and the columns of points,
+  so they never cut over a point. On slats they run along each slat's center line.
+- Each slice stops one kerf short of the cutout, so the pieces stay put until the cutout
+  is cut and then drop together. With no kerf for the thickness there are no slices.
+- A slice that would only cut off a thin strip along the cutout's edge, resting on no
+  point, is left out; the strip stays with the piece beside it.
+- Not sliced: slugs the bed holds level, slugs too small for a slice line to cross,
+  tabbed cutouts, and cutouts with another cut or a nested part inside them.
+
+It's off by default and, like the other settings here, kept for each thickness.
+
 ## When a plate already has lead-ins {#existing-lead-ins}
 
 If a plate already has lead-ins or cut-offs, a red banner above the settings says how
