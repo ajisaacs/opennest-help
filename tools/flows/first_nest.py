@@ -63,6 +63,15 @@ def move(hwnd, x, y, width, height):
     time.sleep(0.5)
 
 
+def press(hwnd, title):
+    """Clicks a WinForms button by its text, so moved buttons don't need re-measuring."""
+    from pywinauto import Application
+
+    owner = Application(backend="win32").connect(handle=hwnd).window(handle=hwnd)
+    owner.child_window(title=title, class_name_re=".*BUTTON.*", found_index=0).click()
+    time.sleep(0.6)
+
+
 def capture(name, title, *extra):
     subprocess.run([sys.executable, str(ROOT / "tools" / "capture.py"), name, "--title", title, *extra], check=True)
 
@@ -101,7 +110,7 @@ def run(until):
     click(converter, 120, 151)
     time.sleep(1)
     capture("first-nest-converter", r"^CAD Converter")
-    click(converter, 1251, 826)  # Accept
+    press(converter, "Accept")
     time.sleep(2)
     capture("first-nest-drawings", r"^OpenNest - \[")
     if until == "drawings":
@@ -113,14 +122,21 @@ def run(until):
     capture("first-nest-autonest", r"^AutoNest$")
     click(auto, 88, 56)  # Plates tab
     capture("first-nest-autonest-plates", r"^AutoNest$")
-    click(auto, 421, 563)  # Accept
+    press(auto, "Accept")
     window(r"^Nesting Progress")
-    time.sleep(1.5)
-    capture("first-nest-progress", r"^Nesting Progress")
-    review = window(r"^Review Auto Nest", timeout=180)
+    # With two or more top layouts the window waits as "Nesting Finished" with the best
+    # layout picked: capture it there (green line, TOP LAYOUTS) and use that layout, which
+    # skips the review. With only one layout, Auto Nest takes it and shows the review.
+    done = window(r"^(Nesting Finished|Review Auto Nest)", timeout=240)
     time.sleep(1)
-    capture("first-nest-review", r"^Review Auto Nest")
-    click(review, 777, 489)  # Keep
+    buffer = ctypes.create_unicode_buffer(512)
+    user32.GetWindowTextW(done, buffer, 512)
+    if buffer.value.startswith("Nesting Finished"):
+        capture("first-nest-progress", r"^Nesting Finished")
+        press(done, "Use This Layout")
+    else:
+        capture("first-nest-review", r"^Review Auto Nest")
+        click(done, 777, 489)  # Keep
     time.sleep(1.5)
     click(main, 847, 111)  # Zoom To Fit
     time.sleep(1)
@@ -131,7 +147,7 @@ def run(until):
     click(main, 543, 82)  # Plan Cutting toolbar button
     time.sleep(8)
     capture("first-nest-plan-cutting", r"^OpenNest - \[")
-    click(main, 918, 377)  # Apply
+    press(main, "Apply")
     time.sleep(3)
 
     click(main, 671, 74)  # Post drop-down arrow
@@ -144,7 +160,7 @@ def run(until):
     settings = window(r".+ Settings$")
     time.sleep(1)
     capture("first-nest-post-settings", r".+ Settings$")
-    click(settings, 607, 566)  # OK
+    press(settings, "OK")
     window(r"^Verify Nest Before Posting", timeout=120)
     time.sleep(10)
     capture("first-nest-verify", r"^Verify Nest Before Posting")
