@@ -146,9 +146,9 @@ next time you run Auto Nest on it.
 ### Stock from MaterialLedger {#materialledger}
 
 If your shop tracks sheets and drops in MaterialLedger, Auto Nest can offer the stock
-that's free right now. Set it up once on each PC: in **Tools > Options**, under
-**MaterialLedger**, enter the ledger's **URL** and **API key**, click **Test**, then
-**Save Ledger**. The nest needs a material and a thickness (**Nest > Edit**).
+that's free right now. Set it up once on each PC: in **Tools > Options**, on the
+**MaterialLedger** page, enter the ledger's **URL:** and **API key:**, click **Test
+Connection**, then **Save Ledger**. The nest needs a material and a thickness (**Nest > Edit**).
 
 1. Turn on **Stock Options** and click **Load from ledger**.
 2. The ledger's free full sheets and drops of the nest's material are added as rows,
