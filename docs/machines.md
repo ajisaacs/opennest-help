@@ -92,7 +92,7 @@ steady it best.
 Each thickness of a machine's material keeps its own cutting settings. When you plan
 the cutting (or place lead-ins by hand), OpenNest uses the settings of the nest's
 machine for the nest's material and thickness, which come from **Nest > Edit**. Change
-them in **Cutting Settings** in the Plan Cutting panel, or in **Tools > Machine
+them in **Leads & Tabs…** in the Plan Cutting panel, or in **Tools > Machine
 Configuration**; either way they're saved on the machine.
 
 - The **General** tab holds the thickness's kerf. The **Outside Cuts** tab sets the
@@ -112,6 +112,6 @@ Configuration**; either way they're saved on the machine.
 - **Clean Hole** is offered on the **Inside Cuts** tab only. An **Arc** lead-in is a
   half circle, and a machine thickness can't hold a **Line + Line** lead-in.
 - If the machine has nothing on file for that material and thickness, the settings you
-  used last on this PC are used as they are, and **Cutting Settings** can use every
+  used last on this PC are used as they are, and **Leads & Tabs…** can use every
   lead type.
 - Plates you've already planned keep their lead-ins until you apply a new plan.

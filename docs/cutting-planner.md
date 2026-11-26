@@ -26,36 +26,41 @@ It shows the plan beside the plate first. Nothing on the plate changes until you
     - Red **Can't apply** means a plate is blocked. The issues below say why.
 3. The panel's mode. **Plan Cutting** shows the new plan. **Validate Nest (live
    programs)** checks what's on the plates now; see [Check a nest](validate.md).
-4. **Cutting Settings** sets lead-ins, lead-outs, tabs and pierces (see below). The
-   line beside it sums them up.
-5. **Keep current part order.** Tick it to keep the parts in their current order and
+4. **Leads & Tabs…**, in the **Part cutting** group, sets lead-ins, lead-outs, tabs,
+   pierces and etched marks (see [below](#cutting-settings)). The line beside it sums
+   them up.
+5. **Keep current part order**, also under **Part cutting**. Tick it to keep the parts in their current order and
    plan only where and how each one is cut. Leave it off to let the planner reorder
    the parts as well.
-6. **Add scrap cut-offs** adds cut-off lines that chop the skeleton into strips, and
-   plans them with the parts. **Cut-off Settings** sets the strip size; see
-   [Scrap cut-offs](#scrap-cut-offs).
-7. **Replan** plans again. **Apply** puts the plan on the plates. **Close** (or
-   ++esc++) closes the panel and leaves the plates as they were.
+6. In the **Scrap cut-offs** group, **Add scrap cut-offs** adds cut-off lines that chop
+   the skeleton into strips, and plans them with the parts. **Strips…** sets the strip
+   size, shown beside it; see [Scrap cut-offs](#scrap-cut-offs).
+7. **Apply**, at the bottom right, puts the plan on the plates. **Close** (or ++esc++)
+   closes the panel and leaves the plates as they were. **Replan**, at the top, plans
+   again.
 8. A line for the plate: its part count, whether the part order changed, and the
-   total length of rapid moves.
+   total length of rapid moves. With several plates, its arrows move between them.
 9. **Issues** lists every problem by plate and part; **Parts** lists every part and
    whether it passed. Click an issue to show it on the plate.
 
-Changing a setting, or ticking or clearing a box, plans again straight away. While the
-plan is shown, the plate view shows the proposed cutting order as part numbers.
+Changing a setting, or ticking or clearing a box, plans again straight away. Canceling
+**Leads & Tabs…**, or clicking **OK** without changing anything, keeps the plan you
+have. So does canceling **Strips…**, unless **Add scrap cut-offs** is ticked; then it
+plans again. While the plan is shown, the plate view shows the proposed cutting order as part numbers.
 
-When the nest has more than one plate with parts, a list in the panel chooses **Current
-plate only** or **All plates**. Changing it takes off scrap cut-offs that aren't applied
+When the nest has more than one plate with parts, a list beside **Replan** chooses
+**Current plate only** or **All plates**. Changing it takes off scrap cut-offs that aren't applied
 yet and plans again. The **Plan Cutting** toolbar button opens with the choice you made
 last (all plates at first); **Plate > Plan Cutting** is always the current plate and
 **Nest > Plan Cutting (All Plates)** always every plate.
 
-When the panel covers several plates, **Previous** and **Next** move between them.
-**Apply** applies every plate at once, or none.
+When the panel covers several plates, the ◀ (**Previous plate**) and ▶ (**Next
+plate**) arrows on the plate's line show each plate in turn. They only change which plate
+you're looking at: **Apply** applies every plate at once, or none.
 
 ## Cutting settings {#cutting-settings}
 
-**Cutting Settings** opens the **Cutting Parameters** dialog. Its settings belong to
+**Leads & Tabs…** opens the **Cutting Parameters** dialog. Its settings belong to
 the nest's [machine](machines.md#machine-lead-ins), material and thickness, so each
 thickness keeps its own: 1/4" plate can be tabbed while 1/2" isn't. The line above the
 fields says what you're editing, for example **Saved for Fiber 1 · Mild Steel A36 0.25
@@ -147,8 +152,8 @@ runs through a junction, see [Trim and extend cut-offs](trim-extend-cutoff.md).
 ## Scrap cut-offs {#scrap-cut-offs}
 
 Tick **Add scrap cut-offs** to cut the leftover skeleton into strips that fit your
-scrap bin. The strip size is shown on the box, for example **35 in strips**. Click
-**Cut-off Settings** to change them; **Use These Settings** returns to the plan.
+scrap bin. The strip size is shown beside the box, for example **35 in strips**. Click
+**Strips…** to change them; **Use These Settings** returns to the plan.
 
 - **Nominal spacing along sheet length:** the most material between two strip lines.
   It isn't the length of each cut.

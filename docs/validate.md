@@ -114,7 +114,7 @@ The extra checks, listed only when they find something:
 - **Part support:** a part the [support bed](machines.md#support-grid) can't hold
   level, with no tab to keep it in place. With **Tab parts by size**, or on a plate with
   no bed, it's a part whose narrow side is in the size range of
-  [Cutting Settings](cutting-planner.md#cutting-settings) that has no tab.
+  [Leads & Tabs…](cutting-planner.md#cutting-settings) that has no tab.
 - **Part spacing:** two parts closer than the plate's part spacing. The finding gives
   the measured gap.
 - **Nested part order** and **Nested part leads:** a part cut inside another part's
