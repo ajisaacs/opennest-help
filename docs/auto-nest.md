@@ -1,8 +1,10 @@
 # Auto Nest
 
-Auto Nest lays out every part you still need on as many sheets as it takes. It never
-touches a plate that already has parts: the sheets it makes go onto empty plates, and
-nothing is added to the nest until you keep the result.
+Auto Nest lays out every part you still need on as many sheets as it takes. By default
+it never touches a plate that already has parts: the sheets it makes go onto empty
+plates. To fill the space left on the nest's plates instead, see
+[Use the current plates](#plate-source). Nothing is added to the nest until you keep
+the result.
 
 Open it with **Auto Nest** on the toolbar or **Nest > Auto Nest**. For a short
 walk-through, see [Your first nest](first-nest.md#run-auto-nest).
@@ -22,6 +24,15 @@ walk-through, see [Your first nest](first-nest.md#run-auto-nest).
    should.
 4. The total number of parts and drawings this run will nest.
 
+Beside **Qty**, the grey **Required** and **Placed** columns show how many of each
+drawing the nest needs and how many are already on its plates. To set every row's
+**Qty** at once:
+
+- **Load Required** sets each **Qty** to the full required quantity, to nest a whole
+  order again.
+- **Load Remaining** sets each **Qty** back to what's still left to place (required less
+  placed), as the dialog opens.
+
 !!! note "Keep a part to its grain"
     To allow only 0° and 90° for a part with a grain direction, enter **Rot Start**
     0, **Rot End** 90 and **Step** 90.
@@ -36,9 +47,10 @@ engine beside its name.
 
 | Engine | Use it for |
 | --- | --- |
-| **Default** | Most jobs. It tries Irregular, Rectangles and Circles and keeps the best layout. |
+| **Default** | Most jobs. It tries Rectangles, Raster, Circles and Irregular, in that order, and keeps the best layout. Because Raster runs early, a run you stop soon still has an interlocking plan. |
 | **Rectangles** | Rectangular and nearly rectangular parts. Each part is packed as its bounding box, so it never tucks a part into another's notch. It is the fastest. |
 | **Irregular** | Odd shapes that should interlock. |
+| **Raster** | A fast first plan for irregular parts. It packs them on a fine grid, holes included, in seconds where Irregular can take a minute, at the cost of a little more material. |
 | **Circles** | Jobs where every part is round: blanks, washers, flanges. If any part isn't round it places nothing. |
 | **FlatBar** | Cutting parts from flat bar, one row along the bar. Shaped ends are nested into each other. |
 | **Lattice** | Many copies of a few parts. It repeats them in tight rows and pairs. It was called **Fill** before. |
@@ -84,6 +96,24 @@ nests start from **Common lines** in
 [**Tools > Nest Defaults**](nest-settings.md#nest-defaults). To join parts by hand, and
 for how they're cut and posted, see [Common lines](edit-plates.md#common-lines).
 
+## Use the current plates {#plate-source}
+
+**Plates** on the **Plates** tab says where the parts go. It opens on **New plates**
+each time.
+
+- **New plates** lays out fresh sheets: the sizes under **Stock Options**, or sheets
+  like the current plate.
+- **Current plates only** fills the free space beside parts already placed, then the
+  nest's empty plates, and makes no new plate. It fills beside parts only on rectangular
+  plates without cut-offs. **Stock Options** is greyed out.
+- **Current, then new** fills the current plates first, then lays out new sheets for
+  what's left.
+
+The review shows the parts that were already on a plate in grey, so you can see what
+Auto Nest added. **Keep** adds it all as one step, so one **Edit >
+Undo** takes it back. If nothing fits, a message says so and names the parts it couldn't
+place. Current plates are always nested on this PC, never [on the server](#nest-on-server).
+
 ## Sheet sizes and stock {#stock-options}
 
 With **Stock Options** off, Auto Nest uses sheets the size of the plate you're looking
@@ -116,9 +146,9 @@ next time you run Auto Nest on it.
 ### Stock from MaterialLedger {#materialledger}
 
 If your shop tracks sheets and drops in MaterialLedger, Auto Nest can offer the stock
-that's free right now. Set it up once on each PC: in **Tools > Options**, under
-**MaterialLedger**, enter the ledger's **URL** and **API key**, click **Test**, then
-**Save Ledger**. The nest needs a material and a thickness (**Nest > Edit**).
+that's free right now. Set it up once on each PC: in **Tools > Options**, on the
+**MaterialLedger** page, enter the ledger's **URL:** and **API key:**, click **Test
+Connection**, then **Save Ledger**. The nest needs a material and a thickness (**Nest > Edit**).
 
 1. Turn on **Stock Options** and click **Load from ledger**.
 2. The ledger's free full sheets and drops of the nest's material are added as rows,
@@ -146,15 +176,33 @@ nest. In Database mode the status bar shows the nest's [ledger holds](nest-serve
 
 ## Watch it run {#progress}
 
-The **Nesting Progress** window shows the stages and the **Best plan so far** while
-the engine works. **Stop** throws the run away and leaves your nest as it was. See
+The **Nesting Progress** window opens tall, most of the screen's height, so the layouts
+are easy to read. Under **TOP LAYOUTS** it shows the best layouts found so far, best
+first, each with its sheets and the free strip its last sheet leaves. **Stop** throws
+the run away and leaves your nest as it was. See
 [Your first nest](first-nest.md#run-auto-nest) for a picture.
+
+### Pick a layout {#pick-layout}
+
+- **While it runs:** click a layout and **Use This Layout** (or double-click it) to stop
+  the search and use that one.
+- **When the search ends** with more than one layout, the line at the bottom turns
+  green and says **Search finished. Pick the layout to use.** The title changes to
+  **Nesting Finished**. The engine's pick is marked **Best**. Select one and click
+  **Use This Layout**, or **Discard** to throw them all away.
+
+A layout you picked goes straight onto the nest, without the
+[Keep or Discard review](#review); you already chose it. If parts couldn't be placed, a
+message names them afterwards. The review still opens when there was only one layout to
+choose from, for [server nests](#nest-on-server) and for
+[current plates](#plate-source).
 
 ## Nest on the server {#nest-on-server}
 
 In Database mode, a big job can run on the nest server instead of tying up your PC.
 Tick **Nest on the server** on the **Plates** tab before you click **Accept**. Auto Nest
-remembers the choice. It's greyed out for plug-in engines, which run only on your PC.
+remembers the choice. It's greyed out for plug-in engines, which run only on your PC, and unless **Plates** is
+**New plates**.
 
 - The server nests one job at a time. The progress window shows your place in the queue,
   then the server's stage and its **Best plan so far**. The server has no time limit, so
@@ -170,6 +218,9 @@ A result you haven't kept or discarded waits on the server, for example one that
 finished after OpenNest closed. Find it in [My Server Jobs](nest-server.md#server-jobs).
 
 ## Keep or discard the result {#review}
+
+When Auto Nest chose the layout for you (see [Pick a layout](#pick-layout)), it shows
+the result for you to keep or discard:
 
 ![Review Auto Nest window](images/auto-nest-review.png)
 

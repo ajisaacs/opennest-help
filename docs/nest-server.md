@@ -174,10 +174,10 @@ spreadsheet, and **Save CSV...** saves it as a file.
 
 If the server moves, update the address without changing the mode:
 
-1. Choose **Tools > Options**.
-2. Under **Nest server URL**, type the new address.
-3. Click **Set / Change Server**. The address is saved at once, even if you then click
-   **Cancel** in Options.
+1. Choose **Tools > Options** and click **Nest Server**.
+2. Under **Saved servers**, type the new address in the server's **URL**, or add the
+   server in the blank last row and pick it in **Active server:**.
+3. Click **Save**.
 
 This only changes where OpenNest looks. It doesn't move any nests from the old server.
 

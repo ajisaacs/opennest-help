@@ -17,6 +17,9 @@ can't read stops **Done** or **Save** instead of being read as zero.
 ## The nest's details {#nest-info}
 
 **Nest > Edit**, or a click on the material in the status bar, opens **Edit Nest**.
+Right-click the material in the status bar for **Edit Nest...** and **Show in Machine
+Configuration...**, which opens the nest machine's settings for this material; see
+[Machines](machines.md).
 
 **Info** tab:
 
@@ -55,22 +58,46 @@ In Database mode the server keeps one shared copy of the nest defaults; see
 
 ## Options {#options}
 
-**Tools > Options** holds settings for OpenNest on this PC:
+**Tools > Options** holds settings for OpenNest on this PC. Pick a page in the list on
+the left. **Save** keeps the changes on every page except where a button below says it
+saves at once; **Cancel** drops the rest.
+
+**General**
 
 | Setting | What it does |
 | --- | --- |
-| **Create a new nest on startup** | Opens an empty nest when OpenNest starts. |
-| **Auto-size plate factor** | The step **Plate > Resize to Fit** rounds plate sizes up to. |
-| **Cut planning effort** | How long [Plan Cutting](cutting-planner.md#not-ready) searches on hard plates: 1 is normal, up to 10. |
-| **Color scheme** | The colors of the plate view. |
-| **Clone push placement** | Where ++shift++ + click and ++ctrl++ + click [push a placed part](edit-plates.md#place-parts): Every push goes toward the plate's origin corner. **Closest to origin** tries a sideways push first and an up-or-down push first, and keeps whichever ends nearer that corner; **Push horizontally first** and **Push vertically first** always push in that order. |
-| **Fill Strategies** | Which fill methods the engines try, and in what order. Leave them as they are unless you're asked to change them. |
-| **Nest server URL** | The [nest server's](nest-server.md#change-server-address) address. **Set / Change Server** saves it at once. |
-| **Auto-update feed URL** | Where OpenNest checks for [updates](#updates). Leave it blank to get them from the nest server in Database mode (or GitHub if the server has none), and from OpenNest's GitHub releases otherwise. **Save Feed URL** saves it at once. Takes effect after a restart. |
-| **Updates** | Which versions this PC installs. **Stable releases only** (the default) takes full releases. The development-build choices also take the newest test build, made from every change as it's finished: **at most once a day**, **at most once a week**, or **Every development build**. Keep PCs that cut production work on stable releases. Takes effect after a restart. |
-| **MaterialLedger** | The ledger **URL** and **API key**, for [stock from MaterialLedger](auto-nest.md#materialledger). **Test** checks the connection; **Save Ledger** saves them at once. |
+| **Create a new nest on startup** | Opens an empty nest with your nest defaults each time OpenNest starts. |
+| **Color scheme:** | The colors of plates, parts and cut paths. |
+| **Clone push placement:** | Where ++shift++ + click and ++ctrl++ + click [push a placed part](edit-plates.md#place-parts). Every push goes toward the plate's origin corner. **Closest to origin** tries a sideways push first and an up-or-down push first, and keeps whichever ends nearer that corner; **Push horizontally first** and **Push vertically first** always push in that order. |
 
-Click **Save** for the rest.
+**Nesting & Cutting**
+
+| Setting | What it does |
+| --- | --- |
+| **Auto-size plate factor:** | The step **Plate > Resize to Fit** rounds plate sizes up to. |
+| **Cut planning effort:** | How long [Plan Cutting](cutting-planner.md#not-ready) searches on hard plates: 1 is normal, up to 10. |
+
+**Fill Strategies**: the fill methods the engines try, in order. Clear a strategy's box
+to skip it. Leave them as they are unless you're asked to change them.
+
+**Nest Server**: the [nest servers](nest-server.md#change-server-address) this PC uses.
+
+- **Saved servers** lists each server's **Name** and **URL**. Type in the blank last
+  row to add one. To remove one, select its row and click **Remove Server**.
+- **Active server:** is the one Database mode uses; it's marked **Active** in the list.
+  You can't remove the active server until you choose another.
+- Changes here are kept when you click **Save**.
+
+**MaterialLedger**: the ledger **URL:** and **API key:**, for
+[stock from MaterialLedger](auto-nest.md#materialledger). **Test Connection** checks
+them; **Save Ledger** saves them at once. Leave **URL:** blank to turn the ledger off.
+
+**Updates**
+
+| Setting | What it does |
+| --- | --- |
+| **Install:** | Which versions this PC installs. **Stable releases only** (the default) takes full releases. The development-build choices also take the newest test build, made from every change as it's finished: **Development builds, at most once a day**, **Development builds, at most once a week**, or **Every development build**. Keep PCs that cut production work on stable releases. Takes effect after a restart. |
+| **Feed URL:** | Where OpenNest checks for [updates](#updates). Leave it blank to get them from the nest server in Database mode (or GitHub if the server has none), and from OpenNest's GitHub releases otherwise. **Save Feed URL** saves it at once. Takes effect after a restart. |
 
 ## Updates {#updates}
 
@@ -79,7 +106,7 @@ OpenNest installer checks for a new version a minute after it starts and downloa
 the background. When it's ready, the status bar says **Update … ready - click to
 restart**; click it and save your work first, because an unsaved nest is lost.
 
-- **Help > Check for Updates...** checks now, even when **Updates** is set to once a day or
+- **Help > Check for Updates...** checks now, even when **Install:** is set to once a day or
   once a week. If you're up to date, it says so.
 - **Help > About OpenNest** shows the version and the releases page.
 - A copy that wasn't installed with the installer, such as one unzipped to a folder,
@@ -106,7 +133,9 @@ OpenNest saves them for next time. In Database mode, machines and post settings 
   or back up. It doesn't change where **Save** goes.
 - **File > Export Plate...** saves the current plate as a **DXF file**, an **SVG file**,
   an **image** as it's shown on screen (`.jpg`), or a text file of each part's
-  **locations and rotations**.
+  **locations and rotations**. **SVG for laser software, e.g. LightBurn (*.svg)** saves
+  only what gets cut or marked, without the plate outline, rapids or uncut tabs, with
+  each kind of line in its own color so it lands on its own layer.
   **Export All Plates...** does the same for every plate in turn.
 - **File > Nest Report...** opens a PDF report of the whole nest in a window, with
   **Save As...** to keep it as a file and **Print...**: each sheet layout, every part

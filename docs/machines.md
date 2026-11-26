@@ -29,6 +29,12 @@ A new nest gets the machine chosen in **Tools > Nest Defaults** (see below). To 
 The status bar at the bottom of the window shows **Machine:** and the nest's machine.
 Click or right-click it for the same list.
 
+To see the machine's settings for the nest's material, right-click the material in the
+status bar and choose **Show in Machine Configuration...**. **Tools > Machine
+Configuration** opens with the nest's machine and the matching thickness selected, or the
+grade, the material or the machine when nothing closer is on file. It's grayed out when
+the nest has no machine.
+
 The nest file remembers its machine. When you change it:
 
 - Every sheet moves to the new machine's support bed, or has none if that machine
