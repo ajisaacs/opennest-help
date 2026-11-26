@@ -84,6 +84,20 @@ parts and down when you delete them. **Hide fully nested drawings** hides the
 drawings that are done. When every drawing is done the list says so; click that note to
 show them again.
 
+### Sort the drawings {#sort-drawings}
+
+The **Sort drawings** button at the end of the **Drawings** tab's toolbar orders the
+list. Point at it to see the order in use.
+
+| Choice | Order |
+| --- | --- |
+| **Name** | Alphabetical. |
+| **Area (largest first)** | By the part's area. |
+| **Bounding Box Size (largest first)** | By the area of the box around the part. |
+| **Remaining Qty (most first)** | By how many are still to nest. The list re-sorts as you place parts. |
+
+Drawings that tie are listed by name. OpenNest remembers your choice for every nest.
+
 ### Fill with a pair {#best-fit}
 
 **Tools > Best-Fit Viewer** shows the best ways to pair two copies of a part, for
