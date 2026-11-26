@@ -66,7 +66,8 @@ thickness keeps its own: 1/4" plate can be tabbed while 1/2" isn't. The line abo
 fields says what you're editing, for example **Saved for Fiber 1 · Mild Steel A36 0.25
 in**. When the machine has no entry for the nest's material and thickness, or the nest
 has no machine, material or thickness, it says **This PC's settings:** and why, and the
-settings you used last on this PC are used instead.
+settings you used last on this PC are used instead. The leads are on the left; **Tabs**,
+**Cutouts**, **Marks** and **Pierce** are beside them.
 
 ![Cutting Parameters dialog](images/cutting-settings.png)
 
@@ -85,17 +86,15 @@ settings you used last on this PC are used instead.
    drawn strong.
 4. **Tabs** leave small uncut gaps that hold parts in the sheet. Tick **Add tabs to hold
    parts in the sheet**, set the **Tab size**, then choose:
-    - **Only tab parts the support grid can't hold level** uses the nest's
-      [support bed](machines.md#support-grid) and tabs only the parts that could tip, at
-      the point where one tab steadies the part most. With **Tab alone holds parts up
-      to** a length, a part that could tip and is no longer than that is held by its
-      tab alone, wherever the tab goes. New settings start at 6; 0 turns it off. On a
-      plate with no support bed, it tabs by size instead.
+    - **Tab parts the support grid can't hold level** uses the nest's
+      [support bed](machines.md#support-grid) and tabs only the parts that could tip. A
+      tabbed part stays in the sheet on its tab wherever the tab goes, so the planner
+      puts it where it suits the cutting route. On a plate with no support bed, it tabs
+      by size instead.
     - **Tab parts by size** ignores the support bed and tabs every part whose narrow side
-      is in the range under **By size, or with no support bed, tab parts whose narrow
-      side is**. The narrow side is measured on each part's smallest box at any angle,
-      so turning a part doesn't change it. Leave the second number at 0 to tab nothing
-      by size.
+      is in the range **Narrow side from** … **to**. The narrow side is measured on each
+      part's smallest box at any angle, so turning a part doesn't change it. Leave the
+      second number at 0 to tab nothing by size.
 5. **Pierce.** **Clearance from contour** is how far each pierce stays from the contour
    it leads into. **Pierce zone diameter** is the size of the hole a pierce blows
    through the plate; when it's above 0, every pierce keeps half of it clear of all
