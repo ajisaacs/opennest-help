@@ -28,8 +28,9 @@ nest: what you see in the preview is what will be cut.
    drawing.
 7. **Split** cuts a part too big for your sheets into pieces. **Simplify** replaces
    runs of short lines with true arcs; when it finds some, the button shows how many,
-   for example **Simplify (3)**. **Export...** saves the drawing, as it is now, to a
-   new file. Pick the file type in the save window: DXF (R14 through 2018), DWG (2004
+   for example **Simplify (3)**. **Separate (2)** shows when the file draws more than
+   one part; see [Files with several parts](#separate). **Export...** saves the drawing,
+   as it is now, to a new file. Pick the file type in the save window: DXF (R14 through 2018), DWG (2004
    through 2018) or SVG. The file keeps its layers and includes the bend lines with
    notes for their direction, angle and radius, so if you import it again the bends
    come back with it. **Holes...** opens the [hole table](#hole-table).
@@ -106,6 +107,26 @@ You can drag the table aside if it covers part of the drawing.
 
 The table follows the drawing you're checking and updates as you change what's cut. It
 only shows; it doesn't change the drawing.
+
+## Files with several parts {#separate}
+
+A file can draw several separate parts, such as a sheet of brackets. It comes in as one
+drawing, which would cut every part as one. When OpenNest finds two or more parts in it,
+**Separate** shows in the bar under the preview with how many, for example **Separate
+(4)**.
+
+- Click **Separate (4)** to make each part its own drawing in the list.
+- To take out only some, select a line of each, right-click and choose **Separate This
+  Part**. **Separate All 4 Parts** on the same menu separates them all.
+
+Each part keeps what you set on its lines (cut, etch, excluded, breakoffs, tabbed
+cutouts and dimensions), and the **Qty** and **Customer**. An SVG's titles name the parts
+when the file has them; otherwise each is the file's name and a number, counted in rows
+from the top, left to right. A part sitting in another part's hole counts as a part of
+its own.
+
+OpenNest won't separate parts that a breakoff or tabbed cutout joins; remove it first.
+Changes made on the **Program** tab are lost, so OpenNest asks before it separates.
 
 ## SVG files {#svg}
 
