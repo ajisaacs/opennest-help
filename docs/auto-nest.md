@@ -1,8 +1,10 @@
 # Auto Nest
 
-Auto Nest lays out every part you still need on as many sheets as it takes. It never
-touches a plate that already has parts: the sheets it makes go onto empty plates, and
-nothing is added to the nest until you keep the result.
+Auto Nest lays out every part you still need on as many sheets as it takes. By default
+it never touches a plate that already has parts: the sheets it makes go onto empty
+plates. To fill the space left on the nest's plates instead, see
+[Use the current plates](#plate-source). Nothing is added to the nest until you keep
+the result.
 
 Open it with **Auto Nest** on the toolbar or **Nest > Auto Nest**. For a short
 walk-through, see [Your first nest](first-nest.md#run-auto-nest).
@@ -93,6 +95,24 @@ nests start from **Common lines** in
 [**Tools > Nest Defaults**](nest-settings.md#nest-defaults). To join parts by hand, and
 for how they're cut and posted, see [Common lines](edit-plates.md#common-lines).
 
+## Use the current plates {#plate-source}
+
+**Plates** on the **Plates** tab says where the parts go. It opens on **New plates**
+each time.
+
+- **New plates** lays out fresh sheets: the sizes under **Stock Options**, or sheets
+  like the current plate.
+- **Current plates only** fills the free space beside parts already placed, then the
+  nest's empty plates, and makes no new plate. It fills beside parts only on rectangular
+  plates without cut-offs. **Stock Options** is greyed out.
+- **Current, then new** fills the current plates first, then lays out new sheets for
+  what's left.
+
+The review shows the parts that were already on a plate in grey, so you can see what
+Auto Nest added. **Keep** adds it all as one step, so one **Edit >
+Undo** takes it back. If nothing fits, a message says so and names the parts it couldn't
+place. Current plates are always nested on this PC, never [on the server](#nest-on-server).
+
 ## Sheet sizes and stock {#stock-options}
 
 With **Stock Options** off, Auto Nest uses sheets the size of the plate you're looking
@@ -163,7 +183,8 @@ the engine works. **Stop** throws the run away and leaves your nest as it was. S
 
 In Database mode, a big job can run on the nest server instead of tying up your PC.
 Tick **Nest on the server** on the **Plates** tab before you click **Accept**. Auto Nest
-remembers the choice. It's greyed out for plug-in engines, which run only on your PC.
+remembers the choice. It's greyed out for plug-in engines, which run only on your PC, and unless **Plates** is
+**New plates**.
 
 - The server nests one job at a time. The progress window shows your place in the queue,
   then the server's stage and its **Best plan so far**. The server has no time limit, so
