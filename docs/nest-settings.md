@@ -133,7 +133,9 @@ OpenNest saves them for next time. In Database mode, machines and post settings 
   or back up. It doesn't change where **Save** goes.
 - **File > Export Plate...** saves the current plate as a **DXF file**, an **SVG file**,
   an **image** as it's shown on screen (`.jpg`), or a text file of each part's
-  **locations and rotations**.
+  **locations and rotations**. **SVG for laser software, e.g. LightBurn (*.svg)** saves
+  only what gets cut or marked, without the plate outline, rapids or uncut tabs, with
+  each kind of line in its own color so it lands on its own layer.
   **Export All Plates...** does the same for every plate in turn.
 - **File > Nest Report...** opens a PDF report of the whole nest in a window, with
   **Save As...** to keep it as a file and **Print...**: each sheet layout, every part
