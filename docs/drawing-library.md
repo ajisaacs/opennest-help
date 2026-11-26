@@ -104,6 +104,8 @@ Before adding, OpenNest checks the drawing against the nest:
 
 - **Different material, grade or thickness:** OpenNest names the differences and asks
   first. If you add it anyway, the nest's cutting settings are used for it.
+- **Nest with no material or thickness yet:** the nest takes them from the drawing, along
+  with the [machine's spacing](machines.md#machine-spacing) for them.
 - **Different units** (inches and millimeters): it isn't added.
 - **Already in the nest:** only its quantity goes up.
 - **Another drawing with the same name** in the nest: it isn't added. Rename one of

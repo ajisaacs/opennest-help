@@ -22,9 +22,9 @@ The **Plates** tab lists every sheet in the nest with its size and utilization.
 - **Plate > Edit** changes the plate's **Size**, its **Quantity** (how many sheets are
   cut with this layout), its **Part Spacing** and **Edge Spacing**, and the
   **Quadrant** its origin is in, and can give it a [sheet outline](#sheet-outline).
-- **Plate > Set as Default** makes this plate's size and spacing the nest's default for
-  new plates. **Tools > Save Current Plate as Defaults** saves them for new nests too;
-  see [Nest settings](nest-settings.md#nest-defaults).
+- **Plate > Set as Default** makes this plate's size and spacing the default for new
+  plates in this nest and for new nests; see
+  [Nest settings](nest-settings.md#nest-defaults).
 - **Plate > Rotate** turns the whole plate and its parts 90° either way, or 180°. A
   90° turn turns the sheet's [grain](#grain) with it.
 - **Plate > Resize to Fit** (++ctrl+p++) shrinks or grows the plate to fit its parts,

@@ -124,3 +124,15 @@ Configuration**; either way they're saved on the machine.
   used last on this PC are used as they are, and **Leads & Tabs…** can use every
   lead type.
 - Plates you've already planned keep their lead-ins until you apply a new plan.
+
+## Spacing from the machine {#machine-spacing}
+
+The **Spacing** tab of a thickness can set its **Part Spacing** and **Edge Spacing**. Tick
+**Use for this thickness** for each one you want to set; the others come from
+[**Tools > Nest Defaults**](nest-settings.md#nest-defaults).
+
+A nest takes this spacing when you change its material or thickness in **Nest > Edit**, when
+you change **Nest > Machine**, and when a drawing set release creates it. BOM import starts
+each group from it. **File > New** has no material yet, so it starts from the nest defaults.
+Spacing you change in the same **Nest > Edit** stays. Plates with parts keep their spacing,
+and so does any plate you've edited; only an untouched empty last plate follows.

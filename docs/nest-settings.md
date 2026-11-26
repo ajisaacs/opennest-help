@@ -36,7 +36,8 @@ Configuration...**, which opens the nest machine's settings for this material; s
 - **Units:** **Inches** or **Millimeters**.
 
 **Defaults** tab: the **Size**, **Part Spacing**, **Edge Spacing** and **Quadrant** that
-new plates in this nest get. **Notes** tab: free text saved with the nest.
+new plates in this nest get. Check **Use these defaults for new nests** to save them for
+every new nest as well. **Notes** tab: free text saved with the nest.
 
 To change one plate instead, use **Plate > Edit**; see
 [Edit a plate by hand](edit-plates.md#plates).
@@ -50,8 +51,8 @@ and **Length**), the **Quadrant** (click one to select it), the **Spacing**
 [**Common lines**](auto-nest.md#common-lines) choice new nests start with. Click
 **Save**.
 
-**Tools > Save Current Plate as Defaults** copies the current plate's size and spacing
-into those defaults in one step.
+**Plate > Set as Default** and **Tools > Save Current Plate as Defaults** copy the current
+plate's size and spacing into those defaults in one step.
 
 In Database mode the server keeps one shared copy of the nest defaults; see
 [Shared settings](nest-server.md#shared-settings).
