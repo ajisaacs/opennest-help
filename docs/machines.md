@@ -101,15 +101,17 @@ Configuration**; either way they're saved on the machine.
   round holes included. While **Same as outside cuts** is ticked, holes use the outside
   settings; clear it to give holes their own.
 - The **Tabs & Pierce** tab sets lead-in angle rounding,
-  [tabs](cutting-planner.md#cutting-settings) and pierce for the thickness. Tick **Use
-  for this thickness** to give it its own; unticked, nests of that thickness use the
-  tab and pierce settings last used on each PC.
-- To give several thicknesses the same tabs and pierce, right-click the thickness in
-  the list and choose **Copy Tabs & Pierce To...**. Tick the thicknesses to copy to
-  (**Thinner**, **Thicker**, **All** and **None** tick them for you), then click
-  **Copy**. For example, set tabs on 1/4" and copy them to every thinner thickness. A
-  thickness with no tabs and pierce of its own copies that too, so the others go back
-  to each PC's settings.
+  [**Tabs**](cutting-planner.md#cutting-settings),
+  [**Cutouts**](cutting-planner.md#slug-slices) (slicing slugs that would tip),
+  [**Marks**](cutting-planner.md#part-labels) (**Etch part label**) and **Pierce** for
+  the thickness. Tick **Use for this thickness** to give it its own; unticked, nests of
+  that thickness use the settings last used on each PC.
+- To give several thicknesses the same tabs, cutouts, marks and pierce, right-click the
+  thickness in the list and choose **Copy Tabs & Pierce To...**. Tick the thicknesses
+  to copy to (**Thinner**, **Thicker**, **All** and **None** tick them for you), then
+  click **Copy**. For example, set tabs on 1/4" and copy them to every thinner
+  thickness. A thickness with no settings of its own on this tab copies that too, so the
+  others go back to each PC's settings.
 - **Clean Hole** is offered on the **Inside Cuts** tab only. An **Arc** lead-in is a
   half circle, and a machine thickness can't hold a **Line + Line** lead-in.
 - If the machine has nothing on file for that material and thickness, the settings you
