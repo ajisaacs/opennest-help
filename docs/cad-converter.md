@@ -20,7 +20,9 @@ nest: what you see in the preview is what will be cut.
 4. **Bend Lines**, **Breakoffs**, **Tabbed Cutouts** and **Dimensions.** Expand a section
    to see or add them. Bend lines are found in the file when it's imported.
 5. **Preview.** Scroll to zoom, drag with the middle button to pan, and double-click
-   the middle button to fit the drawing. Right-click a line to change how it's used
+   the middle button to fit the drawing. Rulers along the left and bottom edges measure
+   in the drawing's units and mark where the pointer is; the grid lines follow the
+   ruler marks as you zoom. Right-click a line to change how it's used
    (see [below](#entities)).
 6. **Qty** is how many of this drawing you need. **Customer** is saved with the
    drawing.
@@ -40,7 +42,10 @@ nest: what you see in the preview is what will be cut.
 ## Choose what's cut {#entities}
 
 Right-click any line, arc or circle in the preview to set what it's for. To set
-several at once, click them with ++ctrl++ or ++shift++ held, then right-click one.
+several at once, click them with ++ctrl++ or ++shift++ held, then right-click one. To
+take a whole outline at once, right-click one of its lines and choose **Select Chain**:
+it selects every line and arc joined end to end with it. Right-click again to set what
+they're for.
 
 ![Right-click menu on a hole in the preview](images/converter-entity-menu.png)
 
