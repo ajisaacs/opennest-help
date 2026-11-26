@@ -176,9 +176,26 @@ nest. In Database mode the status bar shows the nest's [ledger holds](nest-serve
 
 ## Watch it run {#progress}
 
-The **Nesting Progress** window shows the stages and the **Best plan so far** while
-the engine works. **Stop** throws the run away and leaves your nest as it was. See
+The **Nesting Progress** window opens tall, most of the screen's height, so the layouts
+are easy to read. Under **TOP LAYOUTS** it shows the best layouts found so far, best
+first, each with its sheets and the free strip its last sheet leaves. **Stop** throws
+the run away and leaves your nest as it was. See
 [Your first nest](first-nest.md#run-auto-nest) for a picture.
+
+### Pick a layout {#pick-layout}
+
+- **While it runs:** click a layout and **Use This Layout** (or double-click it) to stop
+  the search and use that one.
+- **When the search ends** with more than one layout, the line at the bottom turns
+  green and says **Search finished. Pick the layout to use.** The title changes to
+  **Nesting Finished**. The engine's pick is marked **Best**. Select one and click
+  **Use This Layout**, or **Discard** to throw them all away.
+
+A layout you picked goes straight onto the nest, without the
+[Keep or Discard review](#review); you already chose it. If parts couldn't be placed, a
+message names them afterwards. The review still opens when there was only one layout to
+choose from, for [server nests](#nest-on-server) and for
+[current plates](#plate-source).
 
 ## Nest on the server {#nest-on-server}
 
@@ -201,6 +218,9 @@ A result you haven't kept or discarded waits on the server, for example one that
 finished after OpenNest closed. Find it in [My Server Jobs](nest-server.md#server-jobs).
 
 ## Keep or discard the result {#review}
+
+When Auto Nest chose the layout for you (see [Pick a layout](#pick-layout)), it shows
+the result for you to keep or discard:
 
 ![Review Auto Nest window](images/auto-nest-review.png)
 

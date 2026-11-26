@@ -113,7 +113,14 @@ The [CAD Converter](cad-converter.md) page covers the rest of this window.
 2. **Best plan so far** fills in as soon as the engine has a complete plan.
 3. **Stop** cancels the run. Nothing in your nest changes.
 
+As the engine finds layouts, the window lists the best ones under **TOP LAYOUTS**. Click one and **Use This
+Layout** to use it; it goes onto the nest without the review below. When the search ends
+the bottom line turns green; pick a layout there, or **Discard**. See
+[Pick a layout](auto-nest.md#pick-layout).
+
 ### Keep or discard the result
+
+If there's only one layout to pick from, Auto Nest asks you to keep it:
 
 ![Review window with one sheet holding all 72 parts](images/first-nest-review.png)
 
