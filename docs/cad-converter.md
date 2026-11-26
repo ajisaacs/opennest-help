@@ -33,7 +33,8 @@ nest: what you see in the preview is what will be cut.
    as it is now, to a new file. Pick the file type in the save window: DXF (R14 through 2018), DWG (2004
    through 2018) or SVG. The file keeps its layers and includes the bend lines with
    notes for their direction, angle and radius, so if you import it again the bends
-   come back with it. **Holes...** opens the [hole table](#hole-table).
+   come back with it. **Holes...** opens the [hole table](#hole-table). **Label Box...**
+   sets where the part number is etched; see [Part number label](#label-box).
 8. **Original** shows the file's geometry as it was read, before any cleanup, faded
    behind the current drawing, so you can compare it with what will be cut. **Labels** numbers each entity. **Bends**
    chooses how bend lines are found in files you add from now on; **Auto** suits most
@@ -108,6 +109,33 @@ You can drag the table aside if it covers part of the drawing.
 The table follows the drawing you're checking and updates as you change what's cut. It
 only shows; it doesn't change the drawing.
 
+## Part number label {#label-box}
+
+Plan Cutting can etch each part's number on it, so the parts can be told apart after
+cutting. The label box sets where the number goes on each drawing. Nothing is etched
+until **Etch part label** is turned on in
+[Leads & Tabs…](cutting-planner.md#part-labels).
+
+- Click **Label Box...**. OpenNest puts the box on flat material clear of the edges,
+  holes and bend lines, where it has the most room, level when it can. It uses half-inch
+  text when the part has room for it, else 3/8 in, else 1/4 in (12, 9 or 6 mm).
+- The box is drawn dashed, with the number inside as it will be etched. Drag the box to
+  move it, a corner to resize it (the text is as tall as the box), or the round handle
+  above it to turn it, in 5° steps or freely with ++shift++ held.
+- Once the drawing has a box, **Label Box...** opens a menu: **Find Best Location**,
+  **Rotate 90°**, **Make Horizontal** and **Remove**. However you turn it, the text never
+  reads upside down.
+- The text reads along the box's width and shrinks to fit a short box. If it would end
+  up under half the box's height, the box turns red and shows **Too small to etch**:
+  nothing is etched there. To run the text up the part, click **Rotate 90°** first, then
+  resize the box.
+- When not even 1/4 in text fits clear of everything, OpenNest says so and places a box
+  for you to move and resize. Until you do, it may cover an edge or a bend line.
+
+The number is the drawing's name in capitals. The etching font has digits, capital
+letters and `- _ . /`; spaces and other characters are left out. The box is saved with
+the drawing. It doesn't change the part's program and isn't exported to DXF, DWG or SVG.
+
 ## Bend lines and bend groups {#bend-groups}
 
 With **View > Show Bend Lines** on, each bend line on the plates is colored by how it runs
@@ -118,6 +146,23 @@ against the sheet's grain:
 | Yellow, dashed | Across the grain (within 5°) |
 | Cyan, dash-dot | With the grain (within 5°) |
 | Magenta, dotted | At any other angle |
+
+When **Etch part label** is set to **Part number and bend groups**, Plan Cutting also
+etches a letter in a circle beside each bend line: its bend group. **A** is across the
+grain and **B** with it, each within 5°; **C** to **L** are the 15° steps between,
+counterclockwise from the grain. The grain changes springback, so bends with the same
+letter take the same angle correction at the press brake and can be formed together.
+The letter doesn't say which way the part bends. It depends on how the part is turned on
+the sheet, so it's worked out when the cutting is planned.
+
+- The letter sits just off the bend line, clear of the band the bend forms, of edges,
+  holes, other marks and the label box. It's the largest of the label sizes that fits; a
+  bend with no room for one gets none.
+- Parallel bends within 12 in (300 mm) of each other share one letter.
+- Bend letters don't need a label box. A drawing without one still gets its bend
+  letters, just no number.
+- The CAD Converter previews the letters beside the bend lines, as they'd be for the
+  part cut unturned on a sheet whose grain runs along X.
 
 ## Files with several parts {#separate}
 

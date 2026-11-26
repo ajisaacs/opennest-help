@@ -134,6 +134,23 @@ the pieces drop between the supports.
 
 It's off by default and, like the other settings here, kept for each thickness.
 
+### Etch part labels {#part-labels}
+
+**Marks > Etch part label** chooses what Plan Cutting etches on each part, before its
+cuts:
+
+- **Off** (the default): nothing.
+- **Part number**: the drawing's name, in the [label box](cad-converter.md#label-box)
+  set in the CAD Converter. A drawing with no label box gets no number.
+- **Part number and bend groups**: the number, and each bend's
+  [group letter](cad-converter.md#bend-groups) in a circle beside its bend line.
+
+The etching counts in the cut time and is kept for each thickness. Parts already planned
+get labels only when they're planned again. Nothing is etched on parts whose cutting is
+locked or left out of the plan, or on parts joined on a common line. If you change the
+choice, or a drawing's name, label box or bends, or the plate's grain, after planning,
+the plan is stale: replan before **Apply**.
+
 ## When a plate already has lead-ins {#existing-lead-ins}
 
 If a plate already has lead-ins or cut-offs, a red banner above the settings says how
