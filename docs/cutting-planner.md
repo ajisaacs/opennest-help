@@ -225,6 +225,12 @@ with these cut-offs. Try it on the machine before production.
 **Overlapping parts** block the plan for that plate. Fix the layout first; see
 [Check a nest](validate.md#overlap-check).
 
+**Leads off the sheet.** Plan Cutting keeps every lead-in and lead-out on the sheet, so
+a part close to the edge is entered from a side with room. When a contour has no such
+entry, the issue names the edge, for example **Lead-in runs 0.062 past the plate's left
+edge**. Move the part farther from the edge or shorten the lead in **Leads & Tabs…**,
+then replan. A locked lead that runs off the sheet is listed as a **Fixed lead**.
+
 **Common lines.** Parts [joined on a common line](edit-plates.md#common-lines) are
 cut one after the other, and each shared edge is cut once, by the part cut first. A
 group that was broken, a joined part that's locked or left out of the plan, or a shared

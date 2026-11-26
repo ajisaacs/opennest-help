@@ -110,7 +110,8 @@ The extra checks, listed only when they find something:
   or on an area of an odd-shaped sheet that must stay empty.
 - **Outside work area:** a part inside the plate's edge spacing, or that close to an
   odd-shaped sheet's outline or an area to keep empty. Leads may run there.
-- **Fixed leads:** a locked lead-in or lead-out that runs into a part or a clamp.
+- **Fixed leads:** a locked lead-in or lead-out that runs into a part or a clamp, or
+  off the sheet.
 - **Part support:** a part the [support bed](machines.md#support-grid) can't hold
   level, with no tab to keep it in place. With **Tab parts by size**, or on a plate with
   no bed, it's a part whose narrow side is in the size range of
