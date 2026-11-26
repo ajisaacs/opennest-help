@@ -121,8 +121,13 @@ part in the nest. Place or fill parts into a remnant as above.
 
 ## Select and move parts {#move-parts}
 
-- Click a part to select it. Drag a window to select several, or hold ++ctrl++ to add
-  to the selection. **Edit > Select All** (++ctrl+a++) selects every part.
+- Click a part to select it. Drag a window to select several. Clicking empty space, or
+  starting a window there, clears the selection first. **Edit > Select All**
+  (++ctrl+a++) selects every part.
+- Hold ++ctrl++ to add to the selection: ++ctrl++ + click adds a part, and ++ctrl++ +
+  drag a window from empty space adds the parts in it while keeping what's already
+  selected. ++ctrl+shift++ + click adds a part too. Clicking a selected part again
+  doesn't unselect it; click empty space without ++ctrl++ to start over.
 - Drag selected parts to move them.
 - The arrow keys move the selection by the offset increment. Set it with **Tools > Set
   Offset Increment** (++f5++). Tick **Calculated distance (selection size + part
