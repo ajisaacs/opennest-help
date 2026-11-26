@@ -22,6 +22,15 @@ walk-through, see [Your first nest](first-nest.md#run-auto-nest).
    should.
 4. The total number of parts and drawings this run will nest.
 
+Beside **Qty**, the grey **Required** and **Placed** columns show how many of each
+drawing the nest needs and how many are already on its plates. To set every row's
+**Qty** at once:
+
+- **Load Required** sets each **Qty** to the full required quantity, to nest a whole
+  order again.
+- **Load Remaining** sets each **Qty** back to what's still left to place (required less
+  placed), as the dialog opens.
+
 !!! note "Keep a part to its grain"
     To allow only 0° and 90° for a part with a grain direction, enter **Rot Start**
     0, **Rot End** 90 and **Step** 90.
