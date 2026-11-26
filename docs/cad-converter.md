@@ -108,6 +108,17 @@ You can drag the table aside if it covers part of the drawing.
 The table follows the drawing you're checking and updates as you change what's cut. It
 only shows; it doesn't change the drawing.
 
+## Bend lines and bend groups {#bend-groups}
+
+With **View > Show Bend Lines** on, each bend line on the plates is colored by how it runs
+against the sheet's grain:
+
+| Line | Bend |
+| --- | --- |
+| Yellow, dashed | Across the grain (within 5°) |
+| Cyan, dash-dot | With the grain (within 5°) |
+| Magenta, dotted | At any other angle |
+
 ## Files with several parts {#separate}
 
 A file can draw several separate parts, such as a sheet of brackets. It comes in as one
