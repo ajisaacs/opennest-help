@@ -17,6 +17,9 @@ can't read stops **Done** or **Save** instead of being read as zero.
 ## The nest's details {#nest-info}
 
 **Nest > Edit**, or a click on the material in the status bar, opens **Edit Nest**.
+Right-click the material in the status bar for **Edit Nest...** and **Show in Machine
+Configuration...**, which opens the nest machine's settings for this material; see
+[Machines](machines.md).
 
 **Info** tab:
 
