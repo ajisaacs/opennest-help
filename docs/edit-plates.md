@@ -25,7 +25,8 @@ The **Plates** tab lists every sheet in the nest with its size and utilization.
 - **Plate > Set as Default** makes this plate's size and spacing the nest's default for
   new plates. **Tools > Save Current Plate as Defaults** saves them for new nests too;
   see [Nest settings](nest-settings.md#nest-defaults).
-- **Plate > Rotate** turns the whole plate and its parts 90° either way, or 180°.
+- **Plate > Rotate** turns the whole plate and its parts 90° either way, or 180°. A
+  90° turn turns the sheet's [grain](#grain) with it.
 - **Plate > Resize to Fit** (++ctrl+p++) shrinks or grows the plate to fit its parts,
   rounded up to the **Auto-size plate factor** in **Tools > Options**, whatever the
   plate's size.
@@ -245,7 +246,25 @@ them all.
 - **View** turns on extra drawing: **Draw Rapids**, **Draw Pierce Points**, **Draw
   Bounds** (each part's box), **Draw Offset** (the part spacing around each part),
   **Draw Cut Direction** and **Draw Support** (the [support bed](machines.md#support-grid)).
+- **View > Show Bend Lines** shows the bend lines on bent parts and the sheet's grain;
+  see [Bend lines and grain](#grain).
 - **View > Zoom To** zooms to an **Area** you drag, the **Plate**, the **Selected** parts
   or everything (**Fit**, or ++f++). The buttons to the right of the plate arrows zoom
   out, in, to fit and to an area you drag.
 - **Plate > View in CAD** opens the current plate as a DXF in your CAD program.
+
+## Bend lines and grain {#grain}
+
+Bends should run across the sheet's grain; a bend along the grain is more likely to
+crack on the outside. Turn on **View > Show Bend Lines** to check a nest before it's cut.
+
+- Each bend line is colored by how it runs against the grain, as listed under
+  [Bend lines and bend groups](cad-converter.md#bend-groups). Look for cyan (with the
+  grain) and magenta (at an angle) lines, and turn those parts if the bend matters.
+- Bends that go up get short green marks along the line.
+- The **GRAIN** button off the plate's lower-left corner shows which way the grain runs.
+  If the sheet you'll cut has its grain the other way, click it: the grain turns a
+  quarter turn (side to side or front to back) and the bend colors follow. **Edit >
+  Undo** takes back **Turn Grain**. The button is gray, and can't be clicked, while
+  another tool is active or a cutting plan is shown for review.
+- **Plate > Rotate** 90° turns the grain with the sheet; 180° leaves it as it was.
