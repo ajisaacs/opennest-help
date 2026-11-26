@@ -141,6 +141,11 @@ OpenNest saves them for next time. In Database mode, machines and post settings 
   **Save As...** to keep it as a file and **Print...**: each sheet layout, every part
   with its size, weight, and how many are needed and nested, utilization and any
   shortfall (marked **SHORT**). The report doesn't post or check the nest.
+  On each sheet layout, every part carries its ID from the parts table. A part too thin
+  to hold its ID gets it just outside, on a thin leader line. Parts are also filled in
+  their drawing's color, and that color sits beside the ID in the parts table, so you
+  can match parts that have no room for an ID. A part held by tabs has a **\*** after
+  its ID.
 - **File > Part Printouts...** opens a one-page printout for every part in the
   nest, with **Save As...** and **Print...**: the part drawn to fit the page with its
   overall dimensions, its size,
