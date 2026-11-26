@@ -47,9 +47,10 @@ engine beside its name.
 
 | Engine | Use it for |
 | --- | --- |
-| **Default** | Most jobs. It tries Irregular, Rectangles and Circles and keeps the best layout. |
+| **Default** | Most jobs. It tries Rectangles, Raster, Circles and Irregular, in that order, and keeps the best layout. Because Raster runs early, a run you stop soon still has an interlocking plan. |
 | **Rectangles** | Rectangular and nearly rectangular parts. Each part is packed as its bounding box, so it never tucks a part into another's notch. It is the fastest. |
 | **Irregular** | Odd shapes that should interlock. |
+| **Raster** | A fast first plan for irregular parts. It packs them on a fine grid, holes included, in seconds where Irregular can take a minute, at the cost of a little more material. |
 | **Circles** | Jobs where every part is round: blanks, washers, flanges. If any part isn't round it places nothing. |
 | **FlatBar** | Cutting parts from flat bar, one row along the bar. Shaped ends are nested into each other. |
 | **Lattice** | Many copies of a few parts. It repeats them in tight rows and pairs. It was called **Fill** before. |
