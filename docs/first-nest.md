@@ -150,7 +150,7 @@ cut.
 
 1. Click **Plan Cutting** on the toolbar (or **Plate > Plan Cutting**).
 2. The panel on the right reports whether the plan is ready.
-3. **Cutting Settings** sets the lead-ins and lead-outs for outside edges and holes
+3. **Leads & Tabs…** sets the lead-ins and lead-outs for outside edges and holes
    (round holes included). They start from the nest's
    [machine](machines.md#machine-lead-ins) when it has settings for the material and
    thickness. Check them before you apply the plan.
@@ -162,7 +162,7 @@ cut.
    down for them. The plan is still ready: the post raises the head for each one, and a
    post with no head-raise code set up refuses the nest.
 
-!!! note "Lead-ins come from Cutting Settings"
+!!! note "Lead-ins start from the machine"
     If the nest's machine has no settings for its material and thickness (set them in
     **Nest > Edit**), outside edges start with no lead-ins. If you post without setting
     them, the check before posting reports **Missing lead-ins** for every contour.
