@@ -143,9 +143,9 @@ against the sheet's grain:
 
 | Line | Bend |
 | --- | --- |
-| Yellow, dashed | Across the grain (within 5°) |
-| Cyan, dash-dot | With the grain (within 5°) |
-| Magenta, dotted | At any other angle |
+| Green, dashed | Across the grain (within 5°): the best direction |
+| Yellow, dotted | At any other angle |
+| Red, dash-dot | With the grain (within 5°): the most likely to crack |
 
 When **Etch part label** is set to **Part number and bend groups**, Plan Cutting also
 etches a letter in a circle beside each bend line: its bend group. **A** is across the

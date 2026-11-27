@@ -264,8 +264,9 @@ Bends should run across the sheet's grain; a bend along the grain is more likely
 crack on the outside. Turn on **View > Show Bend Lines** to check a nest before it's cut.
 
 - Each bend line is colored by how it runs against the grain, as listed under
-  [Bend lines and bend groups](cad-converter.md#bend-groups). Look for cyan (with the
-  grain) and magenta (at an angle) lines, and turn those parts if the bend matters.
+  [Bend lines and bend groups](cad-converter.md#bend-groups). Green is across the
+  grain (good), yellow at an angle and red with the grain: turn parts with red or yellow
+  lines if the bend matters.
 - Bends that go up get short green marks along the line.
 - The **GRAIN** button off the plate's lower-left corner shows which way the grain runs.
   If the sheet you'll cut has its grain the other way, click it: the grain turns a
